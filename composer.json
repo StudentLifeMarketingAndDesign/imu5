@@ -24,5 +24,18 @@
 	"config": {
 		"process-timeout": 600	
 	},
-	"minimum-stability": "dev"
+	"minimum-stability": "dev",
+	
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/StudentLifeMarketingAndDesign/division-project"
+        }
+    ],
+    "require": {
+        "md/division-project": "dev-master"
+    }
+
 }
+
+

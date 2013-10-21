@@ -19,7 +19,8 @@
 		"silverstripe/recaptcha": "*",
 		"simplepie/simplepie": "*",
 		"silverstripe/googlesitemaps": "*",
-		"silverstripe/timepickerfield": "*"
+		"silverstripe/timepickerfield": "*",
+		"md/division-project": "dev-master"
 	},
 	"config": {
 		"process-timeout": 600	
@@ -30,11 +31,14 @@
         {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/division-project"
+      
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/StudentLifeMarketingAndDesign/division-bar"
+
         }
-    ],
-    "require": {
-        "md/division-project": "dev-master"
-    }
+    ]
 
 }
 

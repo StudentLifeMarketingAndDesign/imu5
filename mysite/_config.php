@@ -8,7 +8,7 @@ $databaseConfig = array(
 	"type" => 'MySQLDatabase',
 	"server" => 'localhost',
 	"username" => 'root',
-	"password" => 'root',
+	"password" => 'omega',
 	"database" => 'imu5',
 	"path" => '',
 );

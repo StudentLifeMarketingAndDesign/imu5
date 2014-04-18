@@ -29,7 +29,6 @@ class MeetingRoomPage extends RoomPage {
 	private static $has_one = array(
 	);
 	
-	}
 
 }
 class MeetingRoomPage_Controller extends RoomPage_Controller {

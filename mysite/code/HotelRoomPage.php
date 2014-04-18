@@ -6,9 +6,6 @@ class HotelHomePage extends RoomPage {
 
 	private static $has_one = array(
 	);
-	
-	
-	}
 
 }
 class HotelRoomPage_Controller extends RoomPage_Controller {

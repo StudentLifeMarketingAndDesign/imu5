@@ -1,13 +1,11 @@
 <?php
-class HotelHomePage extends SiteTree {
+class HotelHomePage extends Page {
 
 	private static $db = array(
 	);
 
 	private static $has_one = array(
 	);
-
-	}
 
 }
 class HotelHomePage_Controller extends Page_Controller {

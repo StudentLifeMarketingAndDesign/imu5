@@ -1,5 +1,5 @@
 <?php
-class Page extends SiteTree {
+class PhotoGalleryPage extends Page {
 
 	private static $db = array(
 	);
@@ -8,7 +8,7 @@ class Page extends SiteTree {
 	);
 
 }
-class Page_Controller extends ContentController {
+class PhotoGalleryPage_Controller extends ContentController {
 
 	/**
 	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the

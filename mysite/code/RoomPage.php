@@ -1,5 +1,5 @@
 <?php
-class RoomPage extends SiteTree {
+class RoomPage extends Page {
 
 	private static $db = array(
 	);
@@ -7,7 +7,6 @@ class RoomPage extends SiteTree {
 	private static $has_one = array(
 	);
 
-	}
 
 }
 class RoomPage_Controller extends Page_Controller {

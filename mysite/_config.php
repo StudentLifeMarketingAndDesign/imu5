@@ -3,16 +3,11 @@
 global $project;
 $project = 'mysite';
 
-global $databaseConfig;
-$databaseConfig = array(
-	"type" => 'MySQLDatabase',
-	"server" => 'localhost',
-	"username" => 'root',
-	"password" => 'omega',
-	"database" => 'imu5',
-	"path" => '',
-);
-
+global $database;
+$database = 'imu5';
+ 
+// Use _ss_environment.php file for configuration
+require_once("conf/ConfigureFromEnv.php");
 MySQLDatabase::set_connection_charset('utf8');
 
 // Set the current theme. More themes can be downloaded from

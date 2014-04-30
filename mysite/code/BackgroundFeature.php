@@ -18,7 +18,7 @@
 			"Thumbnail"
 		);
 	  function getThumbnail() {
-	      return $this->BackgroundImage()->CMSThumbnail();
+	      return $this->Image()->CMSThumbnail();
 	    }		
 		/*function getCMSFields() { 
 			$fields = new FieldList(); 

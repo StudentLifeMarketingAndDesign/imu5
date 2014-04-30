@@ -1,8 +1,8 @@
 	        <div class="hero-text">
                 <h2 class="blocktext">$BackgroundFeature.Tagline</h2>
-                <ul>
+               <!-- <ul>
                     <li><a href="about/">Meet Tom</a></li>
                     <li><a href="staff/">Staff</a></li>
                     <li><a href="https://www.givetoiowa.org/GiveToIowa/WebObjects/GiveToIowa.woa/wa/goTo?area=studentlife">Give Now</a></li>
-                </ul>
+                </ul>-->
             </div>

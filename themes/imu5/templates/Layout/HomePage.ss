@@ -7,13 +7,13 @@
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
   .hero {
-    background: black url({$BackgroundFeature.BackgroundImage.URL}) no-repeat center top;
+    background: black url({$BackgroundFeature.Image.URL}) no-repeat center top;
     padding: 4em 0;
   }
 }
 @media screen and (min-width: 768px) {
   .hero {
-    background: black url({$BackgroundFeature.BackgroundImage.URL}) no-repeat center top;
+    background: black url({$BackgroundFeature.Image.URL}) no-repeat center top;
     padding: 0;
     height: 665px;
   }

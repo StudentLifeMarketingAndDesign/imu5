@@ -7,7 +7,7 @@
 		);
 		
 		private static $has_one = array (
-			'BackgroundImage' => 'Image',
+			'Image' => 'Image',
 			'HomePage' => 'HomePage'
 		);
 

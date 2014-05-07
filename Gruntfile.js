@@ -25,10 +25,6 @@ module.exports = function(grunt) {
     //concat all the files into the build folder
 
     concat: {
-      css: {
-        src: ['<%=globalConfig.themeDir %>/css/*.css', 'division-project/css/*.css'],
-        dest: '<%=globalConfig.themeDir %>/css/master.css'
-      },
       js:{
         src: ['<%=globalConfig.themeDir %>/js/*.js', 'division-project/js/*.js'],
         dest: '<%=globalConfig.themeDir %>/build/src/main_concat.js'
@@ -48,18 +44,6 @@ module.exports = function(grunt) {
         }
       }
     },
-
-    imagemin: {
-      dynamic: {
-        files: [{
-          expand: true,
-          cwd: '<%=globalConfig.themeDir %>/images/',
-          src: ['**/*.{png,jpg,gif}'],
-          dest: '<%=globalConfig.themeDir %>/build/images/'
-        }]
-      }
-    },
-
     watch: {
       scripts: {
         files: ['<%=globalConfig.themeDir %>/js/*.js', '<%=globalConfig.themeDir %>/js/**/*.js'],
@@ -69,11 +53,7 @@ module.exports = function(grunt) {
         }
       },
       css: {
-        files: ['<%=globalConfig.themeDir %>/scss/*.scss', 
-                '<%=globalConfig.themeDir %>/scss/**/*.scss',
-                'division-project/scss/*.scss',
-                'division-project/scss/**/*.scss'
-                ],
+        files: ['<%=globalConfig.themeDir %>/scss/*.scss', '<%=globalConfig.themeDir %>/scss/**/*.scss'],
         tasks: ['compass'],
         options: {
           spawn: true,
@@ -87,12 +67,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-compass');
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-simple-watch');
 
   // Default task(s).
   // Note: order of tasks is very important
-  grunt.registerTask('default', ['compass', 'concat', 'uglify', 'imagemin', 'simple-watch']);
+  grunt.registerTask('default', ['compass', 'concat', 'uglify', 'simple-watch']);
 
 };

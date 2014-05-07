@@ -1,3 +1,9 @@
+.flex-direction-nav {
+	@media (max-width: $break-small) {
+		display: none;
+	}
+}
+
 .justify {
 	font-size: 0.1px;
 	list-style: none;
@@ -71,13 +77,13 @@ MEETING ROOM LIST
 /* -------------------------------------------------------
 MEETING ROOM PAGE
 ---------------------------------------------------------- */
+.meeting-page-details {
+	padding: 1em 0;
+}
 .meeting-page .number {
 	color: #888;
 	font-size: 20px;
 	margin-top: -.67em;
-}
-.meeting-page-details {
-	padding: 1em 0;
 }
 .meeting-page-details .item {
 	@media (min-width: $break-medium) {
@@ -119,8 +125,7 @@ MEETING ROOM PAGE
 	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
 	box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
 }
-.flex-direction-nav {
-	@media (max-width: $break-small) {
-		display: none;
-	}
+.standard_setup_notice {
+	margin-top: 2em;
+	color: #666;
 }

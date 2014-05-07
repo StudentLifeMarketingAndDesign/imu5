@@ -25,10 +25,6 @@ module.exports = function(grunt) {
     //concat all the files into the build folder
 
     concat: {
-      css: {
-        src: ['<%=globalConfig.themeDir %>/css/*.css', 'division-project/css/*.css'],
-        dest: '<%=globalConfig.themeDir %>/css/master.css'
-      },
       js:{
         src: ['<%=globalConfig.themeDir %>/js/*.js', 'division-project/js/*.js'],
         dest: '<%=globalConfig.themeDir %>/build/src/main_concat.js'

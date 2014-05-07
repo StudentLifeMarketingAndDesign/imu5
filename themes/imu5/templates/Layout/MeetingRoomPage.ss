@@ -8,15 +8,22 @@
 		<div class="white-cover"></div>
 		 <section class="main-content <% if $BackgroundImage %>margin-top<% end_if %>">
 		 	<div class="meeting-page">
-				<div class="flexslider">
-					<ul class="slides">
-						<% if SlideshowImage1 %><li><img src="$SlideshowImage1.URL" alt="$Title"></li><% end_if %>
-						<% if SlideshowImage2 %><li><img src="$SlideshowImage2.URL" alt="$Title"></li><% end_if %>
-						<% if SlideshowImage3 %><li><img src="$SlideshowImage3.URL" alt="$Title"></li><% end_if %>
-						<% if SlideshowImage4 %><li><img src="$SlideshowImage4.URL" alt="$Title"></li><% end_if %>
-					</ul>
-				</div>
+
+		 		<% if SlideshowImage2 %>
+					<div class="flexslider">
+						<ul class="slides">
+							<% if SlideshowImage1 %><li><img src="$SlideshowImage1.URL" alt="$Title"></li><% end_if %>
+							<% if SlideshowImage2 %><li><img src="$SlideshowImage2.URL" alt="$Title"></li><% end_if %>
+							<% if SlideshowImage3 %><li><img src="$SlideshowImage3.URL" alt="$Title"></li><% end_if %>
+							<% if SlideshowImage4 %><li><img src="$SlideshowImage4.URL" alt="$Title"></li><% end_if %>
+						</ul>
+					</div>
+				<% else %>
+					<img src="$SlideshowImage1.URL" alt="$Title">
+				<% end_if %>
+
 				<h1 class="name">$Title</h1>
+
 				<% if Number %><p class="number">Room #$Number</p><% end_if %>
 				$Content
 				$Form

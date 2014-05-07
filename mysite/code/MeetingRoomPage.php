@@ -27,7 +27,7 @@ class MeetingRoomPage extends Page {
 	);
 
 	static $has_one = array(
-		'ThumbnailImage'  => 'Image',
+		// 'ThumbnailImage'  => 'Image',
 		'SlideshowImage1' => 'Image',
 		'SlideshowImage2' => 'Image',
 		'SlideshowImage3' => 'Image',
@@ -43,7 +43,7 @@ class MeetingRoomPage extends Page {
 
 		$fields->removeByName("Metadata");
 
-		$fields->addFieldToTab('Root.Images', new UploadField('ThumbnailImage', 'Thumbnail Image (120 x 85)', null, null, null, $this->ClassName));
+		// $fields->addFieldToTab('Root.Images', new UploadField('ThumbnailImage', 'Thumbnail Image (120 x 85)', null, null, null, $this->ClassName));
 		$fields->addFieldToTab('Root.Images', new UploadField('SlideshowImage1', 'Slideshow Image 1', null, null, null, $this->ClassName));
 		$fields->addFieldToTab('Root.Images', new UploadField('SlideshowImage2', 'Slideshow Image 2', null, null, null, $this->ClassName));
 		$fields->addFieldToTab('Root.Images', new UploadField('SlideshowImage3', 'Slideshow Image 3', null, null, null, $this->ClassName));

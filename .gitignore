@@ -22,3 +22,6 @@ googlesitemaps/
 composer.lock
 division-project/
 division-bar/
+assets/
+mathspamprotection/
+node_modules/

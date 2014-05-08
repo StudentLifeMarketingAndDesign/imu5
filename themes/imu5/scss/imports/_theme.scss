@@ -1,3 +1,11 @@
+
+.page-full-width .main-content {
+	@media (min-width: $break-medium) {
+		width: 100%;
+	}
+}
+
+
 .flex-direction-nav {
 	@media (max-width: $break-small) {
 		display: none;

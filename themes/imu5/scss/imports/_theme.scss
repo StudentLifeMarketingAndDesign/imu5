@@ -212,8 +212,9 @@ RESPONSIVE TABLES
   td {
     padding: .5em;
     vertical-align: middle;
-	border-top: none;
+
     @media (min-width: $break-small) {
+      border-top: none;
       padding: .5em .5em;
     }
 

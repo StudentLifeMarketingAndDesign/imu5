@@ -77,6 +77,51 @@ class MeetingRoomPage extends Page {
 		return $fields;
 
 	}
+	function getStandardCapacity () {
+		$capacities = array(
+			$this->TablesAndChairsCapacity,
+			$this->RoundedTablesCapacity,
+			$this->TheaterCapacity,
+			$this->ClassroomCapacity,
+			$this->UshapeCapacity,
+			$this->BoardroomCapacity
+		);
+
+		foreach($capacities as $capacity) {
+			if (!is_null($capacity) && substr($capacity, -1, 1) == '*') { return substr($capacity, 0, -1); }
+		}
+
+		return false;
+	}
+
+	function getDisplayCapacity () {
+
+		if ($this->getStandardCapacity()) {
+			return $this->getStandardCapacity();
+		} else {
+			$capacities = array(
+				(int) $this->TablesAndChairsCapacity,
+				(int) $this->RoundedTablesCapacity,
+				(int) $this->TheaterCapacity,
+				(int) $this->ClassroomCapacity,
+				(int) $this->UshapeCapacity,
+				(int) $this->BoardroomCapacity
+			);
+		}
+
+		$capacities = array_filter($capacities);
+		asort($capacities);
+		$capacities = array_values($capacities);
+
+		if (count($capacities) == 0) {
+			return 'N/A';
+		} elseif (count($capacities) == 1) {
+			return $capacities[0];
+		} else {
+			return $capacities[0] . '-' . end($capacities);
+		}
+
+	}
 }
 class MeetingRoomPage_Controller extends Page_Controller {
 
@@ -100,6 +145,14 @@ class MeetingRoomPage_Controller extends Page_Controller {
 
 	public function init() {
 		parent::init();
+
+		function HasAnyAmenities () {
+    	return $this->HasComputer ||
+    	       $this->HasEthernetConnection ||
+    	       $this->HasProjector ||
+    	       $this->HasDVD ||
+    	       $this->HasWifi;
+		}
 
 	}
 

@@ -16,7 +16,7 @@
 						<a href="$Link">
 							<h3 class="title">$Title</h3>
 							<p class="room-capacity">
-								<span class="capacity"><strong>Capacity: </strong></span>
+								<span class="capacity"><strong>Capacity: </strong>$DisplayCapacity</span>
 								<% if $Number %><span class="room"><strong>Room #</strong>$Number</span><% end_if %>
 							</p>
 

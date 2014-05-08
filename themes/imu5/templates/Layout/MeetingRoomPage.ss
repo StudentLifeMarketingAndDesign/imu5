@@ -184,9 +184,11 @@
 					<button class="btn btn-primary">Reserve This Room</button>
 				</div>
 
-				<p class="standard_setup_notice">
-					* denotes a room's standard setup. The non-standard setup fee is $40.
-				</p>
+				<% if StandardCapacity %>
+					<p class="standard_setup_notice">
+						* denotes a room's standard setup. The non-standard setup fee is $40.
+					</p>
+				<% end_if %>
 
 			</div>
 		</section>

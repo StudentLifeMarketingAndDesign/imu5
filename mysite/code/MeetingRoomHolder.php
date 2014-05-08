@@ -5,10 +5,12 @@ class MeetingRoomHolder extends Page {
 	);
 
 	private static $has_one = array(
+
 	);
-	private static $allowed_children = array(
-		'MeetingRoomPage'
-	);
+
+	// private static $allowed_children = array(
+	// 	'MeetingRoomPage'
+	// );
 
 
 }

@@ -10,7 +10,7 @@
 			$Content
 			$Form
 			<ul class="justify MeetingRoomList">
-				<% loop $allChildren %>
+				<% loop $Children %>
 
 					<li class="item">
 						<a href="$Link">

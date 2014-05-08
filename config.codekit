@@ -1471,6 +1471,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/Gruntfile.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/Gruntfile.js",
+		"outputAbbreviatedPath": "\/min\/Gruntfile-ck.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/index.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -1494,6 +1505,15 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/mysite\/_config.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/mysite\/code\/CompageRoomsPage.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/mysite\/code\/CompageRoomsPage.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -1539,6 +1559,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/mysite\/code\/Page.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/mysite\/code\/PageFullWidth.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/mysite\/code\/PageFullWidth.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -1799,6 +1828,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/themes\/imu5\/templates\/Layout\/CompareRoomsPage.ss": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/themes\/imu5\/templates\/Layout\/CompareRoomsPage.ss",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/themes\/imu5\/templates\/Layout\/HotelHomPage.ss": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -1835,6 +1873,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/themes\/imu5\/templates\/Layout\/PageFullWidth.ss": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/themes\/imu5\/templates\/Layout\/PageFullWidth.ss",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/themes\/imu5\/templates\/Layout\/PhotoGalleryPage.ss": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -1849,62 +1896,6 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/themes\/imu5\/templates\/Layout\/RoomPage.ss",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/themes\/tutorial\/css\/editor.css": {
-		"fileType": 16,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/themes\/tutorial\/css\/editor.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/themes\/tutorial\/css\/form.css": {
-		"fileType": 16,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/themes\/tutorial\/css\/form.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/themes\/tutorial\/css\/layout.css": {
-		"fileType": 16,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/themes\/tutorial\/css\/layout.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/themes\/tutorial\/css\/typography.css": {
-		"fileType": 16,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/themes\/tutorial\/css\/typography.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/themes\/tutorial\/images\/welcome.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 19020,
-		"inputAbbreviatedPath": "\/themes\/tutorial\/images\/welcome.png",
-		"outputAbbreviatedPath": "\/themes\/tutorial\/images\/welcome.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/themes\/tutorial\/templates\/Page.ss": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/themes\/tutorial\/templates\/Page.ss",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -2491,7 +2482,7 @@
 	"sassUseLibsass": 0,
 	"shouldRunAutoprefixer": 0,
 	"shouldRunBless": 0,
-	"skippedItemsString": "\/betterbuttons, \/themes\/simple, .hg, \/recaptcha, .svn, \/sortablegridfield, _cache, \/framework, \/timepickerfield, .git, \/cms, \/gridfield-bulk-editing-tools, \/assets, _logs, \/dashboard, logs, \/userforms, \/googlesitemaps, \/widgets, \/vendor, \/spamprotection, log, \/event_calendar, \/blog, cache",
+	"skippedItemsString": "\/betterbuttons, cache, .hg, \/recaptcha, .svn, \/sortablegridfield, _cache, \/framework, \/timepickerfield, \/themes\/tutorial, .git, \/cms, \/gridfield-bulk-editing-tools, \/assets, _logs, \/dashboard, logs, \/userforms, \/googlesitemaps, \/widgets, \/vendor, \/spamprotection, log, \/event_calendar, \/blog, \/themes\/simple",
 	"slimAutoOutputPathRelativePath": "",
 	"slimAutoOutputPathReplace1": "",
 	"slimAutoOutputPathReplace2": "",

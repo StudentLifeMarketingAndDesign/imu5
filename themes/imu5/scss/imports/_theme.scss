@@ -145,3 +145,181 @@ MEETING ROOM PAGE
 	margin-top: 2em;
 	color: #666;
 }
+
+
+/* -------------------------------------------------------
+RESPONSIVE TABLES
+---------------------------------------------------------- */
+.responsive-table {
+	width: 100%;
+	margin-bottom: 1.5em;
+	@media (min-width: $break-medium) {
+		font-size: .9em;
+	}
+	@media (min-width: $break-large) {
+		font-size: 1em;
+	}
+
+	thead {
+		// Accessibly hide <thead> on narrow viewports
+		position: absolute;
+		clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+		clip: rect(1px, 1px, 1px, 1px);
+		padding: 0;
+		border: 0;
+		height: 1px;
+		width: 1px;
+		overflow: hidden;
+
+		@media (min-width: $break-medium) {
+			// Unhide <thead> on wide viewports
+			position: relative;
+			clip: auto;
+			height: auto;
+			width: auto;
+			overflow: auto;
+		}
+
+    th {
+      background-color: rgba(0,0,0,1);
+      border: 1px solid rgba(0,0,0,1);
+      font-weight: normal;
+      text-align: center;
+      color: white;
+
+      &:first-of-type {
+        text-align: left;
+      }
+    }
+  }
+
+  // Set these items to display: block for narrow viewports
+  tbody,tr,th,td {
+    display: block;
+    padding: 0;
+    text-align: left;
+    white-space: normal;
+  }
+
+  tr {
+    @media (min-width: $break-medium) {
+      // Undo display: block
+      display: table-row;
+    }
+  }
+
+  th,
+  td {
+    padding: .5em;
+    vertical-align: middle;
+	border-top: none;
+    @media (min-width: $break-small) {
+      padding: .5em .5em;
+    }
+
+    @media (min-width: $break-medium) {
+      // Undo display: block
+      display: table-cell;
+      padding: .5em;
+    }
+
+    @media (min-width: $break-large) {
+      padding: .75em .5em;
+    }
+
+    @media (min-width: $break-xlarge) {
+      padding: .75em;
+    }
+  }
+
+  caption {
+    margin-bottom: 1em;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+
+    @media (min-width: $break-medium) {
+      font-size: 1.5em;
+    }
+  }
+
+  tfoot {
+    font-size: .8em;
+    font-style: italic;
+
+    @media (min-width: $break-large) {
+      font-size: .9em;
+    }
+  }
+
+  tbody {
+    @media (min-width: $break-medium) {
+      // Undo display: block
+      display: table-row-group;
+    }
+
+    tr {
+      margin-bottom: 1em;
+      border: 2px solid rgba(0,0,0,1);
+
+      @media (min-width: $break-medium) {
+        // Undo display: block
+        display: table-row;
+        border-width: 1px;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      &:nth-of-type(even) {
+        @media (min-width: $break-medium) {
+          background-color: rgba(94,93,82,.1);
+        }
+      }
+    }
+
+    th[scope="row"] {
+      background-color: rgba(0,0,0,1);
+      color: white;
+
+      @media (min-width: $break-medium) {
+        background-color: transparent;
+        color: rgba(94,93,82,1);
+        text-align: left;
+      }
+    }
+
+    td {
+      text-align: right;
+
+      @media (min-width: $break-small) {
+        border-bottom: 1px solid  rgba(0,0,0,1);
+      }
+
+      @media (min-width: $break-medium) {
+        text-align: center;
+      }
+    }
+
+    td[data-type=currency] {
+      text-align: right;
+    }
+
+    td[data-title]:before {
+      content: attr(data-title);
+      float: left;
+      font-size: .8em;
+      color: rgba(94,93,82,.75);
+
+      @media (min-width: $break-small) {
+        font-size: .9em;
+      }
+
+      @media (min-width: $break-medium) {
+        // Don’t show data-title labels
+        content: none;
+      }
+    }
+  }
+}

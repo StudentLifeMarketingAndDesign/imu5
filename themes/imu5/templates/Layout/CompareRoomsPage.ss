@@ -38,7 +38,7 @@
 									<td data-title="Computer"><% if HasComputer %>&#10003;<% else %>&nbsp;<% end_if %></td>
 									<td data-title="Ethernet"><% if HasEthernetConnection %>&#10003;<% else %>&nbsp;<% end_if %></td>
 									<td data-title="Projector"><% if HasProjectorScreen %>&#10003;<% else %>&nbsp;<% end_if %></td>
-									<td data-title="DVD"><% if HasDVD %>x <% else %>&nbsp;<% end_if %></td>
+									<td data-title="DVD"><% if HasDVD %>&#10003;<% else %>&nbsp;<% end_if %></td>
 									<td data-title="Speakers"><% if HasSpeakers %>&#10003;<% else %>&nbsp;<% end_if %></td>
 									<td data-title="Markerboard"><% if HasMarkerboard %>&#10003;<% else %>&nbsp;<% end_if %></td>
 									<td data-title="Microphone"><% if HasMicrophone %>&#10003;<% else %>&nbsp;<% end_if %></td>

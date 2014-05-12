@@ -35,14 +35,14 @@
 								<tr>
 									<th scope="row"><a href="$Link">$Title</a></th>
 									<td data-title="Capacity">$DisplayCapacity</td>
-									<td data-title="Computer"><% if HasComputer %>x <% else %>&nbsp;<% end_if %></td>
-									<td data-title="Ethernet"><% if HasEthernetConnection %>x <% else %>&nbsp;<% end_if %></td>
-									<td data-title="Projector"><% if HasProjectorScreen %>x <% else %>&nbsp;<% end_if %></td>
+									<td data-title="Computer"><% if HasComputer %>&#10003;<% else %>&nbsp;<% end_if %></td>
+									<td data-title="Ethernet"><% if HasEthernetConnection %>&#10003;<% else %>&nbsp;<% end_if %></td>
+									<td data-title="Projector"><% if HasProjectorScreen %>&#10003;<% else %>&nbsp;<% end_if %></td>
 									<td data-title="DVD"><% if HasDVD %>x <% else %>&nbsp;<% end_if %></td>
-									<td data-title="Speakers"><% if HasSpeakers %>x <% else %>&nbsp;<% end_if %></td>
-									<td data-title="Markerboard"><% if HasMarkerboard %>x <% else %>&nbsp;<% end_if %></td>
-									<td data-title="Microphone"><% if HasMicrophone %>x <% else %>&nbsp;<% end_if %></td>
-									<td data-title="WiFi"><% if HasWifi %>x <% else %>&nbsp;<% end_if %></td>
+									<td data-title="Speakers"><% if HasSpeakers %>&#10003;<% else %>&nbsp;<% end_if %></td>
+									<td data-title="Markerboard"><% if HasMarkerboard %>&#10003;<% else %>&nbsp;<% end_if %></td>
+									<td data-title="Microphone"><% if HasMicrophone %>&#10003;<% else %>&nbsp;<% end_if %></td>
+									<td data-title="WiFi"><% if HasWifi %>&#10003;<% else %>&nbsp;<% end_if %></td>
 								</tr>
 							<% end_loop %>
 						</tbody>

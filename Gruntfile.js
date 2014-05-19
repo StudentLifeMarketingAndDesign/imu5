@@ -12,12 +12,15 @@ module.exports = function(grunt) {
     
     //compile the sass
 
-    compass: {
-      dist: {                   // Target
+    sass: {
+      dist: { 
+        files: {
+          '<%=globalConfig.themeDir %>/css/master.css' : '<%=globalConfig.themeDir %>/scss/master.scss'
+        },                  // Target
         options: {              // Target options
-          sassDir: ['<%=globalConfig.themeDir %>/scss', 'division-project/scss'],
-          cssDir: '<%=globalConfig.themeDir %>/css',
-          environment: 'production'
+          style: 'compressed',
+          sourcemap: 'true',
+          loadPath: ['division-project/scss']
         }
       }
     },
@@ -53,8 +56,8 @@ module.exports = function(grunt) {
         }
       },
       css: {
-        files: ['<%=globalConfig.themeDir %>/scss/*.scss', '<%=globalConfig.themeDir %>/scss/**/*.scss'],
-        tasks: ['compass'],
+        files: ['<%=globalConfig.themeDir %>/scss/*.scss', '<%=globalConfig.themeDir %>/scss/**/*.scss', 'division-project/scss/*.scss','division-project/scss/**/*.scss'],
+        tasks: ['sass'],
         options: {
           spawn: true,
         }
@@ -66,12 +69,12 @@ module.exports = function(grunt) {
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-simple-watch');
 
   // Default task(s).
   // Note: order of tasks is very important
-  grunt.registerTask('default', ['compass', 'concat', 'uglify', 'simple-watch']);
+  grunt.registerTask('default', ['sass', 'concat', 'uglify', 'watch']);
 
 };

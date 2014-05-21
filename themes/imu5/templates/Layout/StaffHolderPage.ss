@@ -3,7 +3,6 @@
       <div class="container clearfix">
             <div class="white-cover"></div>
           <section class="main-content">
-<h1>$Title</h1>
             $Form
             $Content
             <% loop Teams %>

@@ -324,3 +324,53 @@ RESPONSIVE TABLES
     }
   }
 }
+/* Who does what css */
+.who-does-what-section .colgroup{
+	position: relative;
+
+}
+.who-does-what-section p span {
+	font-weight: bold;
+}
+
+.who-does-what-section-tags{
+	display: block;
+	clear: both;
+	padding: 10px;
+	margin-top: 20px;
+	background-color: #efefef;
+}
+
+.who-does-what-section-tags p{
+	margin: 0;
+	padding: 0;
+}
+
+.who-does-what {
+	word-wrap:break-word; 
+	max-height: 200px; 
+	overflow-y: auto;
+}
+ 
+.who-does-what h3, h4 {
+	margin: 0 0 10px 0;
+	color: #222222;
+}
+
+.who-does-what h4 {
+	padding-top: 7px;
+}
+
+.who-does-what p {
+	margin: 0;
+	padding: 0;
+}
+
+.who-does-what.additional-info {
+	padding-bottom: 40px;
+
+}
+
+.who-does-what-selected-tag a {
+	font-size: 1.25rem;
+}

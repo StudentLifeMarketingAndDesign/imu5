@@ -348,8 +348,7 @@ RESPONSIVE TABLES
 
 .who-does-what {
 	word-wrap:break-word; 
-	max-height: 200px; 
-	overflow-y: auto;
+
 }
  
 .who-does-what h3, h4 {
@@ -412,28 +411,3 @@ RESPONSIVE TABLES
 }
 
 
-aside label {
-	border: 0; 
-	clip: rect(0 0 0 0); 
-	height: 1px; 
-	margin: -1px;
-	overflow: hidden;
-	padding: 0; 
-	position: absolute;
-	width: 1px;
-}
-
-aside form {
-	margin: 1.25em 0 1.20em 15px;
-}
-
-aside .action {
-border: 0;
-clip: rect(0 0 0 0);
-height: 1px;
-margin: -1px;
-overflow: hidden;
-padding: 0;
-position: absolute;
-width: 1px;
-}

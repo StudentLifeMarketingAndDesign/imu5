@@ -42,9 +42,27 @@
 	<section class="home-highlights">
         <div class="container clearfix">
 	        <% loop HomePageFeatures %>
-	            <% include HomePageFeature %>
-	         <% end_loop %>
-         </div><!-- end .container -->
+	        	<% include HomePageFeature %>
+	        <% end_loop %>
+	        
+		    <div class="module"> 
+			    <div class="inner">
+			    	<% loop AfterClassEvents.Limit(4) %>
+			        <h3><a href='$link'> $Title </a></h3>
+			        <p>Coming Up On: $NextDateTime.NiceUS() </p>     	
+					<% end_loop %>
+			    </div>
+			</div>  
+			
+			<div class="module">
+			    <div class="inner">
+			    	<a class="twitter-timeline"  href="https://twitter.com/imubuddy"  data-widget-id="472118990869762048">Tweets by @imubuddy</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+			    </div>
+			</div>
+	       
+        </div><!-- end .container -->
     </section>
 
     <% include TopicsAndNews %>

@@ -97,8 +97,15 @@ class JSONDisplayExtension extends DataExtension{
 
 		$eventsPage = AfterClassEventsPage::get()->First();
 
+		//If we have an events page on the site, use that page's category.
 		if($eventsPage){
-			$feedURL = $feedBase."categories/".$eventsPage->DisplayCategory.'/feed/json';
+			if($eventsPage->DisplayCategory != 0){
+				$feedURL = $feedBase."categories/".$eventsPage->DisplayCategory.'/feed/json';
+			}
+		//Otherwise just pull in all events
+		}elseif($category){
+			$category = rawurlencode($category);
+			$feedURL = $feedBase."categories/".$category.'/feed/json';
 		}else{
 			$feedURL = $feedBase."feed/json";
 		}

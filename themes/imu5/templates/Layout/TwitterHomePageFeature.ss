@@ -1,4 +1,4 @@
-<div class="module">
+<div class="module twitter">
 	<div class="inner">
 		<h3>Latest Tweets</h3>
 		<a class="twitter-timeline" href="https://twitter.com/imubuddy" data-widget-id="472445048630419456" data-chrome="noheader nofooter transparent">Tweets by @imubuddy</a>

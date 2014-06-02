@@ -13,8 +13,6 @@
 					<div class="who-does-what-selected-tag">
 						<h2>
 						<% _t('VIEWINGTAGGED', 'Departments tagged with') %> '$SelectedTag': </h2>
-
-						
 					</div>
 					<hr />
 				<% end_if %>				
@@ -37,7 +35,6 @@
 								<p> $AdditionalInfo </p>
 								<% end_if %>
 							</div>
-							<img src="{$ThemeDir}/images/additional-info-fade.png" alt= "additional info"class="additional-info-fade" />
 						 </div>	
 						<% if TagsCollection %>
 						    <div class="who-does-what-section-tags">

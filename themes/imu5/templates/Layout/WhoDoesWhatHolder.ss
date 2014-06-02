@@ -30,11 +30,6 @@
 								<% if $EmailAddress %><p><span>Email:</span> $EmailAddress </p><% end_if %>
 								<% if $Website %><p><a href="$Website">Visit Website</a></p><% end_if %>
 							</div>						
-							<div class="who-does-what additional-info col-1-2">
-								<% if $AdditionalInfo %>
-								<p> $AdditionalInfo </p>
-								<% end_if %>
-							</div>
 						 </div>	
 						<% if TagsCollection %>
 						    <div class="who-does-what-section-tags">

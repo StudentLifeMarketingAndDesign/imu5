@@ -1,1 +1,0 @@
-<span class="next-date-time">$NextDateTime.Format("D, F j") $NextDateTime.Time</span><span class="location"><% if $Location %> at $Location<% end_if %><% if $Venue %>, $Venue<% end_if %> </span>

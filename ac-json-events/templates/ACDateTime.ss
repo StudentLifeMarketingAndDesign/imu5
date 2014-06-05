@@ -1,1 +1,0 @@
-<span class="next-date-time">$NextDateTime.Format("D, F j") $NextDateTime.Time</span><span class="location"></span>

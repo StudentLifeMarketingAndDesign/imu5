@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "ef65761213474b6d14d69404676839ce",
+    "hash": "c16916690963dc98964163e09734f8d9",
     "packages": [
         {
             "name": "colymba/gridfield-bulk-editing-tools",
@@ -174,12 +174,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-bar.git",
-                "reference": "a5845dfa6c766ed9fce8d19e7302c5404af70cd3"
+                "reference": "45594313b71abc1028b718d86b086aca9f5681e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-bar/zipball/a5845dfa6c766ed9fce8d19e7302c5404af70cd3",
-                "reference": "a5845dfa6c766ed9fce8d19e7302c5404af70cd3",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-bar/zipball/45594313b71abc1028b718d86b086aca9f5681e4",
+                "reference": "45594313b71abc1028b718d86b086aca9f5681e4",
                 "shasum": ""
             },
             "require": {
@@ -198,7 +198,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/division-bar/tree/master",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-bar/issues"
             },
-            "time": "2014-04-17 14:30:01"
+            "time": "2014-06-05 18:33:57"
         },
         {
             "name": "md/division-project",
@@ -206,12 +206,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-project.git",
-                "reference": "8decfb8c30a658aaf3acf98cdff2ea06fe368374"
+                "reference": "a20d3b6728412b754ee028b517bb7a31f6f0ed23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/8decfb8c30a658aaf3acf98cdff2ea06fe368374",
-                "reference": "8decfb8c30a658aaf3acf98cdff2ea06fe368374",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/a20d3b6728412b754ee028b517bb7a31f6f0ed23",
+                "reference": "a20d3b6728412b754ee028b517bb7a31f6f0ed23",
                 "shasum": ""
             },
             "require": {
@@ -221,7 +221,6 @@
                 "silverstripe-themes/simple": "*",
                 "silverstripe/blog": "*",
                 "silverstripe/cms": "3.1.5",
-                "silverstripe/dashboard": "*",
                 "silverstripe/framework": "3.1.5",
                 "silverstripe/googlesitemaps": "*",
                 "silverstripe/installer": "*",
@@ -246,7 +245,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/division-project/tree/master",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-project/issues"
             },
-            "time": "2014-06-05 15:49:06"
+            "time": "2014-06-05 21:33:39"
         },
         {
             "name": "silverstripe-themes/simple",
@@ -371,51 +370,6 @@
                 "silverstripe"
             ],
             "time": "2014-05-12 23:13:44"
-        },
-        {
-            "name": "silverstripe/dashboard",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/unclecheese/silverstripe-dashboard.git",
-                "reference": "2deb5c475fabfb589609abf6053c245eac4b3b37"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/unclecheese/silverstripe-dashboard/zipball/2deb5c475fabfb589609abf6053c245eac4b3b37",
-                "reference": "2deb5c475fabfb589609abf6053c245eac4b3b37",
-                "shasum": ""
-            },
-            "require": {
-                "silverstripe/cms": "~3.1",
-                "silverstripe/framework": "~3.1"
-            },
-            "replace": {
-                "silverstripe/dashboard": "*"
-            },
-            "type": "silverstripe-module",
-            "extra": {
-                "installer-name": "dashboard"
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Uncle Cheese",
-                    "email": "unclecheese@leftandmain.com",
-                    "homepage": "http://leftandmain.com"
-                }
-            ],
-            "description": "Adds a dashboard to the SilverStripe CMS",
-            "keywords": [
-                "cms",
-                "dashboard",
-                "module",
-                "silverstripe"
-            ],
-            "time": "2014-04-29 22:15:41"
         },
         {
             "name": "silverstripe/framework",

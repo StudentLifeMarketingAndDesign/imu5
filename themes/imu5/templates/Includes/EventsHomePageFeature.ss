@@ -23,6 +23,6 @@
 				</div>				
 			<% end_if %>
 		<% end_if %>
-		<p>See More Events on <a href="http://afterclass.uiowa.edu/" target="_blank">After Class</a></p>
+		<p><a href="http://afterclass.uiowa.edu/" target="_blank">See More Events on After Class</a></p>
 	</div>
 </div>

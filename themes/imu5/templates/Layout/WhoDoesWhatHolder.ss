@@ -27,7 +27,7 @@
 								<% if $OfficeName %><p><span>Office Name:</span> $OfficeName</p><% end_if %>
 								<% if $OfficeLocation %><p><span>Location:</span> $OfficeLocation</p><% end_if %>
 								<% if $PhoneNumber %><p><span>Phone Number:</span> $PhoneNumber</p><% end_if %>
-								<% if $EmailAddress %><p><span>Email:</span> $EmailAddress </p><% end_if %>
+								<% if $EmailAddress %><p><span>Email:</span> <a href="mailto:$EmailAddress">$EmailAddress</a></p><% end_if %>
 								<% if $Website %><p><a href="$Website">Visit Website</a></p><% end_if %>
 							</div>						
 						 </div>	

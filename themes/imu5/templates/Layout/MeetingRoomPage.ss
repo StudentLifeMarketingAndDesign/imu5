@@ -181,8 +181,8 @@
 				</div>
 
 				<div class="well">
-					<!--<button class="btn btn-primary">Reserve This Room</button>-->
-					<p><a href="event-services/reservations/">Make a reservation</a></p>
+					<button class="btn btn-primary"><a href="event-services/reservations/">Make a reservation</a></button>
+
 				</div>
 
 				<% if StandardCapacity %>

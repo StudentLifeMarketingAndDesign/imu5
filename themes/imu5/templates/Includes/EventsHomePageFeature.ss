@@ -6,7 +6,7 @@
 				<% loop AfterClassEvents("Iowa Memorial Union").Limit(4) %>
 					<div class="event">
 						<h4><a href="$Link" target="_blank">  $Title </a></h4>
-						<p><% include ACDateLocation %></p>
+						<p><% include ACDateTime %></p>
 					</div>
 				<% end_loop %>
 			</div>

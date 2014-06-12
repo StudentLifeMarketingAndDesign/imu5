@@ -2,6 +2,8 @@
 class WhoDoesWhatHolder extends BlogHolder {
 
 	private static $db = array(
+		"facebook_iframe" => "HTMLText",
+		"twitter_iframe" => "HTMLText",
 	);
 
 	private static $has_one = array(
@@ -22,7 +24,8 @@ class WhoDoesWhatHolder extends BlogHolder {
 		//$f->removeByName("Content");
 		//$gridFieldConfig = GridFieldConfig_RecordEditor::create();
 		//$gridFieldConfig->addComponent(new GridFieldSortableRows('SortOrder'));
-		
+		$f->addFieldToTab('Root.Main', new TextField('facebook_iframe','Facebook iFrame Code'));
+		$f->addFieldToTab('Root.Main', new TextField('twitter_iframe','Twitter iFrame Code'));
 		
 		/*$gridField = new GridField("StaffTeam", "Staff Teams", StaffTeam::get(), GridFieldConfig_RecordEditor::create());
 		$f->addFieldToTab("Root.Main", $gridField); // add the grid field to a tab in the CMS	*/

@@ -52,7 +52,17 @@
         	<% include SideBarSearch %>
         	<% include SideNav %>
         	<div id="sidebar-tags">
-        	$SideBarView
+        		<% if facebook_iframe %>
+        
+        			$facebook_iframe
+
+        		<% end_if %>
+        		<% if twitter_iframe %>
+        		<div id="twit-div">
+        			$twitter_iframe
+        		</div>
+        		<% end_if %>
+        		$SideBarView
         	</div>
         </aside>
     </div>

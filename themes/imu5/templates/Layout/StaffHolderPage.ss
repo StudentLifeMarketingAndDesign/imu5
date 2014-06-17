@@ -1,7 +1,7 @@
 <div class="gradient">
 	<div class="container clearfix">
 		<div class="white-cover"></div>
-		<section class="main-content">
+		<section class="main-content staff-content">
 			$Form
 			$Content
 			<ul class="staff-list no-teams">

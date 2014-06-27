@@ -181,7 +181,11 @@
 				</div>
 
 				<div class="well">
-					<a href="event-services/reservations/">Make a reservation</a>
+					<% if InSection("spaces") %>
+						<p>Make a reservation for this space by calling 319-335-3114.</p>
+					<% else %>
+						<a href="event-services/reservations/" class="btn">Make a reservation</a>
+					<% end_if %>
 				</div>
 
 				<% if StandardCapacity %>

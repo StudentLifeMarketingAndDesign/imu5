@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "37a26dbcd94c34cb939f46dad8576b04",
+    "hash": "b78860082d19ebd5c8ffb30cf2afa0f5",
     "packages": [
         {
             "name": "colymba/gridfield-bulk-editing-tools",
@@ -143,12 +143,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events.git",
-                "reference": "efe305df7d045871b1ea7be6d80f3869d36a7de8"
+                "reference": "e22aec089b82d4c876af7174ea332f1f1dcf3138"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/ac-json-events/zipball/efe305df7d045871b1ea7be6d80f3869d36a7de8",
-                "reference": "efe305df7d045871b1ea7be6d80f3869d36a7de8",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/ac-json-events/zipball/e22aec089b82d4c876af7174ea332f1f1dcf3138",
+                "reference": "e22aec089b82d4c876af7174ea332f1f1dcf3138",
                 "shasum": ""
             },
             "require": {
@@ -167,7 +167,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/tree/master",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/issues"
             },
-            "time": "2014-08-25 20:52:27"
+            "time": "2014-08-25 21:33:28"
         },
         {
             "name": "md/division-bar",

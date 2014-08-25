@@ -1,9 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
     ],
-    "hash": "729f1048ee5b5dae7a0613fd1e6fb6ed",
+    "hash": "0ed00dd5590cdc63524dfdc373e91349",
     "packages": [
         {
             "name": "colymba/gridfield-bulk-editing-tools",
@@ -139,16 +140,16 @@
         },
         {
             "name": "md/ac-json-events",
-            "version": "dev-localist",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events.git",
-                "reference": "1965a2b14bddbda84b09be093e0839f28d6dfa98"
+                "reference": "222314c41a49ccd596981a76611bf5ad3edb6890"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/ac-json-events/zipball/1965a2b14bddbda84b09be093e0839f28d6dfa98",
-                "reference": "1965a2b14bddbda84b09be093e0839f28d6dfa98",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/ac-json-events/zipball/222314c41a49ccd596981a76611bf5ad3edb6890",
+                "reference": "222314c41a49ccd596981a76611bf5ad3edb6890",
                 "shasum": ""
             },
             "require": {
@@ -164,10 +165,10 @@
             },
             "description": "After Class JSON Display Module",
             "support": {
-                "source": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/tree/localist",
+                "source": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/tree/master",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/issues"
             },
-            "time": "2014-08-20 20:56:07"
+            "time": "2014-08-25 19:34:04"
         },
         {
             "name": "md/division-bar",
@@ -207,16 +208,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-project.git",
-                "reference": "536a21be938ade5dadd39f9d80e6bc5faf8c410a"
+                "reference": "42ef8ec9eddb888e8ce428413a3a885e76f7e19c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/536a21be938ade5dadd39f9d80e6bc5faf8c410a",
-                "reference": "536a21be938ade5dadd39f9d80e6bc5faf8c410a",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/42ef8ec9eddb888e8ce428413a3a885e76f7e19c",
+                "reference": "42ef8ec9eddb888e8ce428413a3a885e76f7e19c",
                 "shasum": ""
             },
             "require": {
                 "colymba/gridfield-bulk-editing-tools": "*",
+                "md/ac-json-events": "dev-master",
                 "md/division-bar": "*",
                 "php": ">=5.3.2",
                 "silverstripe-themes/simple": "*",
@@ -246,7 +248,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/division-project/tree/master",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-project/issues"
             },
-            "time": "2014-07-28 20:14:42"
+            "time": "2014-08-25 19:34:50"
         },
         {
             "name": "silverstripe-themes/simple",
@@ -290,12 +292,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-blog.git",
-                "reference": "095a97018e43840859b8888fd3ecbb9e27053e0d"
+                "reference": "8b28a1d047aea632b7ce9c552f0e04c6a282816c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-blog/zipball/095a97018e43840859b8888fd3ecbb9e27053e0d",
-                "reference": "095a97018e43840859b8888fd3ecbb9e27053e0d",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-blog/zipball/8b28a1d047aea632b7ce9c552f0e04c6a282816c",
+                "reference": "8b28a1d047aea632b7ce9c552f0e04c6a282816c",
                 "shasum": ""
             },
             "require": {
@@ -323,7 +325,7 @@
                 "blog",
                 "silverstripe"
             ],
-            "time": "2014-07-07 08:11:18"
+            "time": "2014-08-24 23:20:55"
         },
         {
             "name": "silverstripe/cms",
@@ -613,12 +615,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-userforms.git",
-                "reference": "e20ee394f27c62c47ad375ab2b1f08bb6a2fdf80"
+                "reference": "fcba06c1664e4c2ae5c7e2998719af92d5b0b63d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-userforms/zipball/e20ee394f27c62c47ad375ab2b1f08bb6a2fdf80",
-                "reference": "e20ee394f27c62c47ad375ab2b1f08bb6a2fdf80",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-userforms/zipball/fcba06c1664e4c2ae5c7e2998719af92d5b0b63d",
+                "reference": "fcba06c1664e4c2ae5c7e2998719af92d5b0b63d",
                 "shasum": ""
             },
             "require": {
@@ -649,7 +651,7 @@
                 "silverstripe",
                 "userforms"
             ],
-            "time": "2014-08-21 03:59:47"
+            "time": "2014-08-25 06:42:29"
         },
         {
             "name": "silverstripe/widgets",
@@ -868,9 +870,9 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "md/division-project": 20,
-        "md/ac-json-events": 20
+        "md/division-project": 20
     },
+    "prefer-stable": false,
     "platform": {
         "php": ">=5.3.2"
     },

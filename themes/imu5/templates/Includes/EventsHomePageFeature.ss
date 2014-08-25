@@ -6,7 +6,7 @@
 			<div class="event-list">
 				<% loop EventList.Limit(4) %>
 					<div class="event">
-						<h4><a href="$Link" target="_blank">  $Title </a></h4>
+						<h4><a href="$LocalistLink" target="_blank">  $Title </a></h4>
 						<p><% include ACDateLocation %></p>
 					</div>
 				<% end_loop %>

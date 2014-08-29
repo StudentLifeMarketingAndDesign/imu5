@@ -1,7 +1,8 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
     ],
     "hash": "b78860082d19ebd5c8ffb30cf2afa0f5",
     "packages": [
@@ -11,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/colymba/GridFieldBulkEditingTools.git",
-                "reference": "1906afcba4bbe0e56d7d99ff6d6a43b7e07507d7"
+                "reference": "013a4fde7babd6eacc67874021fb43be9b085a0f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/colymba/GridFieldBulkEditingTools/zipball/1906afcba4bbe0e56d7d99ff6d6a43b7e07507d7",
-                "reference": "1906afcba4bbe0e56d7d99ff6d6a43b7e07507d7",
+                "url": "https://api.github.com/repos/colymba/GridFieldBulkEditingTools/zipball/013a4fde7babd6eacc67874021fb43be9b085a0f",
+                "reference": "013a4fde7babd6eacc67874021fb43be9b085a0f",
                 "shasum": ""
             },
             "require": {
@@ -45,7 +46,7 @@
                 "gridfield bulk upload",
                 "silverstripe"
             ],
-            "time": "2014-08-08 15:34:11"
+            "time": "2014-08-29 07:00:51"
         },
         {
             "name": "composer/installers",
@@ -143,12 +144,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events.git",
-                "reference": "e22aec089b82d4c876af7174ea332f1f1dcf3138"
+                "reference": "395647ede7acf2b5d3f9bbe3de51cb35d599577e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/ac-json-events/zipball/e22aec089b82d4c876af7174ea332f1f1dcf3138",
-                "reference": "e22aec089b82d4c876af7174ea332f1f1dcf3138",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/ac-json-events/zipball/395647ede7acf2b5d3f9bbe3de51cb35d599577e",
+                "reference": "395647ede7acf2b5d3f9bbe3de51cb35d599577e",
                 "shasum": ""
             },
             "require": {
@@ -167,7 +168,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/tree/master",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/issues"
             },
-            "time": "2014-08-25 21:33:28"
+            "time": "2014-08-28 18:37:05"
         },
         {
             "name": "md/division-bar",
@@ -871,6 +872,7 @@
     "stability-flags": {
         "md/division-project": 20
     },
+    "prefer-stable": false,
     "platform": {
         "php": ">=5.3.2"
     },

@@ -3,8 +3,7 @@
 	"description": "The SilverStripe Framework Installer",
 	"require": {
 		"php": ">=5.3.2",
-		"md/division-project": "dev-master",
-		"md/ac-json-events": "dev-master"
+		"md/division-project": "dev-master"
 	},
 	"config": {
 		"process-timeout": 600	
@@ -20,14 +19,12 @@
         {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/division-bar"
-
-        },
+        },     
         {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events"
 
         }
-        
     ]
 
 }

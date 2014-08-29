@@ -10,7 +10,7 @@
 	<meta name="viewport" content="width=device-width">
 	<link rel="shortcut icon" href="division-project/images/favicon.ico" />
 	
-	<title>$Title - $SiteConfig.Title - The University of Iowa</title>
+	<title>$Title | The University of Iowa</title>
 
 	<link rel="stylesheet" type="text/css" href="{$ThemeDir}/css/master.css" />
 

@@ -1,5 +1,5 @@
 <?php
-class HotelHomePage extends RoomPage {
+class HotelRoomPage extends RoomPage {
 
 	private static $db = array(
 	);

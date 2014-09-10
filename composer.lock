@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/colymba/GridFieldBulkEditingTools.git",
-                "reference": "013a4fde7babd6eacc67874021fb43be9b085a0f"
+                "reference": "4a349987a4c318a982e6174df276c16eafebb460"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/colymba/GridFieldBulkEditingTools/zipball/013a4fde7babd6eacc67874021fb43be9b085a0f",
-                "reference": "013a4fde7babd6eacc67874021fb43be9b085a0f",
+                "url": "https://api.github.com/repos/colymba/GridFieldBulkEditingTools/zipball/4a349987a4c318a982e6174df276c16eafebb460",
+                "reference": "4a349987a4c318a982e6174df276c16eafebb460",
                 "shasum": ""
             },
             "require": {
@@ -46,7 +46,7 @@
                 "gridfield bulk upload",
                 "silverstripe"
             ],
-            "time": "2014-08-29 07:00:51"
+            "time": "2014-09-06 12:51:07"
         },
         {
             "name": "composer/installers",
@@ -144,12 +144,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events.git",
-                "reference": "b2a0f5119d10dd137fd46a5cba816f33bcff2be0"
+                "reference": "defe04e183923dc40144a9ea4220d0d2e42f399c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/ac-json-events/zipball/b2a0f5119d10dd137fd46a5cba816f33bcff2be0",
-                "reference": "b2a0f5119d10dd137fd46a5cba816f33bcff2be0",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/ac-json-events/zipball/defe04e183923dc40144a9ea4220d0d2e42f399c",
+                "reference": "defe04e183923dc40144a9ea4220d0d2e42f399c",
                 "shasum": ""
             },
             "require": {
@@ -168,7 +168,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/tree/master",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/issues"
             },
-            "time": "2014-09-02 19:57:14"
+            "time": "2014-09-10 21:13:29"
         },
         {
             "name": "md/division-bar",
@@ -784,12 +784,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unclecheese/silverstripe-event-calendar.git",
-                "reference": "c5a68969297ddcbc97f83c229e561d5171e3cdbb"
+                "reference": "0578b9db748d47ebb52013b8a30d62c6c7227837"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/unclecheese/silverstripe-event-calendar/zipball/c5a68969297ddcbc97f83c229e561d5171e3cdbb",
-                "reference": "c5a68969297ddcbc97f83c229e561d5171e3cdbb",
+                "url": "https://api.github.com/repos/unclecheese/silverstripe-event-calendar/zipball/0578b9db748d47ebb52013b8a30d62c6c7227837",
+                "reference": "0578b9db748d47ebb52013b8a30d62c6c7227837",
                 "shasum": ""
             },
             "require": {
@@ -819,7 +819,7 @@
                 "events",
                 "silverstripe"
             ],
-            "time": "2014-07-22 03:27:16"
+            "time": "2014-09-04 09:45:27"
         },
         {
             "name": "undefinedoffset/sortablegridfield",

@@ -1,18 +1,18 @@
 <div class="module events">
 	<div class="inner">
 		<h3>Events Listed at the IMU</h3>
-		<% with Page("calendar") %>
-			<% if EventList %>
+		<% with $LocalistCalendar %>
+			<% if $EventList %>
 			<div class="event-list">
-				<% loop EventList.Limit(4) %>
+				<% loop $EventList.Limit(4) %>
 					<div class="event">
-						<h4><a href="$LocalistLink" target="_blank">  $Title </a></h4>
+						<h4><a href="$AfterClassLink" target="_blank">  $Title </a></h4>
 						<p><% include LocalistDatesNoLinks %></p>
 					</div>
 				<% end_loop %>
 			</div>
 			<% end_if %>
 		<% end_with %>
-		<p><a href="http://afterclass.uiowa.edu/" target="_blank">See More Events on After Class</a></p>
+		<p><a href="http://events.uiowa.edu/iowa_memorial_union/calendar" target="_blank">See all events happening at the IMU</a></p>
 	</div>
 </div>

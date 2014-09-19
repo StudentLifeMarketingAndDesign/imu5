@@ -23,7 +23,8 @@ class MeetingRoomPage extends Page {
 	'HasSpeakers' => 'Boolean',
 	'HasMarkerboard'	 => 'Boolean',
 	'HasMicrophone'	 => 'Boolean',
-	'HasWifi'	 => 'Boolean'
+	'HasWifi'	 => 'Boolean',
+	'ExternalLink' => 'Text'
 	);
 
 	static $has_one = array(
@@ -42,6 +43,8 @@ class MeetingRoomPage extends Page {
 		$fields = parent::getCMSFields();
 
 		$fields->removeByName("Metadata");
+
+		$fields->addFieldToTab('Root.Main', new TextField('ExternalLink', 'Redirect this page to the following URL:'), 'Content');
 
 		// $fields->addFieldToTab('Root.Images', new UploadField('ThumbnailImage', 'Thumbnail Image (120 x 85)', null, null, null, $this->ClassName));
 		$fields->addFieldToTab('Root.Images', new UploadField('SlideshowImage1', 'Slideshow Image 1', null, null, null, $this->ClassName));
@@ -145,15 +148,18 @@ class MeetingRoomPage_Controller extends Page_Controller {
 
 	public function init() {
 		parent::init();
+		if($link = $this->ExternalLink) {
+			$this->redirect($link, 301);
+			return;
+		}
+	}
 
-		function HasAnyAmenities () {
+	public function HasAnyAmenities () {
     	return $this->HasComputer ||
     	       $this->HasEthernetConnection ||
     	       $this->HasProjector ||
     	       $this->HasDVD ||
     	       $this->HasWifi;
-		}
-
 	}
 
 }

@@ -24,6 +24,7 @@ class MeetingRoomPage extends Page {
 	'HasMarkerboard'	 => 'Boolean',
 	'HasMicrophone'	 => 'Boolean',
 	'HasWifi'	 => 'Boolean',
+	'HasElectricPiano' => 'Boolean',
 	'ExternalLink' => 'Text'
 	);
 
@@ -76,7 +77,7 @@ class MeetingRoomPage extends Page {
 		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasMarkerboard','Has Markerboard?'));
 		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasMicrophone','Has Microphone?'));
 		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasWifi','Has Wifi?'));
-
+		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasElectricPiano','Has Electric Piano?'));
 		return $fields;
 
 	}

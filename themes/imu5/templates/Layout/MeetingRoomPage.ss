@@ -84,19 +84,19 @@
 							<% if HasEthernetConnection %>
 								<p>
 									<!-- <span><img src="$ThemeDir/images/ethernet_connection_icon.png" width="24"></span> -->
-									Ethernet Connection
+									Ethernet connection
 								</p>
 							<% end_if %>
 							<% if HasProjectorScreen %>
 								<p>
 									<!-- <span><img src="$ThemeDir/images/projector_icon.png" width="24"></span> -->
-									Projector Screen
+									Projector screen
 								</p>
 							<% end_if %>
 							<% if HasDVD %>
 								<p>
 									<!-- <span><img src="$ThemeDir/images/dvd_vcr.png" height="24"></span> -->
-									DVD Player
+									DVD player
 								</p>
 							<% end_if %>
 							<% if HasSpeakers %>
@@ -121,6 +121,12 @@
 								<p>
 									<!-- <span><img src="$ThemeDir/images/wifi_icon.png" height="24"></span> -->
 									Wifi
+								</p>
+							<% end_if %>
+							<% if HasElectricPiano %>
+								<p>
+									<!-- <span><img src="$ThemeDir/images/wifi_icon.png" height="24"></span> -->
+									Electric piano
 								</p>
 							<% end_if %>
 						</div>
@@ -190,7 +196,8 @@
 
 				<% if StandardCapacity %>
 					<p class="standard_setup_notice">
-						* denotes a room's standard setup. The non-standard setup fee is $40.
+						* denotes a room's standard setup. The non-standard setup fee is 
+						<% if $URLSegment == "northwestern-room" || $URLSegment == "ohio-state-room" %>{$DollarSign}80<% else %>{$DollarSign}40<% end_if %>  
 					</p>
 				<% end_if %>
 

@@ -6,8 +6,8 @@
 			<div class="event-list">
 				<% loop $EventList.Limit(4) %>
 					<div class="event">
-						<h4><a href="$AfterClassLink" target="_blank">  $Title </a></h4>
-						<p><% include LocalistDatesNoLinks %>- $Content.Summary(10) <a target="_blank" href="$AfterClassLink">Continue Reading</a></p>
+						<h4><a href="$AfterClassLink" target="_blank">  $Title.LimitCharacters(20) </a></h4>
+						<p><% include LocalistDatesNoLinks %>- $Content.Summary(5) <a target="_blank" href="$AfterClassLink">Continue Reading</a></p>
 					</div>
 				<% end_loop %>
 			</div>

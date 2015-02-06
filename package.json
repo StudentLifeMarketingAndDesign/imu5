@@ -3,6 +3,7 @@
   "version": "0.1.1",
   "devDependencies": {
     "grunt": "*",
+    "grunt-criticalcss": "^0.5.0",
     "grunt-contrib-concat": "*",
     "grunt-contrib-uglify": "*",
     "grunt-contrib-sass": "*",

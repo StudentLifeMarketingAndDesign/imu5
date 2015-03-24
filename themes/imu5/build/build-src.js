@@ -9910,7 +9910,7 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
         touch = (( "ontouchstart" in window ) || msGesture || window.DocumentTouch && document instanceof DocumentTouch) && slider.vars.touch,
         // depricating this idea, as devices are being released with both of these events
         //eventType = (touch) ? "touchend" : "click",
-        eventType = "click touchend MSPointerUp",
+        eventType = "click touchend MSPointerUp keyup",
         watchedEvent = "",
         watchedEventClearTimer,
         vertical = slider.vars.direction === "vertical",
@@ -10486,7 +10486,8 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
         }
       },
       uniqueID: function($clone) {
-        $clone.find( '[id]' ).each(function() {
+        // Append _clone to current level and children elements with id attributes
+        $clone.filter( '[id]' ).add($clone.find( '[id]' )).each(function() {
           var $this = $(this);
           $this.attr( 'id', $this.attr( 'id' ) + '_clone' );
         });
@@ -10774,9 +10775,8 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
           slider.cloneOffset = 1;
           // clear out old clones
           if (type !== "init") slider.container.find('.clone').remove();
-          // slider.container.append(slider.slides.first().clone().addClass('clone').attr('aria-hidden', 'true')).prepend(slider.slides.last().clone().addClass('clone').attr('aria-hidden', 'true'));
-		      methods.uniqueID( slider.slides.first().clone().addClass('clone').attr('aria-hidden', 'true') ).appendTo( slider.container );
-		      methods.uniqueID( slider.slides.last().clone().addClass('clone').attr('aria-hidden', 'true') ).prependTo( slider.container );
+          slider.container.append(methods.uniqueID(slider.slides.first().clone().addClass('clone')).attr('aria-hidden', 'true'))
+                          .prepend(methods.uniqueID(slider.slides.last().clone().addClass('clone')).attr('aria-hidden', 'true'));
         }
         slider.newSlides = $(slider.vars.selector, slider);
 
@@ -10978,7 +10978,7 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
     video: false,                   //{NEW} Boolean: If using video in the slider, will prevent CSS3 3D Transforms to avoid graphical glitches
 
     // Primary Controls
-    controlNav: true,               //Boolean: Create navigation for paging control of each clide? Note: Leave true for manualControls usage
+    controlNav: true,               //Boolean: Create navigation for paging control of each slide? Note: Leave true for manualControls usage
     directionNav: true,             //Boolean: Create navigation for previous/next navigation? (true/false)
     prevText: "Previous",           //String: Set the text for the "previous" directionNav item
     nextText: "Next",               //String: Set the text for the "next" directionNav item
@@ -11048,16 +11048,505 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
   };
 })(jQuery);
 
-$(document).ready(function() {	
+/*!
+  hey, [be]Lazy.js - v1.3.1 - 2015.02.01 
+  A lazy loading and multi-serving image script
+  (c) Bjoern Klinggaard - @bklinggaard - http://dinbror.dk/blazy
+*/
+;(function(root, blazy) {
+	if (typeof define === 'function' && define.amd) {
+        // AMD. Register bLazy as an anonymous module
+        define(blazy);
+	} else if (typeof exports === 'object') {
+		// Node. Does not work with strict CommonJS, but
+        // only CommonJS-like environments that support module.exports,
+        // like Node. 
+		module.exports = blazy();
+	} else {
+        // Browser globals. Register bLazy on window
+        root.Blazy = blazy();
+	}
+})(this, function () {
+	'use strict';
+	
+	//vars
+	var source, options, viewport, images, count, isRetina, destroyed;
+	//throttle vars
+	var validateT, saveViewportOffsetT;
+	
+	// constructor
+	function Blazy(settings) {
+		//IE7- fallback for missing querySelectorAll support
+		if (!document.querySelectorAll) {
+			var s=document.createStyleSheet();
+			document.querySelectorAll = function(r, c, i, j, a) {
+				a=document.all, c=[], r = r.replace(/\[for\b/gi, '[htmlFor').split(',');
+				for (i=r.length; i--;) {
+					s.addRule(r[i], 'k:v');
+					for (j=a.length; j--;) a[j].currentStyle.k && c.push(a[j]);
+						s.removeRule(0);
+				}
+				return c;
+			};
+		}
+		//init vars
+		destroyed 				= true;
+		images 					= [];
+		viewport				= {};
+		//options
+		options 				= settings 				|| {};
+		options.error	 		= options.error 		|| false;
+		options.offset			= options.offset 		|| 100;
+		options.success			= options.success 		|| false;
+	  	options.selector 		= options.selector 		|| '.b-lazy';
+		options.separator 		= options.separator 	|| '|';
+		options.container		= options.container 	?  document.querySelectorAll(options.container) : false;
+		options.errorClass 		= options.errorClass 	|| 'b-error';
+		options.breakpoints		= options.breakpoints	|| false;
+		options.successClass 	= options.successClass 	|| 'b-loaded';
+		options.src = source 	= options.src			|| 'data-src';
+		isRetina				= window.devicePixelRatio > 1;
+		viewport.top 			= 0 - options.offset;
+		viewport.left 			= 0 - options.offset;
+		//throttle, ensures that we don't call the functions too often
+		validateT				= throttle(validate, 25); 
+		saveViewportOffsetT			= throttle(saveViewportOffset, 50);
+
+		saveViewportOffset();	
+				
+		//handle multi-served image src
+		each(options.breakpoints, function(object){
+			if(object.width >= window.screen.width) {
+				source = object.src;
+				return false;
+			}
+		});
+		
+		// start lazy load
+		initialize();	
+  	}
+	
+	/* public functions
+	************************************/
+	Blazy.prototype.revalidate = function() {
+ 		initialize();
+   	};
+	Blazy.prototype.load = function(element, force){
+		if(!isElementLoaded(element)) loadImage(element, force);
+	};
+	Blazy.prototype.destroy = function(){
+		if(options.container){
+			each(options.container, function(object){
+				unbindEvent(object, 'scroll', validateT);
+			});
+		}
+		unbindEvent(window, 'scroll', validateT);
+		unbindEvent(window, 'resize', validateT);
+		unbindEvent(window, 'resize', saveViewportOffsetT);
+		count = 0;
+		images.length = 0;
+		destroyed = true;
+	};
+	
+	/* private helper functions
+	************************************/
+	function initialize(){
+		// First we create an array of images to lazy load
+		createImageArray(options.selector);
+		// Then we bind resize and scroll events if not already binded
+		if(destroyed) {
+			destroyed = false;
+			if(options.container) {
+	 			each(options.container, function(object){
+	 				bindEvent(object, 'scroll', validateT);
+	 			});
+	 		}
+			bindEvent(window, 'resize', saveViewportOffsetT);
+			bindEvent(window, 'resize', validateT);
+	 		bindEvent(window, 'scroll', validateT);
+		}
+		// And finally, we start to lazy load. Should bLazy ensure domready?
+		validate();	
+	}
+	
+	function validate() {
+		for(var i = 0; i<count; i++){
+			var image = images[i];
+ 			if(elementInView(image) || isElementLoaded(image)) {
+				Blazy.prototype.load(image);
+ 				images.splice(i, 1);
+ 				count--;
+ 				i--;
+ 			} 
+ 		}
+		if(count === 0) {
+			Blazy.prototype.destroy();
+		}
+	}
+	
+	function loadImage(ele, force){
+		// if element is visible
+		if(force || (ele.offsetWidth > 0 && ele.offsetHeight > 0)) {
+			var dataSrc = ele.getAttribute(source) || ele.getAttribute(options.src); // fallback to default data-src
+			if(dataSrc) {
+				var dataSrcSplitted = dataSrc.split(options.separator);
+				var src = dataSrcSplitted[isRetina && dataSrcSplitted.length > 1 ? 1 : 0];
+				var img = new Image();
+				// cleanup markup, remove data source attributes
+				each(options.breakpoints, function(object){
+					ele.removeAttribute(object.src);
+				});
+				ele.removeAttribute(options.src);
+				img.onerror = function() {
+					if(options.error) options.error(ele, "invalid");
+					ele.className = ele.className + ' ' + options.errorClass;
+				}; 
+				img.onload = function() {
+					// Is element an image or should we add the src as a background image?
+			      		ele.nodeName.toLowerCase() === 'img' ? ele.src = src : ele.style.backgroundImage = 'url("' + src + '")';	
+					ele.className = ele.className + ' ' + options.successClass;	
+					if(options.success) options.success(ele);
+				};
+				img.src = src; //preload image
+			} else {
+				if(options.error) options.error(ele, "missing");
+				ele.className = ele.className + ' ' + options.errorClass;
+			}
+		}
+	 }
+			
+	function elementInView(ele) {
+		var rect = ele.getBoundingClientRect();
+		
+		return (
+			// Intersection
+			rect.right >= viewport.left
+			&& rect.bottom >= viewport.top
+			&& rect.left <= viewport.right
+			&& rect.top <= viewport.bottom
+		 );
+	 }
+	 
+	 function isElementLoaded(ele) {
+		 return (' ' + ele.className + ' ').indexOf(' ' + options.successClass + ' ') !== -1;
+	 }
+	 
+	 function createImageArray(selector) {
+ 		var nodelist 	= document.querySelectorAll(selector);
+ 		count 			= nodelist.length;
+ 		//converting nodelist to array
+ 		for(var i = count; i--; images.unshift(nodelist[i])){}
+	 }
+	 
+	 function saveViewportOffset(){
+		 viewport.bottom = (window.innerHeight || document.documentElement.clientHeight) + options.offset;
+		 viewport.right = (window.innerWidth || document.documentElement.clientWidth) + options.offset;
+	 }
+	 
+	 function bindEvent(ele, type, fn) {
+		 if (ele.attachEvent) {
+         		ele.attachEvent && ele.attachEvent('on' + type, fn);
+       	 	} else {
+         	       ele.addEventListener(type, fn, false);
+       		}
+	 }
+	 
+	 function unbindEvent(ele, type, fn) {
+		 if (ele.detachEvent) {
+         		ele.detachEvent && ele.detachEvent('on' + type, fn);
+       	 	} else {
+         	       ele.removeEventListener(type, fn, false);
+       		}
+	 }
+	 
+	 function each(object, fn){
+ 		if(object && fn) {
+ 			var l = object.length;
+ 			for(var i = 0; i<l && fn(object[i], i) !== false; i++){}
+ 		}
+	 }
+	 
+	 function throttle(fn, minDelay) {
+     		 var lastCall = 0;
+		 return function() {
+			 var now = +new Date();
+         		 if (now - lastCall < minDelay) {
+           			 return;
+			 }
+         		 lastCall = now;
+         		 fn.apply(images, arguments);
+       		 };
+	 }
+  	
+	 return Blazy;
+});
+
+(function (window, undefined) {
+    "use strict";
+    // test for REM unit support
+    var cssremunit =  function() {
+        var div = document.createElement( 'div' );
+            div.style.cssText = 'font-size: 1rem;';
+
+        return (/rem/).test(div.style.fontSize);
+    },
+
+    // filter returned links for stylesheets
+    isStyleSheet = function () {
+        var styles = document.getElementsByTagName('link'),
+            filteredLinks = [];
+
+        for ( var i = 0; i < styles.length; i++) {
+            if ( styles[i].rel.toLowerCase() === 'stylesheet' && styles[i].getAttribute('data-norem') === null ) {
+
+                filteredLinks.push( styles[i].href );
+            }
+        }
+
+        return filteredLinks;
+    },
+
+   processLinks = function () {
+        //prepare to match each link
+        for( var i = 0; i < links.length; i++ ){
+            xhr( links[i], storeCSS );
+        }
+    },
+
+    storeCSS = function ( response, link ) {
+
+        preCSS.push(response.responseText);
+        CSSLinks.push(link);
+
+        if( CSSLinks.length === links.length ){
+            for( var j = 0; j <  CSSLinks.length; j++ ){
+                matchCSS( preCSS[j], CSSLinks[j] );
+            }
+
+            if( ( links = importLinks.slice(0) ).length > 0 ){ //after finishing all current links, set links equal to the new imports found
+                CSSLinks = [];
+                preCSS = [];
+                importLinks = [];
+                processLinks();
+            } else {
+                buildCSS();
+            }
+        }
+    },
+
+    matchCSS = function ( sheetCSS, link ) { // collect all of the rules from the xhr response texts and match them to a pattern
+        var clean = removeMediaQueries( sheetCSS ).replace(/\/\*[\s\S]*?\*\//g, ''), // remove MediaQueries and comments
+            pattern = /[\w\d\s\-\/\\\[\]:,.'"*()<>+~%#^$_=|@]+\{[\w\d\s\-\/\\%#:!;,.'"*()]+\d*\.?\d+rem[\w\d\s\-\/\\%#:!;,.'"*()]*\}/g, //find selectors that use rem in one or more of their rules
+            current = clean.match(pattern),
+            remPattern =/\d*\.?\d+rem/g,
+            remCurrent = clean.match(remPattern),
+            sheetPathPattern = /(.*\/)/,
+            sheetPath = sheetPathPattern.exec(link)[0], //relative path to css file specified in @import
+            importPattern = /@import (?:url\()?['"]?([^'\)"]*)['"]?\)?[^;]*/gm, //matches all @import variations outlined at: https://developer.mozilla.org/en-US/docs/Web/CSS/@import
+            importStatement;
+
+        while( (importStatement = importPattern.exec(sheetCSS)) !== null ){
+            importLinks.push( sheetPath + importStatement[1] );
+        }
+
+        if( current !== null && current.length !== 0 ){
+            found = found.concat( current ); // save all of the blocks of rules with rem in a property
+            foundProps = foundProps.concat( remCurrent ); // save all of the properties with rem
+        }
+    },
+
+    buildCSS = function () { // first build each individual rule from elements in the found array and then add it to the string of rules.
+        var pattern = /[\w\d\s\-\/\\%#:,.'"*()]+\d*\.?\d+rem[\w\d\s\-\/\\%#:!,.'"*()]*[;}]/g; // find properties with rem values in them
+        for( var i = 0; i < found.length; i++ ){
+            rules = rules + found[i].substr(0,found[i].indexOf("{")+1); // save the selector portion of each rule with a rem value
+            var current = found[i].match( pattern );
+            for( var j = 0; j<current.length; j++ ){ // build a new set of with only the selector and properties that have rem in the value
+                rules = rules + current[j];
+                if( j === current.length-1 && rules[rules.length-1] !== "}" ){
+                    rules = rules + "\n}";
+                }
+            }
+        }
+
+        parseCSS();
+    },
+
+    parseCSS = function () { // replace each set of parentheses with evaluated content
+        for( var i = 0; i < foundProps.length; i++ ){
+            css[i] = Math.round( parseFloat(foundProps[i].substr(0,foundProps[i].length-3)*fontSize) ) + 'px';
+        }
+
+        loadCSS();
+    },
+
+    loadCSS = function () { // replace and load the new rules
+        for( var i = 0; i < css.length; i++ ){ // only run this loop as many times as css has entries
+            if( css[i] ){
+                rules = rules.replace( foundProps[i],css[i] ); // replace old rules with our processed rules
+            }
+        }
+        var remcss = document.createElement( 'style' );
+        remcss.setAttribute( 'type', 'text/css' );
+        remcss.id = 'remReplace';
+        document.getElementsByTagName( 'head' )[0].appendChild( remcss );   // create the new element
+        if( remcss.styleSheet ) {
+            remcss.styleSheet.cssText = rules; // IE8 will not support innerHTML on read-only elements, such as STYLE
+        } else {
+            remcss.appendChild( document.createTextNode( rules ) );
+        }
+    },
+
+    xhr = function ( url, callback ) { // create new XMLHttpRequest object and run it
+        try {
+            //try to create a request object
+            //arranging the two conditions this way is for IE7/8's benefit
+            //so that it works with any combination of ActiveX or Native XHR settings, 
+            //as long as one or the other is enabled; but if both are enabled
+            //it prefers ActiveX, which means it still works with local files
+            //(Native XHR in IE7/8 is blocked and throws "access is denied",
+            // but ActiveX is permitted if the user allows it [default is to prompt])
+            var xhr = window.ActiveXObject ? ( new ActiveXObject('Microsoft.XMLHTTP') || new ActiveXObject('Msxml2.XMLHTTP') ) : new XMLHttpRequest();
+
+            xhr.open( 'GET', url, true );
+            xhr.onreadystatechange = function() {
+                if ( xhr.readyState === 4 ){
+                    callback(xhr, url);
+                } // else { callback function on AJAX error }
+            };
+
+            xhr.send( null );
+        } catch (e){
+            if ( window.XDomainRequest ) {
+                var xdr = new XDomainRequest();
+                xdr.open('get', url);
+                xdr.onload = function() {
+                    callback(xdr, url);
+                };
+                xdr.onerror = function() {
+                    return false; // xdr load fail
+                };
+                xdr.send();
+            }
+        }
+    },
+
+    // Remove queries.
+    removeMediaQueries = function(css) {
+        // Test for Media Query support
+        if ( !window.matchMedia && !window.msMatchMedia ) {
+            // If the browser doesn't support media queries, we find all @media declarations in the CSS and remove them.
+            // Note: Since @rules can't be nested in the CSS spec, we're safe to just check for the closest following "}}" to the "@media".
+            css = css.replace(/@media[\s\S]*?\}\s*\}/g, "");
+        }
+
+        return css;
+    };
+
+    if( !cssremunit() ){ // this checks if the rem value is supported
+        var rules = '', // initialize the rules variable in this scope so it can be used later
+            links = isStyleSheet(), // initialize the array holding the sheets urls for use later
+            importLinks = [], //initialize the array holding the import sheet urls for use later
+            found = [], // initialize the array holding the found rules for use later
+            foundProps = [], // initialize the array holding the found properties for use later
+            preCSS = [], // initialize array that holds css before being parsed
+            CSSLinks = [], //initialize array holding css links returned from xhr
+            css = [], // initialize the array holding the parsed rules for use later
+            fontSize = '';
+
+        // Notice: rem is a "root em" that means that in case when html element size was changed by css
+        // or style we should not change document.documentElement.fontSize to 1em - only body size should be changed
+        // to 1em for calculation
+
+        fontSize = (function () {
+            var doc = document,
+                docElement = doc.documentElement,
+                body = doc.body || doc.createElement('body'),
+                isFakeBody = !doc.body,
+                div = doc.createElement('div'),
+                currentSize = body.style.fontSize,
+                size;
+
+            if ( isFakeBody ) {
+                docElement.appendChild( body );
+            }
+
+            div.style.cssText = 'width:1em; position:absolute; visibility:hidden; padding: 0;';
+
+            body.style.fontSize = '1em';
+
+            body.appendChild( div );
+            size = div.offsetWidth;
+
+            if ( isFakeBody ) {
+                docElement.removeChild( body );
+            }
+            else {
+                body.removeChild( div );
+                body.style.fontSize = currentSize;
+            }
+
+            return size;
+        }());
+
+        processLinks();
+    } // else { do nothing, you are awesome and have REM support }
+
+})(window);
+
+/*!
+loadCSS: load a CSS file asynchronously.
+[c]2014 @scottjehl, Filament Group, Inc.
+Licensed MIT
+*/
+function loadCSS( href, before, media, callback ){
+	"use strict";
+	// Arguments explained:
+	// `href` is the URL for your CSS file.
+	// `before` optionally defines the element we'll use as a reference for injecting our <link>
+	// By default, `before` uses the first <script> element in the page.
+	// However, since the order in which stylesheets are referenced matters, you might need a more specific location in your document.
+	// If so, pass a different reference element to the `before` argument and it'll insert before that instead
+	// note: `insertBefore` is used instead of `appendChild`, for safety re: http://www.paulirish.com/2011/surefire-dom-element-insertion/
+	var ss = window.document.createElement( "link" );
+	var ref = before || window.document.getElementsByTagName( "script" )[ 0 ];
+	var sheets = window.document.styleSheets;
+	ss.rel = "stylesheet";
+	ss.href = href;
+	// temporarily, set media to something non-matching to ensure it'll fetch without blocking render
+	ss.media = "only x";
+	ss.onload = callback || function() {};
+	// inject link
+	ref.parentNode.insertBefore( ss, ref );
+	// This function sets the link's media back to `all` so that the stylesheet applies once it loads
+	// It is designed to poll until document.styleSheets includes the new sheet.
+	function toggleMedia(){
+		var defined;
+		for( var i = 0; i < sheets.length; i++ ){
+			if( sheets[ i ].href && sheets[ i ].href.indexOf( href ) > -1 ){
+				defined = true;
+			}
+		}
+		if( defined ){
+			ss.media = media || "all";
+		}
+		else {
+			setTimeout( toggleMedia );
+		}
+	}
+	toggleMedia();
+	return ss;
+}
+
+$(document).ready(function() {
 
     // Hide the directory navigation
-    $('.division-directory').hide();
+    // $('.division-directory').hide();
 
 
     // Show/Hide the directory navigation on-click
     $('.directory-toggle').click(function() {
         $(this).toggleClass("active");
-        $('.division-directory').slideToggle();
+        $('.division-directory').toggleClass("active");
         return false;
     });
 
@@ -11067,7 +11556,7 @@ $(document).ready(function() {
         $(this).toggleClass('active');
         $('.division-search').slideToggle();
         return false;
-    });    
+    });
 
 
     // For small screens - show the directory
@@ -11078,37 +11567,39 @@ $(document).ready(function() {
     });
 
 });
-$(window).load(function() {
-	// add js class to body if javascript enabled
-    //$('body').addClass('js');
 
-	// Flexslider
-	// $('.flexslider').flexslider({
-	// 	slideshow: false
-	// });
-	
-	if ($('.flexslider').length){
+if ($('.flexslider').length){
 
-		$('.flexslider').show();
+	$('.flexslider').show();
 
-		 //Flexslider
-		$('.flexslider').flexslider({
-			animation: "slide",
-			animationLoop: true,
-			itemMargin: 0,
-			minItems: 1,
-			maxItems: 1,
-			itemWidth: 500,
-		});
-	}
+	 //Flexslider
+	$('.flexslider').flexslider({
+		animation: "slide",
+		animationLoop: true,
+		itemMargin: 0,
+		minItems: 1,
+		maxItems: 1,
+		itemWidth: 500,
+	});
+}
 
-	$('.nav-title a').click(function() {
-		$('.nav-main-wrapper').toggleClass('expand');
-		return false;
-	})
-
-	/* FitVids */
-	$(".module .media").fitVids();
-
+$('.nav-title a').click(function() {
+	$('.nav-main-wrapper').toggleClass('expand');
+	return false;
 });
-   
+
+/* FitVids */
+$(".module .media").fitVids();
+$(".hero-content").fitVids();
+
+var bLazy = new Blazy({
+	selector: 'img,.lazy',
+    breakpoints: [{
+        width: 420, //max-width
+        src: 'data-src-small'
+    }, {
+        width: 768, // max-width
+        src: 'data-src-medium'
+    }
+   ]
+});

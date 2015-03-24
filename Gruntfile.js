@@ -19,26 +19,21 @@ module.exports = function(grunt) {
         },                  // Target
         options: {              // Target options
           style: 'compressed',
-          sourcemap: 'true',
-          loadPath: ['division-project/scss']
+          loadPath: ['division-project/scss', 'division-bar/scss']
         }
       }
     },
 
     //concat all the files into the build folder
 
-    concat: {
+      concat: {
       js:{
-        src: ['division-project/bower_components/jquery/jquery.js',
-          'division-project/bower_components/jquery.equalheights/jquery.equalheights.js',
-          'division-project/bower_components/fitvids/jquery.fitvids.js',
-          'division-project/bower_components/flexslider/jquery.flexslider.js',
-          'division-bar/js/division-bar.js',
-          '<%=globalConfig.themeDir %>/js/*.js', 
-          'division-project/js/*.js'],
+        src: [
+          'division-project/build/build.src.js'],
         dest: '<%=globalConfig.themeDir %>/build/build-src.js'
       }
     },
+
 
     //minify those concated files
     //toggle mangle to leave variable names intact

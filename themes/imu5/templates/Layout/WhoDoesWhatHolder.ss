@@ -7,20 +7,20 @@
 	<div class="container clearfix">
 		<div class="white-cover"></div>
 	    <section class="main-content <% if $BackgroundImage %>margin-top<% end_if %>">
-        <h1>$Title</h1>
-				<% if SelectedTag %>
-					<p><a href="$Link">View All Departments</a></p>	
+	    		<h1>$Title</h1>	
+        		<% if SelectedTag %>
 					<div class="who-does-what-selected-tag">
-						<h2>
-						<% _t('VIEWINGTAGGED', 'Departments tagged with') %> '$SelectedTag': </h2>
+						
+						<p>
+						<% _t('VIEWINGTAGGED', 'Departments tagged with') %> '<strong>$SelectedTag</strong>':</p>
 					</div>
-					<hr />
-				<% end_if %>				
+				<% end_if %>
+        			
 				<% if $BlogEntries %>
 					<% loop $BlogEntries.Sort(Title) %>		
 						<section class="who-does-what-section blogSummary" id="{$URLSegment}">
 						  <div class="colgroup">
-							<div class="who-does-what col-1-2">
+							<div class="who-does-what">
 							<h3>
 								$MenuTitle
 							</h3>
@@ -28,7 +28,7 @@
 								<% if $OfficeLocation %><p><span>Location:</span> $OfficeLocation</p><% end_if %>
 								<% if $PhoneNumber %><p><span>Phone Number:</span> $PhoneNumber</p><% end_if %>
 								<% if $EmailAddress %><p><span>Email:</span> <a href="mailto:$EmailAddress">$EmailAddress</a></p><% end_if %>
-								<% if $Website %><p><a href="$Website">Visit Website</a></p><% end_if %>
+								<% if $Website %><p><a class="btn" href="$Website" target="_blank">Visit Website</a></p><% end_if %>
 							</div>						
 						 </div>	
 						<% if TagsCollection %>
@@ -44,27 +44,15 @@
 					   </section>
 					<hr>	
 					<% end_loop %> 
+					<p><a href="$Link" class="btn">View All Departments</a></p>	
 				<% else %>
 					<p><% _t('NOENTRIES', 'There are no departments with this tag.') %></p>
 				<% end_if %>
-        </section>
-        <aside class="sec-content hide-print">
-        	<% include SideBarSearch %>
-        	<% include SideNav %>
-        	<div id="sidebar-tags">
-        		<% if facebook_iframe %>
-        
-        			$facebook_iframe
 
-        		<% end_if %>
-        		<% if twitter_iframe %>
-        		<div id="twit-div">
-        			$twitter_iframe
-        		</div>
-        		<% end_if %>
-        		$SideBarView
-        	</div>
-        </aside>
+        </section>
+	    <section class="sec-content hide-print">
+	    	<% include BlogSideBar %>
+	    </section>
     </div>
 </div>
 <%-- <% include TopicsAndNews %> --%>

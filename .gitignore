@@ -27,23 +27,14 @@ mathspamprotection/
 node_modules/
 ac-json-events/
 cache/
-
 focuspoint/
-
 quickaddnew/
-
-<<<<<<< Updated upstream
 gridfieldajaxrefresh/
-
 gridfieldextensions/
-
 gridfieldpaginatorwithshowall/
-
 rss-display/
-
 staticpublishqueue/
-
 tenon/
-=======
 gridfieldextensions/
->>>>>>> Stashed changes
+flickr/
+staticpublisher/

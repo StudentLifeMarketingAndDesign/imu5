@@ -15,7 +15,8 @@ module.exports = function(grunt) {
     sass: {
       dist: { 
         files: {
-          '<%=globalConfig.themeDir %>/css/master.css' : '<%=globalConfig.themeDir %>/scss/master.scss'
+          '<%=globalConfig.themeDir %>/css/master.css' : '<%=globalConfig.themeDir %>/scss/master.scss',
+          '<%=globalConfig.themeDir %>/css/editor.css' : 'division-project/scss/editor.scss'
         },                  // Target
         options: {              // Target options
           style: 'compressed',
@@ -50,7 +51,7 @@ module.exports = function(grunt) {
     },
     watch: {
       scripts: {
-        files: ['<%=globalConfig.themeDir %>/js/*.js', '<%=globalConfig.themeDir %>/js/**/*.js'],
+        files: ['<%=globalConfig.themeDir %>/js/*.js', '<%=globalConfig.themeDir %>/js/**/*.js', 'division-project/build/build.src.js'],
         tasks: ['concat', 'uglify'],
         options: {
           spawn: true,

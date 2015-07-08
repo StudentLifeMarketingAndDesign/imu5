@@ -84,7 +84,7 @@ class MeetingRoomPage extends Page {
 	function getStandardCapacity () {
 		$capacities = array(
 			$this->TablesAndChairsCapacity,
-			$this->RoundedTablesCapacity,
+			$this->RoundTablesCapacity,
 			$this->TheaterCapacity,
 			$this->ClassroomCapacity,
 			$this->UshapeCapacity,
@@ -105,7 +105,7 @@ class MeetingRoomPage extends Page {
 		} else {
 			$capacities = array(
 				(int) $this->TablesAndChairsCapacity,
-				(int) $this->RoundedTablesCapacity,
+				(int) $this->RoundTablesCapacity,
 				(int) $this->TheaterCapacity,
 				(int) $this->ClassroomCapacity,
 				(int) $this->UshapeCapacity,

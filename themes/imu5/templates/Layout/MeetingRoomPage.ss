@@ -41,7 +41,7 @@
 							 <% if RoundedTablesCapacity %>
 								<p>
 									<!-- <span><img src="$ThemeDir/images/round_table_icon.png"></span> -->
-									<strong>Rounded Tables:</strong> $RoundedTablesCapacity
+									<strong>Round Tables:</strong> $RoundedTablesCapacity
 								</p>
 							 <% end_if %>
 							 <% if TheaterCapacity %>

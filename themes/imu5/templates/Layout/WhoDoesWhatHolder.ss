@@ -16,8 +16,8 @@
 					</div>
 				<% end_if %>
         			
-				<% if $BlogEntries %>
-					<% loop $BlogEntries.Sort(Title) %>		
+				<% if $BlogPosts %>
+					<% loop $BlogPosts.Sort(Title) %>		
 						<section class="who-does-what-section blogSummary" id="{$URLSegment}">
 						  <div class="colgroup">
 							<div class="who-does-what">
@@ -31,12 +31,12 @@
 								<% if $Website %><p><a class="btn" href="$Website" target="_blank">Visit Website</a></p><% end_if %>
 							</div>						
 						 </div>	
-						<% if TagsCollection %>
+						<% if Tags %>
 						    <div class="who-does-what-section-tags">
 							<p>
 								Tags:
-								<% loop TagsCollection %>
-									<a href="$Link" title="View all posts tagged '$Tag'" rel="tag">$Tag</a><% if not Last %>,<% end_if %>
+								<% loop Tags %>
+									<a href="$Link" title="View all posts tagged '$Title'" rel="tag">$Title</a><% if not Last %>,<% end_if %>
 								<% end_loop %>
 							</p>
 							</div>

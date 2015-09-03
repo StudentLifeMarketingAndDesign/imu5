@@ -1,5 +1,5 @@
 <?php
-class WhoDoesWhatHolder extends BlogHolder {
+class WhoDoesWhatHolder extends Blog {
 
 	private static $db = array(
 		"facebook_iframe" => "HTMLText",
@@ -32,7 +32,7 @@ class WhoDoesWhatHolder extends BlogHolder {
 		return $f;
 	}
 }
-class WhoDoesWhatHolder_Controller extends BlogHolder_Controller {
+class WhoDoesWhatHolder_Controller extends Blog_Controller {
 
 	/**
 	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the

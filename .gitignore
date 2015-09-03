@@ -29,12 +29,6 @@ ac-json-events/
 cache/
 focuspoint/
 quickaddnew/
-<<<<<<< Updated upstream
-=======
-
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
 gridfieldajaxrefresh/
 gridfieldextensions/
 gridfieldpaginatorwithshowall/
@@ -42,12 +36,10 @@ rss-display/
 staticpublishqueue/
 tenon/
 gridfieldextensions/
-<<<<<<< Updated upstream
 flickr/
 staticpublisher/
-=======
->>>>>>> Stashed changes
-=======
-gridfieldextensions/
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+betternavigator/
+lumberjack/
+maintenance-mode/
+segment-field/
+tagfield/

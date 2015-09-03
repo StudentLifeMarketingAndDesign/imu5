@@ -1,5 +1,5 @@
 <?php
-class WhoDoesWhatPage extends BlogEntry {
+class WhoDoesWhatPage extends BlogPost {
 
 	private static $db = array(
 		"OfficeName" => "Text",
@@ -55,7 +55,7 @@ class WhoDoesWhatPage extends BlogEntry {
 		return $fields;
 	}
 }
-class WhoDoesWhatPage_Controller extends BlogEntry_Controller {
+class WhoDoesWhatPage_Controller extends BlogPost_Controller {
 
 	/**
 	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the

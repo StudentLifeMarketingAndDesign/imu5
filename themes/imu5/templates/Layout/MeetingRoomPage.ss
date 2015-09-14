@@ -129,6 +129,12 @@
 									Electric piano
 								</p>
 							<% end_if %>
+							<% if ComplimentaryEquipmentProvided %>
+								<p>
+									<!-- <span><img src="$ThemeDir/images/wifi_icon.png" height="24"></span> -->
+									Complimentary items*
+								</p>
+							<% end_if %>
 						</div>
 					</div>
 
@@ -187,12 +193,16 @@
 				</div>
 
 				<div class="well">
+
 					<% if InSection("spaces") %>
 						<p>Make a reservation for this space by calling 319-335-3114 or emailing <a href="mailto:imu-eventservices@uiowa.edu">imu-eventservices@uiowa.edu</a>.</p>
 					<% else %>
 						<a href="event-services/reservations/" class="btn">Make a reservation</a>
 					<% end_if %>
 				</div>
+					<% if ComplimentaryEquipmentProvided %>
+						<p>*Some items are provided in fee rooms in limited amounts for no charge: for a full list see our <a href="event-services/fees/"> A/V, Equipment, and Services page.  </p></a>
+					<% end_if %>
 
 				<% if StandardCapacity %>
 					<p class="standard_setup_notice">

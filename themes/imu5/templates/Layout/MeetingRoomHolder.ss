@@ -14,6 +14,7 @@
 
 					<li class="item">
 						<a href="$Link">
+							<img src="$SlideshowImage1.croppedImage(300,200).URL" alt="$Title">
 							<h3 class="title">$Title</h3>
 							<p class="room-capacity">
 								<span class="capacity"><strong>Capacity: </strong>$DisplayCapacity</span>
@@ -28,7 +29,7 @@
 							<% if $UshapeCapacity %>$UshapeCapacity<% end_if %>
 							<% if $BoardroomCapacity %>$BoardroomCapacity<% end_if %>
 							-->
-							<img src="$SlideshowImage1.croppedImage(300,200).URL" alt="$Title">
+							
 						 </a>
 					</li>&nbsp;
 

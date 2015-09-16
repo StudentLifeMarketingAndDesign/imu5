@@ -2,31 +2,31 @@
 class MeetingRoomPage extends Page {
 
 	private static $db = array(
-	// Generic
-	'Number' => 'Varchar',
-	// Rates
-	'StudentRate' => 'Varchar',
-	'FacultyRate' => 'Varchar',
-	'GeneralRate' => 'Varchar',
-	// Capacities
-	'TablesAndChairsCapacity' => 'Varchar',
-	'RoundedTablesCapacity' => 'Varchar',
-	'TheaterCapacity' => 'Varchar',
-	'ClassroomCapacity' => 'Varchar',
-	'UshapeCapacity' => 'Varchar',
-	'BoardroomCapacity' => 'Varchar',
-	// Amenities
-	'HasComputer' => 'Boolean',
-	'HasEthernetConnection' => 'Boolean',
-	'HasProjectorScreen' => 'Boolean',
-	'HasDVD' => 'Boolean',
-	'HasSpeakers' => 'Boolean',
-	'HasMarkerboard'	 => 'Boolean',
-	'HasMicrophone'	 => 'Boolean',
-	'HasWifi'	 => 'Boolean',
-	'HasElectricPiano' => 'Boolean',
-	'ExternalLink' => 'Text',
-	'ComplimentaryEquipmentProvided' => 'Boolean',
+		// Generic
+		'Number' => 'Varchar',
+		// Rates
+		'StudentRate' => 'Varchar',
+		'FacultyRate' => 'Varchar',
+		'GeneralRate' => 'Varchar',
+		// Capacities
+		'TablesAndChairsCapacity' => 'Varchar',
+		'RoundedTablesCapacity'   => 'Varchar',
+		'TheaterCapacity'         => 'Varchar',
+		'ClassroomCapacity'       => 'Varchar',
+		'UshapeCapacity'          => 'Varchar',
+		'BoardroomCapacity'       => 'Varchar',
+		// Amenities
+		'HasComputer'                    => 'Boolean',
+		'HasEthernetConnection'          => 'Boolean',
+		'HasProjectorScreen'             => 'Boolean',
+		'HasDVD'                         => 'Boolean',
+		'HasSpeakers'                    => 'Boolean',
+		'HasMarkerboard'                 => 'Boolean',
+		'HasMicrophone'                  => 'Boolean',
+		'HasWifi'                        => 'Boolean',
+		'HasElectricPiano'               => 'Boolean',
+		'ExternalLink'                   => 'Text',
+		'ComplimentaryEquipmentProvided' => 'Boolean',
 	);
 
 	static $has_one = array(
@@ -34,14 +34,14 @@ class MeetingRoomPage extends Page {
 		'SlideshowImage1' => 'Image',
 		'SlideshowImage2' => 'Image',
 		'SlideshowImage3' => 'Image',
-		'SlideshowImage4' => 'Image'
-   );
+		'SlideshowImage4' => 'Image',
+	);
 
-   static $defaults = array (
+	static $defaults = array(
 		"HasWifi" => true
-   );
+	);
 
-	public function getCMSFields(){
+	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
 		$fields->removeByName("Metadata");
@@ -55,35 +55,35 @@ class MeetingRoomPage extends Page {
 		$fields->addFieldToTab('Root.Images', new UploadField('SlideshowImage4', 'Slideshow Image 4', null, null, null, $this->ClassName));
 
 		// Generic
-		$fields->addFieldToTab('Root.Main', new TextField('Number', 'Room Number'));
+		$fields->addFieldToTab('Root.Main', new TextField('Number', 'Room Number'), 'Content');
 		// Rates
-		$fields->addFieldToTab('Root.Rates', new TextField('StudentRate','Student Rate'));
-		$fields->addFieldToTab('Root.Rates', new TextField('FacultyRate','Faculty Rate'));
-		$fields->addFieldToTab('Root.Rates', new TextField('GeneralRate','General Rate'));
+		$fields->addFieldToTab('Root.Rates', new TextField('StudentRate', 'Student Rate'));
+		$fields->addFieldToTab('Root.Rates', new TextField('FacultyRate', 'Faculty Rate'));
+		$fields->addFieldToTab('Root.Rates', new TextField('GeneralRate', 'General Rate'));
 
 		// Capacities
-		$fields->addFieldToTab('Root.Capacities', new TextField('TablesAndChairsCapacity','Tables & Chairs Capacity.  Put * after a capacity value to indicate a room\'s standard setup capacity.'));
-		$fields->addFieldToTab('Root.Capacities', new TextField('RoundedTablesCapacity','Rounded Tables Capacity'));
-		$fields->addFieldToTab('Root.Capacities', new TextField('TheaterCapacity','Theater Capacity'));
-		$fields->addFieldToTab('Root.Capacities', new TextField('ClassroomCapacity','Classroom Capacity'));
-		$fields->addFieldToTab('Root.Capacities', new TextField('UshapeCapacity','U-Shape Capacity'));
-		$fields->addFieldToTab('Root.Capacities', new TextField('BoardroomCapacity','Board Room Capacity'));
+		$fields->addFieldToTab('Root.Capacities', new TextField('TablesAndChairsCapacity', 'Tables & Chairs Capacity.  Put * after a capacity value to indicate a room\'s standard setup capacity.'));
+		$fields->addFieldToTab('Root.Capacities', new TextField('RoundedTablesCapacity', 'Rounded Tables Capacity'));
+		$fields->addFieldToTab('Root.Capacities', new TextField('TheaterCapacity', 'Theater Capacity'));
+		$fields->addFieldToTab('Root.Capacities', new TextField('ClassroomCapacity', 'Classroom Capacity'));
+		$fields->addFieldToTab('Root.Capacities', new TextField('UshapeCapacity', 'U-Shape Capacity'));
+		$fields->addFieldToTab('Root.Capacities', new TextField('BoardroomCapacity', 'Board Room Capacity'));
 
 		// Amenities
-		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasComputer','Has Computer?'));
-		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasEthernetConnection','Has Ethernet Connection?'));
-		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasProjectorScreen','Has Projector Screen?'));
-		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasDVD','Has DVD Player?'));
-		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasSpeakers','Has Speakers?'));
-		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasMarkerboard','Has Markerboard?'));
-		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasMicrophone','Has Microphone?'));
-		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasWifi','Has Wifi?'));
-		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasElectricPiano','Has Electric Piano?'));
+		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasComputer', 'Has Computer?'));
+		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasEthernetConnection', 'Has Ethernet Connection?'));
+		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasProjectorScreen', 'Has Projector Screen?'));
+		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasDVD', 'Has DVD Player?'));
+		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasSpeakers', 'Has Speakers?'));
+		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasMarkerboard', 'Has Markerboard?'));
+		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasMicrophone', 'Has Microphone?'));
+		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasWifi', 'Has Wifi?'));
+		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasElectricPiano', 'Has Electric Piano?'));
 		$fields->addFieldToTab('Root.Amenities', new CheckboxField('ComplimentaryEquipmentProvided', 'Has Complimentary Equipment Provided?'));
 		return $fields;
 
 	}
-	function getStandardCapacity () {
+	function getStandardCapacity() {
 		$capacities = array(
 			$this->TablesAndChairsCapacity,
 			$this->RoundTablesCapacity,
@@ -93,14 +93,14 @@ class MeetingRoomPage extends Page {
 			$this->BoardroomCapacity
 		);
 
-		foreach($capacities as $capacity) {
-			if (!is_null($capacity) && substr($capacity, -1, 1) == '*') { return substr($capacity, 0, -1); }
+		foreach ($capacities as $capacity) {
+			if (!is_null($capacity) && substr($capacity, -1, 1) == '*') {return substr($capacity, 0, -1);}
 		}
 
 		return false;
 	}
 
-	function getDisplayCapacity () {
+	function getDisplayCapacity() {
 
 		if ($this->getStandardCapacity()) {
 			return $this->getStandardCapacity();
@@ -124,7 +124,7 @@ class MeetingRoomPage extends Page {
 		} elseif (count($capacities) == 1) {
 			return $capacities[0];
 		} else {
-			return $capacities[0] . '-' . end($capacities);
+			return $capacities[0].'-'.end($capacities);
 		}
 
 	}
@@ -146,23 +146,23 @@ class MeetingRoomPage_Controller extends Page_Controller {
 	 *
 	 * @var array
 	 */
-	private static $allowed_actions = array (
+	private static $allowed_actions = array(
 	);
 
 	public function init() {
 		parent::init();
-		if($link = $this->ExternalLink) {
+		if ($link = $this->ExternalLink) {
 			$this->redirect($link, 301);
 			return;
 		}
 	}
 
-	public function HasAnyAmenities () {
-    	return $this->HasComputer ||
-    	       $this->HasEthernetConnection ||
-    	       $this->HasProjector ||
-    	       $this->HasDVD ||
-    	       $this->HasWifi;
+	public function HasAnyAmenities() {
+		return $this->HasComputer ||
+		$this->HasEthernetConnection ||
+		$this->HasProjector ||
+		$this->HasDVD ||
+		$this->HasWifi;
 	}
 
 }

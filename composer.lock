@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "30b43c1a1a59c44cd6f6de29ebcadb04",
+    "hash": "5b82b5fa5f4bcfc71cc9f22ddacf5c12",
     "packages": [
         {
             "name": "colymba/gridfield-bulk-editing-tools",
@@ -288,7 +288,7 @@
         },
         {
             "name": "md/division-project",
-            "version": "2.1.x-dev",
+            "version": "2.2.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-project.git",

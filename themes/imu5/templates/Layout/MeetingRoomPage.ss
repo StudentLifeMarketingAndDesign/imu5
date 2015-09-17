@@ -7,7 +7,7 @@
 	<div class="container clearfix">
 		<div class="white-cover"></div>
 		 <section class="main-content <% if $BackgroundImage %>margin-top<% end_if %>">
-		 	$Breadcrumbs
+		 	
 		 	<div class="meeting-page">
 
 		 		<% if SlideshowImage2 %>
@@ -22,7 +22,7 @@
 				<% else %>
 					<img src="$SlideshowImage1.CroppedImage(760, 506).URL" alt="$Title">
 				<% end_if %>
-
+				$Breadcrumbs
 				<h1 class="name">$Title</h1>
 
 				<% if Number %><p class="number">Room #$Number</p><% end_if %>

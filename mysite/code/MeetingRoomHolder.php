@@ -8,10 +8,9 @@ class MeetingRoomHolder extends Page {
 
 	);
 
-	// private static $allowed_children = array(
-	// 	'MeetingRoomPage'
-	// );
-
+	private static $allowed_children = array(
+		'MeetingRoomPage',
+	);
 
 }
 class MeetingRoomHolder_Controller extends Page_Controller {
@@ -31,7 +30,7 @@ class MeetingRoomHolder_Controller extends Page_Controller {
 	 *
 	 * @var array
 	 */
-	private static $allowed_actions = array (
+	private static $allowed_actions = array(
 	);
 
 	public function init() {

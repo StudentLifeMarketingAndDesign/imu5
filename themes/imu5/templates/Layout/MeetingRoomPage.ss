@@ -193,6 +193,93 @@
 
 				</div>
 
+				<ul class="justify MeetingRoomList room-setups">
+
+					
+					<% if TablesAndChairsCapacity %>
+					<li class="item">
+						<p>
+							<img src="{$ThemeDir}/images/room-setups/tables.png" alt="tables">
+						</p>
+						<p class="room-capacity">
+							<strong>Tables &amp; Chairs</strong> <br> 
+							<strong> Capacity: </strong> $TablesAndChairsCapacity
+						</p>
+						
+					</li>&nbsp;
+					<% end_if %>
+
+					<% if RoundedTablesCapacity %>
+					<li class="item">
+						<p>
+							<img src="{$ThemeDir}/images/room-setups/roundTables.png" alt="roundTables">
+						</p>
+						<p class="room-capacity">
+							<strong>Round Tables</strong> <br> 
+							<strong> Capacity: </strong> $RoundedTablesCapacity
+						</p>
+					
+					</li>&nbsp;
+					<% end_if %>
+
+					<% if TheaterCapacity %>
+					<li class="item">
+						<p>
+							<img src="{$ThemeDir}/images/room-setups/theater.png" alt="theater">
+						</p>
+						<p class="room-capacity">
+							<strong>Theater</strong> <br>
+							<strong> Capacity: </strong> $TheaterCapacity
+						</p>
+					
+					</li>&nbsp;
+					<% end_if %>
+
+					<% if ClassroomCapacity %>
+					<li class="item">
+						<p>
+							<img src="{$ThemeDir}/images/room-setups/classroom.png" alt="classroom">
+						</p>
+						<p class="room-capacity">
+							<strong>Classroom</strong> <br>
+							<strong> Capacity: </strong> $ClassroomCapacity
+						</p>
+					
+					</li>&nbsp;
+					<% end_if %>								
+
+					<% if UshapeCapacity %>
+					<li class="item">
+						<p>
+							<img src="{$ThemeDir}/images/room-setups/Ushape.png" alt="Ushape">
+						</p>
+						<p class="room-capacity">
+							<strong>U-Shape</strong> <br>
+							<strong> Capacity: </strong> $UshapeCapacity
+						</p>
+					
+					</li>&nbsp;
+					<% end_if %>
+
+					<% if BoardroomCapacity %>
+					<li class="item">
+						<p>
+							<img src="{$ThemeDir}/images/room-setups/boardRoom.png" alt="boardRoom">
+						</p>
+						<p class="room-capacity">
+							<strong>Board Room</strong> <br>
+							<strong> Capacity: </strong> $BoardroomCapacity
+						</p>
+					
+					</li>&nbsp;
+					<% end_if %>
+
+
+
+
+					<li class="item filler"></li>
+				</ul>
+
 				<div class="well">
 
 					<% if InSection("spaces") %>

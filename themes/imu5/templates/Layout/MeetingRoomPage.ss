@@ -31,7 +31,7 @@
 
 				<div class="meeting-page-details clearfix">
 					<div class="item first capacity">
-						<h4 class="title">Capacity by Setup</h4>
+						<h4 class="title">Capacity by setup</h4>
 						<div class="">
 							<% if TablesAndChairsCapacity %>
 								<p>
@@ -144,14 +144,14 @@
 						<h4 class="title">Rates</h4>
 						<% if StudentRate %>
 							<p>
-								<strong>Student Organizations</strong><br>
+								<strong>Student organizations</strong><br>
 							 	<span class="dolla_dolla_bill">
 							 		<span class="sign">$</span>$StudentRate
 							 	</span>
 							</p>
 						<% else %>
 							<p>
-								<strong>Student Organizations</strong><br>
+								<strong>Student organizations</strong><br>
 							 	<span class="dolla_dolla_bill">
 							 		<span class="sign">$0</span>
 							 	</span>
@@ -160,14 +160,14 @@
 
 						<% if FacultyRate %>
 							<p>
-								<strong>Faculty Departments</strong><br>
+								<strong>Faculty departments</strong><br>
 								<span class="dolla_dolla_bill">
 									<span class="sign">$</span>$FacultyRate
 								</span>
 							</p>
 						<% else %>
 							<p>
-								<strong>Faculty Departments</strong><br>
+								<strong>Faculty departments</strong><br>
 								<span class="dolla_dolla_bill">
 									<span class="sign">$0</span>
 								</span>
@@ -176,14 +176,14 @@
 
 						<% if GeneralRate %>
 							<p>
-								<strong>General Public</strong><br>
+								<strong>General public</strong><br>
 								<span class="dolla_dolla_bill">
 									<span class="sign">$</span>$GeneralRate
 								</span>
 							</p>
 						<% else %>
 							<p>
-								<strong>General Public</strong><br>
+								<strong>General public</strong><br>
 								<span class="dolla_dolla_bill">
 									<span class="sign">$0</span>
 								</span>
@@ -192,94 +192,6 @@
 					</div>
 
 				</div>
-
-				<ul class="justify MeetingRoomList room-setups">
-
-					
-					<% if TablesAndChairsCapacity %>
-					<li class="item">
-						<p>
-							<img src="{$ThemeDir}/images/room-setups/tables.png" alt="tables">
-						</p>
-						<p class="room-capacity">
-							<strong>Tables &amp; Chairs</strong> <br> 
-							<strong> Capacity: </strong> $TablesAndChairsCapacity
-						</p>
-						
-					</li>&nbsp;
-					<% end_if %>
-
-					<% if RoundedTablesCapacity %>
-					<li class="item">
-						<p>
-							<img src="{$ThemeDir}/images/room-setups/roundTables.png" alt="roundTables">
-						</p>
-						<p class="room-capacity">
-							<strong>Round Tables</strong> <br> 
-							<strong> Capacity: </strong> $RoundedTablesCapacity
-						</p>
-					
-					</li>&nbsp;
-					<% end_if %>
-
-					<% if TheaterCapacity %>
-					<li class="item">
-						<p>
-							<img src="{$ThemeDir}/images/room-setups/theater.png" alt="theater">
-						</p>
-						<p class="room-capacity">
-							<strong>Theater</strong> <br>
-							<strong> Capacity: </strong> $TheaterCapacity
-						</p>
-					
-					</li>&nbsp;
-					<% end_if %>
-
-					<% if ClassroomCapacity %>
-					<li class="item">
-						<p>
-							<img src="{$ThemeDir}/images/room-setups/classroom.png" alt="classroom">
-						</p>
-						<p class="room-capacity">
-							<strong>Classroom</strong> <br>
-							<strong> Capacity: </strong> $ClassroomCapacity
-						</p>
-					
-					</li>&nbsp;
-					<% end_if %>								
-
-					<% if UshapeCapacity %>
-					<li class="item">
-						<p>
-							<img src="{$ThemeDir}/images/room-setups/Ushape.png" alt="Ushape">
-						</p>
-						<p class="room-capacity">
-							<strong>U-Shape</strong> <br>
-							<strong> Capacity: </strong> $UshapeCapacity
-						</p>
-					
-					</li>&nbsp;
-					<% end_if %>
-
-					<% if BoardroomCapacity %>
-					<li class="item">
-						<p>
-							<img src="{$ThemeDir}/images/room-setups/boardRoom.png" alt="boardRoom">
-						</p>
-						<p class="room-capacity">
-							<strong>Board Room</strong> <br>
-							<strong> Capacity: </strong> $BoardroomCapacity
-						</p>
-					
-					</li>&nbsp;
-					<% end_if %>
-
-
-
-
-					<li class="item filler"></li>
-				</ul>
-
 				<div class="well">
 
 					<% if InSection("spaces") %>
@@ -288,6 +200,87 @@
 						<a href="event-services/reservations/" class="btn">Make a reservation</a>
 					<% end_if %>
 				</div>
+				<h2>Available setups for {$Title}:</h2>
+				<ul class="justify MeetingRoomList room-setups">
+
+					
+					<% if TablesAndChairsCapacity %>
+					<li class="item">
+						<img src="{$ThemeDir}/images/room-setups/tables.png" alt="tables">
+						<h3 class="title">Tables &amp; Chairs</h3>
+						<p class="room-capacity">
+							<strong> Capacity: </strong> $TablesAndChairsCapacity
+						</p>
+						
+					</li>&nbsp;
+					<% end_if %>
+
+					<% if RoundedTablesCapacity %>
+					<li class="item">
+
+							<img src="{$ThemeDir}/images/room-setups/roundTables.png" alt="roundTables">
+
+						<h3 class="title">Round Tables</h3>
+						<p class="room-capacity">
+							<strong> Capacity: </strong> $RoundedTablesCapacity
+						</p>
+					
+					</li>&nbsp;
+					<% end_if %>
+
+					<% if TheaterCapacity %>
+					<li class="item">
+
+							<img src="{$ThemeDir}/images/room-setups/theater.png" alt="theater">
+
+						<h3 class="title">Theater</h3>
+						<p class="room-capacity">
+							<strong> Capacity: </strong> $TheaterCapacity
+						</p>
+					
+					</li>&nbsp;
+					<% end_if %>
+
+					<% if ClassroomCapacity %>
+					<li class="item">
+
+							<img src="{$ThemeDir}/images/room-setups/classroom.png" alt="classroom">
+
+						<h3 class="title">Classroom</h3>
+						<p class="room-capacity">
+							<strong> Capacity: </strong> $ClassroomCapacity
+						</p>
+					
+					</li>&nbsp;
+					<% end_if %>								
+
+					<% if UshapeCapacity %>
+					<li class="item">
+
+						<img src="{$ThemeDir}/images/room-setups/Ushape.png" alt="Ushape">
+						<h3 class="title">U-Shape</h3>
+						<p class="room-capacity">
+							<strong> Capacity: </strong> $UshapeCapacity
+						</p>
+					
+					</li>&nbsp;
+					<% end_if %>
+
+					<% if BoardroomCapacity %>
+					<li class="item">
+						<img src="{$ThemeDir}/images/room-setups/boardRoom.png" alt="boardRoom">
+						<h3 class="title">Board Room</h3>
+						<p class="room-capacity">
+							<strong> Capacity: </strong> $BoardroomCapacity
+						</p>
+					
+					</li>&nbsp;
+					<% end_if %>
+
+					<li class="item filler"></li>
+				</ul>
+
+
 					<% if ComplimentaryEquipmentProvided %>
 						<p>*Some items are provided in fee rooms in limited amounts for no charge: for a full list see our <a href="event-services/fees/"> A/V, Equipment, and Services page.  </p></a>
 					<% end_if %>

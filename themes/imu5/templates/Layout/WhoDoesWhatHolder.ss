@@ -8,16 +8,17 @@
 		<div class="white-cover"></div>
 	    <section class="main-content <% if $BackgroundImage %>margin-top<% end_if %>">
 	    		<h1>$Title</h1>	
-        		<% if SelectedTag %>
+        		<% if $CurrentTag %>
 					<div class="who-does-what-selected-tag">
 						
+                			
 						<p>
-						<% _t('VIEWINGTAGGED', 'Departments tagged with') %> '<strong>$SelectedTag</strong>':</p>
+						<% _t('VIEWINGTAGGED', 'Departments tagged with') %> '<strong>$CurrentTag.Title</strong>':</p>
 					</div>
 				<% end_if %>
         			
-				<% if $BlogPosts %>
-					<% loop $BlogPosts.Sort(Title) %>		
+				<% if $PaginatedList %>
+					<% loop $PaginatedList.Sort(Title) %>		
 						<section class="who-does-what-section blogSummary" id="{$URLSegment}">
 						  <div class="colgroup">
 							<div class="who-does-what">

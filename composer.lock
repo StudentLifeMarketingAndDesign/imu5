@@ -292,12 +292,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-project.git",
-                "reference": "6f6e06d9f6062a241387d4af37b04e08d6467eab"
+                "reference": "f99f601ca8639252be90d139e99dee9cbca095e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/6f6e06d9f6062a241387d4af37b04e08d6467eab",
-                "reference": "6f6e06d9f6062a241387d4af37b04e08d6467eab",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/f99f601ca8639252be90d139e99dee9cbca095e5",
+                "reference": "f99f601ca8639252be90d139e99dee9cbca095e5",
                 "shasum": ""
             },
             "require": {
@@ -337,7 +337,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/division-project/tree/2.2.x",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-project/issues"
             },
-            "time": "2015-10-12 13:44:05"
+            "time": "2015-10-23 20:37:41"
         },
         {
             "name": "md/rss-display",
@@ -1073,27 +1073,22 @@
         },
         {
             "name": "silverstripe/tagfield",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe-labs/silverstripe-tagfield.git",
-                "reference": "e941dbfc269a406d49dbdf695dc8afbd4727601a"
+                "reference": "a6c309257e0ac77b90d84091a72d577e0c64a359"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe-labs/silverstripe-tagfield/zipball/e941dbfc269a406d49dbdf695dc8afbd4727601a",
-                "reference": "e941dbfc269a406d49dbdf695dc8afbd4727601a",
+                "url": "https://api.github.com/repos/silverstripe-labs/silverstripe-tagfield/zipball/a6c309257e0ac77b90d84091a72d577e0c64a359",
+                "reference": "a6c309257e0ac77b90d84091a72d577e0c64a359",
                 "shasum": ""
             },
             "require": {
                 "silverstripe/framework": "~3.1"
             },
             "type": "silverstripe-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-develop": "2.0.x-dev"
-                }
-            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-2-Clause"
@@ -1111,7 +1106,7 @@
                 "silverstripe",
                 "tag"
             ],
-            "time": "2015-05-22 04:02:35"
+            "time": "2015-09-10 00:51:31"
         },
         {
             "name": "silverstripe/tenon",

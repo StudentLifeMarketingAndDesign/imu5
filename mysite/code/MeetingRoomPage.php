@@ -29,7 +29,7 @@ class MeetingRoomPage extends Page {
 		'ComplimentaryEquipmentProvided' => 'Boolean',
 
 
-		'ShowRoomLayouts' => 'Boolean',
+		'ShowRoomLayout' => 'Boolean',
 	);
 
 	static $has_one = array(
@@ -58,7 +58,7 @@ class MeetingRoomPage extends Page {
 		$fields->addFieldToTab('Root.Images', new UploadField('SlideshowImage4', 'Slideshow Image 4', null, null, null, $this->ClassName));
 
 		// Generic
-		$fields->addFieldToTab('Root.Main', new CheckboxField('ShowRoomLayouts', 'Has layouts?'));
+		$fields->addFieldToTab('Root.Main', new CheckboxField('ShowRoomLayout', 'Show layouts?'), 'Content');
 		$fields->addFieldToTab('Root.Main', new TextField('Number', 'Room Number'), 'Content');
 				// Rates
 		$fields->addFieldToTab('Root.Rates', new TextField('StudentRate', 'Student Rate'));

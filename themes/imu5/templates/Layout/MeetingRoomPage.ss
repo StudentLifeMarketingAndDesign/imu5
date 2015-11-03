@@ -29,6 +29,7 @@
 				$Content
 				$Form
 
+				
 				<div class="meeting-page-details clearfix">
 					<div class="item first capacity">
 						<h4 class="title">Capacity by setup</h4>
@@ -71,6 +72,7 @@
 							 <% end_if %>
 						</div>
 				  </div>
+				 
 
 
 					<div class="item equipment ">
@@ -200,6 +202,8 @@
 						<a href="event-services/reservations/" class="btn">Make a reservation</a>
 					<% end_if %>
 				</div>
+
+				<% if ShowRoomLayout %>
 				<h2>Available setups for {$Title}:</h2>
 				<ul class="justify MeetingRoomList room-setups">
 
@@ -279,6 +283,7 @@
 
 					<li class="item filler"></li>
 				</ul>
+				<% end_if %>
 
 
 					<% if ComplimentaryEquipmentProvided %>

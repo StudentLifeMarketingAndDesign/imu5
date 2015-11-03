@@ -2,6 +2,7 @@
 class MeetingRoomHolder extends Page {
 
 	private static $db = array(
+		
 	);
 
 	private static $has_one = array(
@@ -11,6 +12,7 @@ class MeetingRoomHolder extends Page {
 	// private static $allowed_children = array(
 	// 	'MeetingRoomPage'
 	// );
+
 
 
 }

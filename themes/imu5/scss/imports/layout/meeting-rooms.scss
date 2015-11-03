@@ -16,11 +16,14 @@ MEETING ROOM HOLDER
 .MeetingRoomList .item {
 	margin-bottom: 3em;
 }
-.MeetingRoomList .title {
-	color: #0088cc;
+.MeetingRoomList .title{
+
 	font-weight: 300;
 	margin: 0;
 	margin-top: 5px;
+}
+.MeetingRoomList a .title{
+	color: #0088cc;
 }
 .MeetingRoomList a:hover .title {
 	text-decoration: underline;
@@ -90,7 +93,12 @@ MEETING ROOM PAGE
 	margin-top: 1em;
 	text-align: center;
 }
+
 .standard_setup_notice {
 	margin-top: 2em;
 	color: #666;
+}
+.room-setups img {
+		border: 1px solid #eee;
+		padding: 3px;	
 }

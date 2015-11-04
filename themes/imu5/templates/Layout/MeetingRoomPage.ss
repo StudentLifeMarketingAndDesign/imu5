@@ -203,6 +203,17 @@
 					<% end_if %>
 				</div>
 
+
+				<% if ComplimentaryEquipmentProvided %>
+					<p>*Some items are provided in fee rooms in limited amounts for no charge: for a full list see our <a href="event-services/fees/"> A/V, Equipment, and Services page.  </p></a>
+				<% end_if %>
+
+				<% if StandardCapacity %>
+					<p class="standard_setup_notice">
+						* denotes a room's standard setup. The non-standard setup fee is 
+						<strong><% if $URLSegment == "northwestern-room" || $URLSegment == "ohio-state-room" %>{$DollarSign}80<% else %>{$DollarSign}40<% end_if %></strong>.
+					</p>
+				<% end_if %>
 				<% if ShowRoomLayout %>
 				<h2>Available setups for {$Title}:</h2>
 				<ul class="justify MeetingRoomList room-setups">
@@ -285,17 +296,6 @@
 				</ul>
 				<% end_if %>
 
-
-					<% if ComplimentaryEquipmentProvided %>
-						<p>*Some items are provided in fee rooms in limited amounts for no charge: for a full list see our <a href="event-services/fees/"> A/V, Equipment, and Services page.  </p></a>
-					<% end_if %>
-
-				<% if StandardCapacity %>
-					<p class="standard_setup_notice">
-						* denotes a room's standard setup. The non-standard setup fee is 
-						<% if $URLSegment == "northwestern-room" || $URLSegment == "ohio-state-room" %>{$DollarSign}80<% else %>{$DollarSign}40<% end_if %>  
-					</p>
-				<% end_if %>
 
 			</div>
 		</section>

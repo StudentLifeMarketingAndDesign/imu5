@@ -10,7 +10,7 @@
 		 	
 		 	<div class="meeting-page">
 
-		 		<% if SlideshowImage2 %>
+		 		<% if SlideshowImage1 || SlideshowImage2 || SlideshowImage3 || SlideshowImage4  %>
 					<div class="flexslider">
 						<ul class="slides">
 							<% if SlideshowImage1 %><li><img src="$SlideshowImage1.CroppedImage(760, 506).URL" alt="$Title"></li><% end_if %>

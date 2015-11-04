@@ -28,11 +28,10 @@ class MeetingRoomPage extends Page {
 		'ExternalLink'                   => 'Text',
 		'ComplimentaryEquipmentProvided' => 'Boolean',
 
-
 		'ShowRoomLayout' => 'Boolean',
 	);
 
-	static $has_one = array(
+	private static $has_one = array(
 		// 'ThumbnailImage'  => 'Image',
 		'SlideshowImage1' => 'Image',
 		'SlideshowImage2' => 'Image',
@@ -40,7 +39,7 @@ class MeetingRoomPage extends Page {
 		'SlideshowImage4' => 'Image',
 	);
 
-	static $defaults = array(
+	private static $defaults = array(
 		"HasWifi" => true
 	);
 
@@ -60,7 +59,7 @@ class MeetingRoomPage extends Page {
 		// Generic
 		$fields->addFieldToTab('Root.Main', new CheckboxField('ShowRoomLayout', 'Show layouts?'), 'Content');
 		$fields->addFieldToTab('Root.Main', new TextField('Number', 'Room Number'), 'Content');
-				// Rates
+		// Rates
 		$fields->addFieldToTab('Root.Rates', new TextField('StudentRate', 'Student Rate'));
 		$fields->addFieldToTab('Root.Rates', new TextField('FacultyRate', 'Faculty Rate'));
 		$fields->addFieldToTab('Root.Rates', new TextField('GeneralRate', 'General Rate'));
@@ -84,7 +83,6 @@ class MeetingRoomPage extends Page {
 		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasWifi', 'Has Wifi?'));
 		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasElectricPiano', 'Has Electric Piano?'));
 		$fields->addFieldToTab('Root.Amenities', new CheckboxField('ComplimentaryEquipmentProvided', 'Has Complimentary Equipment Provided?'));
-		
 
 		return $fields;
 

@@ -8,6 +8,7 @@
 		<div class="white-cover"></div>
 	    <section class="main-content <% if $BackgroundImage %>margin-top<% end_if %>">
 	    		<h1>$Title</h1>	
+	    		$Content
         		<% if $CurrentTag %>
 					<div class="who-does-what-selected-tag">
 						

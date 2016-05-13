@@ -3,7 +3,7 @@
 	"description": "The SilverStripe Framework Installer",
 	"require": {
 		"php": ">=5.3.2",
-		"md/division-project": "dev-3.3.x-userforms3"
+		"md/division-project": "3.3.x"
 	},
 	"config": {
 		"process-timeout": 600	

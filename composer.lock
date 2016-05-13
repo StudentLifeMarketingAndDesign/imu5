@@ -1268,16 +1268,16 @@
         },
         {
             "name": "silverstripe/userforms",
-            "version": "dev-master",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-userforms.git",
-                "reference": "23cd591ae6ec9a081e2f89bce95b4ad0347801ac"
+                "reference": "8f2fac4c2bac5a377d59b03fb60737687eaf03b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-userforms/zipball/23cd591ae6ec9a081e2f89bce95b4ad0347801ac",
-                "reference": "23cd591ae6ec9a081e2f89bce95b4ad0347801ac",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-userforms/zipball/8f2fac4c2bac5a377d59b03fb60737687eaf03b1",
+                "reference": "8f2fac4c2bac5a377d59b03fb60737687eaf03b1",
                 "shasum": ""
             },
             "require": {
@@ -1293,7 +1293,7 @@
             "type": "silverstripe-module",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0.x-dev"
+                    "dev-master": "3.1.x-dev"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1327,7 +1327,7 @@
                 "silverstripe",
                 "userforms"
             ],
-            "time": "2016-05-12 09:44:42"
+            "time": "2016-02-04 05:05:27"
         },
         {
             "name": "silverstripe/widgets",

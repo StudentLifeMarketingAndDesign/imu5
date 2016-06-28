@@ -13,10 +13,14 @@
 						<a href="$Link">
 							<img src="$SlideshowImage1.croppedImage(300,200).URL" alt="$Title">
 							<h3 class="title">$Title</h3>
+
 							<p class="room-capacity">
+							<% if $DisplayCapacity %>
 								<span class="capacity"><strong>Capacity: </strong>$DisplayCapacity</span>
-								<% if $Number %><span class="room"><strong>Room #</strong>$Number</span><% end_if %>
+							<% end_if %>
+								<span class="room"><strong>Room #</strong>$Number</span>
 							</p>
+							
 
 							<!--
 							<% if $TablesAndChairsCapacity %>$TablesAndChairsCapacity<% end_if %>

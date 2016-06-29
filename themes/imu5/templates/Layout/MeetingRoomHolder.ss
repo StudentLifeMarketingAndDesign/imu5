@@ -18,7 +18,9 @@
 							<% if $DisplayCapacity %>
 								<span class="capacity"><strong>Capacity: </strong>$DisplayCapacity</span>
 							<% end_if %>
+							<% if $Number %>
 								<span class="room"><strong>Room #</strong>$Number</span>
+							<% end_if %>
 							</p>
 							
 

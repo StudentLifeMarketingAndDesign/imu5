@@ -152,7 +152,7 @@
 							<p>
 								<strong>Student organizations</strong><br>
 							 	<span class="dolla_dolla_bill">
-							 		<span class="sign">$</span>$StudentRate
+							 		$StudentRate
 							 	</span>
 							</p>
 						<% end_if %>
@@ -161,7 +161,7 @@
 							<p>
 								<strong>Faculty departments</strong><br>
 								<span class="dolla_dolla_bill">
-									<span class="sign">$</span>$FacultyRate
+									$FacultyRate
 								</span>
 							</p>
 						<% end_if %>
@@ -170,7 +170,7 @@
 							<p>
 								<strong>General public</strong><br>
 								<span class="dolla_dolla_bill">
-									<span class="sign">$</span>$GeneralRate
+									$GeneralRate
 								</span>
 							</p>
 						<% end_if %>

@@ -65,8 +65,8 @@ class MeetingRoomPage extends Page {
 		$fields->addFieldToTab('Root.Rates', new TextField('GeneralRate', 'General Rate'));
 
 		// Capacities
-		$fields->addFieldToTab('Root.Capacities', new TextField('TablesAndChairsCapacity', 'Tables & Chairs Capacity.  Put * after a capacity value to indicate a room\'s standard setup capacity.'));
-		$fields->addFieldToTab('Root.Capacities', new TextField('RoundedTablesCapacity', 'Rounded Tables Capacity'));
+		$fields->addFieldToTab('Root.Capacities', new TextField('TablesAndChairsCapacity', 'Banquet Rectangles Capacity.  Put * after a capacity value to indicate a room\'s standard setup capacity.'));
+		$fields->addFieldToTab('Root.Capacities', new TextField('RoundedTablesCapacity', 'Banquent Rounds Capacity'));
 		$fields->addFieldToTab('Root.Capacities', new TextField('TheaterCapacity', 'Theater Capacity'));
 		$fields->addFieldToTab('Root.Capacities', new TextField('ClassroomCapacity', 'Classroom Capacity'));
 		$fields->addFieldToTab('Root.Capacities', new TextField('UshapeCapacity', 'U-Shape Capacity'));

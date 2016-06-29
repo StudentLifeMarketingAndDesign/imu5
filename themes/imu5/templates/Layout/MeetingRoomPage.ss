@@ -31,54 +31,54 @@
 
 				
 				<div class="meeting-page-details clearfix">
+					<% if TablesAndChairsCapacity || RoundedTablesCapacity || TheaterCapacity || ClassroomCapacity || UshapeCapacity || BoardroomCapacity %>
 					<div class="item first capacity">
-						<% if TablesAndChairsCapacity || RoundedTablesCapacity || TheaterCapacity || ClassroomCapacity || UshapeCapacity || BoardroomCapacity %>
-							<h4 class="title">Capacity by setup</h4>
-							<div class="">
-								<% if TablesAndChairsCapacity %>
-									<p>
-										<!-- <span><img src="$ThemeDir/images/table_icon.png"></span> -->
-										<strong>Tables &amp; Chairs:</strong> $TablesAndChairsCapacity
-									</p>
-								 <% end_if %>
-								 <% if RoundedTablesCapacity %>
-									<p>
-										<!-- <span><img src="$ThemeDir/images/round_table_icon.png"></span> -->
-										<strong>Round Tables:</strong> $RoundedTablesCapacity
-									</p>
-								 <% end_if %>
-								 <% if TheaterCapacity %>
-									<p>
-										<!-- <span><img src="$ThemeDir/images/theater_icon.png"></span>  -->
-										<strong>Theater:</strong> $TheaterCapacity
-									</p>
-								 <% end_if %>
-								 <% if ClassroomCapacity %>
-									<p>
-										<!-- <span><img src="$ThemeDir/images/classroom_icon.png"></span> -->
-										<strong>Classroom:</strong> $ClassroomCapacity
-									</p>
-								 <% end_if %>
-								 <% if UshapeCapacity %>
-									<p>
-										<!-- <span><img src="$ThemeDir/images/ushape_icon.png"></span> -->
-										<strong>U-Shape:</strong> $UshapeCapacity
-									</p>
-								 <% end_if %>
-								 <% if BoardroomCapacity %>
-									<p>
-										<!-- <span><img src="$ThemeDir/images/boardroom_icon.png" width="24"></span> -->
-										<strong>Board Room:</strong> $BoardroomCapacity
-									</p>
-								 <% end_if %>
-							</div>
-						<% end_if %>
-				  </div>
+						<h4 class="title">Capacity by setup</h4>
+						<div class="">
+							<% if TablesAndChairsCapacity %>
+							<p>
+								<!-- <span><img src="$ThemeDir/images/table_icon.png"></span> -->
+								<strong>Tables &amp; Chairs:</strong> $TablesAndChairsCapacity
+							</p>
+							<% end_if %>
+							<% if RoundedTablesCapacity %>
+							<p>
+								<!-- <span><img src="$ThemeDir/images/round_table_icon.png"></span> -->
+								<strong>Round Tables:</strong> $RoundedTablesCapacity
+							</p>
+							<% end_if %>
+							<% if TheaterCapacity %>
+							<p>
+								<!-- <span><img src="$ThemeDir/images/theater_icon.png"></span>  -->
+								<strong>Theater:</strong> $TheaterCapacity
+							</p>
+							<% end_if %>
+							<% if ClassroomCapacity %>
+							<p>
+								<!-- <span><img src="$ThemeDir/images/classroom_icon.png"></span> -->
+								<strong>Classroom:</strong> $ClassroomCapacity
+							</p>
+							<% end_if %>
+							<% if UshapeCapacity %>
+							<p>
+								<!-- <span><img src="$ThemeDir/images/ushape_icon.png"></span> -->
+								<strong>U-Shape:</strong> $UshapeCapacity
+							</p>
+							<% end_if %>
+							<% if BoardroomCapacity %>
+							<p>
+								<!-- <span><img src="$ThemeDir/images/boardroom_icon.png" width="24"></span> -->
+								<strong>Board Room:</strong> $BoardroomCapacity
+							</p>
+							<% end_if %>
+						</div>
+					</div>
+					<% end_if %>
 				 
 
-
+				  	<% if HasComputer || HasEthernetConnection || HasProjectorScreen || HasDVD || HasSpeakers || HasMarkerboard || HasMicrophone || HasWifi || HasElectricPiano|| ComplimentaryEquipmentProvided %>
 					<div class="item equipment ">
-					<% if HasComputer || HasEthernetConnection || HasProjectorScreen || HasDVD || HasSpeakers || HasMarkerboard || HasMicrophone || HasWifi || HasElectricPiano|| ComplimentaryEquipmentProvided %>
+					
 						<h4 class="title">Equipment</h4>
 						<div>
 							<% if HasComputer %>
@@ -142,8 +142,8 @@
 								</p>
 							<% end_if %>
 						</div>
-					<% end_if %>
 					</div>
+					<% end_if %>
 
 					<% if StudentRate || FacultyRate || GeneralRate %>
 					<div class="item last rates">
@@ -155,13 +155,6 @@
 							 		<span class="sign">$</span>$StudentRate
 							 	</span>
 							</p>
-						<% else %>
-							<p>
-								<strong>Student organizations</strong><br>
-							 	<span class="dolla_dolla_bill">
-							 		<span class="sign">$0</span>
-							 	</span>
-							</p>
 						<% end_if %>
 
 						<% if FacultyRate %>
@@ -171,13 +164,6 @@
 									<span class="sign">$</span>$FacultyRate
 								</span>
 							</p>
-						<% else %>
-							<p>
-								<strong>Faculty departments</strong><br>
-								<span class="dolla_dolla_bill">
-									<span class="sign">$0</span>
-								</span>
-							</p>
 						<% end_if %>
 
 						<% if GeneralRate %>
@@ -185,13 +171,6 @@
 								<strong>General public</strong><br>
 								<span class="dolla_dolla_bill">
 									<span class="sign">$</span>$GeneralRate
-								</span>
-							</p>
-						<% else %>
-							<p>
-								<strong>General public</strong><br>
-								<span class="dolla_dolla_bill">
-									<span class="sign">$0</span>
 								</span>
 							</p>
 						<% end_if %>

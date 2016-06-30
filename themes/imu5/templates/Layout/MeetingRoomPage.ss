@@ -10,13 +10,17 @@
 		 	
 		 	<div class="meeting-page">
 
-		 		<% if SlideshowImage1 || SlideshowImage2 || SlideshowImage3 || SlideshowImage4  %>
+		 		<% if SlideshowImage1 || SlideshowImage2 || SlideshowImage3 || $SlideshowImage4 || $SlideshowImage5 || $SlideshowImage6 || $SlideshowImage7 || $SlideshowImage8 %>
 					<div class="flexslider">
 						<ul class="slides">
 							<% if SlideshowImage1 %><li><img src="$SlideshowImage1.CroppedImage(760, 506).URL" alt="$Title"></li><% end_if %>
 							<% if SlideshowImage2 %><li><img src="$SlideshowImage2.CroppedImage(760, 506).URL" alt="$Title"></li><% end_if %>
 							<% if SlideshowImage3 %><li><img src="$SlideshowImage3.CroppedImage(760, 506).URL" alt="$Title"></li><% end_if %>
 							<% if SlideshowImage4 %><li><img src="$SlideshowImage4.CroppedImage(760, 506).URL" alt="$Title"></li><% end_if %>
+							<% if SlideshowImage5 %><li><img src="$SlideshowImage5.CroppedImage(760, 506).URL" alt="$Title"></li><% end_if %>
+							<% if SlideshowImage6 %><li><img src="$SlideshowImage6.CroppedImage(760, 506).URL" alt="$Title"></li><% end_if %>
+							<% if SlideshowImage7 %><li><img src="$SlideshowImage7.CroppedImage(760, 506).URL" alt="$Title"></li><% end_if %>
+							<% if SlideshowImage8 %><li><img src="$SlideshowImage8.CroppedImage(760, 506).URL" alt="$Title"></li><% end_if %>
 						</ul>
 					</div>
 				<% else %>

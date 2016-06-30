@@ -38,13 +38,13 @@
 							<% if TablesAndChairsCapacity %>
 							<p>
 								<!-- <span><img src="$ThemeDir/images/table_icon.png"></span> -->
-								<strong>Banquent Rectangles:</strong> $TablesAndChairsCapacity
+								<strong>Banquet Rectangles:</strong> $TablesAndChairsCapacity
 							</p>
 							<% end_if %>
 							<% if RoundedTablesCapacity %>
 							<p>
 								<!-- <span><img src="$ThemeDir/images/round_table_icon.png"></span> -->
-								<strong>Banquent Rounds:</strong> $RoundedTablesCapacity
+								<strong>Banquet Rounds:</strong> $RoundedTablesCapacity
 							</p>
 							<% end_if %>
 							<% if TheaterCapacity %>
@@ -206,7 +206,7 @@
 					<% if TablesAndChairsCapacity %>
 					<li class="item">
 						<img src="{$ThemeDir}/images/room-setups/tables.png" alt="tables">
-						<h3 class="title">Banquent Rectangles</h3>
+						<h3 class="title">Banquet Rectangles</h3>
 						<p class="room-capacity">
 							<strong> Capacity: </strong> $TablesAndChairsCapacity
 						</p>
@@ -219,7 +219,7 @@
 
 							<img src="{$ThemeDir}/images/room-setups/roundTables.png" alt="roundTables">
 
-						<h3 class="title">Banquent Rounds</h3>
+						<h3 class="title">Banquet Rounds</h3>
 						<p class="room-capacity">
 							<strong> Capacity: </strong> $RoundedTablesCapacity
 						</p>

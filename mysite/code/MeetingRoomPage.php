@@ -37,6 +37,11 @@ class MeetingRoomPage extends Page {
 		'SlideshowImage2' => 'Image',
 		'SlideshowImage3' => 'Image',
 		'SlideshowImage4' => 'Image',
+		'SlideshowImage5' => 'Image',
+		'SlideshowImage6' => 'Image',
+		'SlideshowImage7' => 'Image',
+		'SlideshowImage8' => 'Image',
+
 	);
 
 	private static $defaults = array(
@@ -55,6 +60,10 @@ class MeetingRoomPage extends Page {
 		$fields->addFieldToTab('Root.Images', new UploadField('SlideshowImage2', 'Slideshow Image 2', null, null, null, $this->ClassName));
 		$fields->addFieldToTab('Root.Images', new UploadField('SlideshowImage3', 'Slideshow Image 3', null, null, null, $this->ClassName));
 		$fields->addFieldToTab('Root.Images', new UploadField('SlideshowImage4', 'Slideshow Image 4', null, null, null, $this->ClassName));
+		$fields->addFieldToTab('Root.Images', new UploadField('SlideshowImage5', 'Slideshow Image 5', null, null, null, $this->ClassName));
+		$fields->addFieldToTab('Root.Images', new UploadField('SlideshowImage6', 'Slideshow Image 6', null, null, null, $this->ClassName));
+		$fields->addFieldToTab('Root.Images', new UploadField('SlideshowImage7', 'Slideshow Image 7', null, null, null, $this->ClassName));
+		$fields->addFieldToTab('Root.Images', new UploadField('SlideshowImage8', 'Slideshow Image 8', null, null, null, $this->ClassName));
 
 		// Generic
 		$fields->addFieldToTab('Root.Main', new CheckboxField('ShowRoomLayout', 'Show layouts?'), 'Content');
@@ -65,8 +74,8 @@ class MeetingRoomPage extends Page {
 		$fields->addFieldToTab('Root.Rates', new TextField('GeneralRate', 'General Rate'));
 
 		// Capacities
-		$fields->addFieldToTab('Root.Capacities', new TextField('TablesAndChairsCapacity', 'Banquet Rectangles Capacity.  Put * after a capacity value to indicate a room\'s standard setup capacity.'));
-		$fields->addFieldToTab('Root.Capacities', new TextField('RoundedTablesCapacity', 'Banquent Rounds Capacity'));
+		$fields->addFieldToTab('Root.Capacities', new TextField('TablesAndChairsCapacity', 'Tables & Chairs Capacity.  Put * after a capacity value to indicate a room\'s standard setup capacity.'));
+		$fields->addFieldToTab('Root.Capacities', new TextField('RoundedTablesCapacity', 'Rounded Tables Capacity'));
 		$fields->addFieldToTab('Root.Capacities', new TextField('TheaterCapacity', 'Theater Capacity'));
 		$fields->addFieldToTab('Root.Capacities', new TextField('ClassroomCapacity', 'Classroom Capacity'));
 		$fields->addFieldToTab('Root.Capacities', new TextField('UshapeCapacity', 'U-Shape Capacity'));
@@ -124,7 +133,7 @@ class MeetingRoomPage extends Page {
 		$capacities = array_values($capacities);
 
 		if (count($capacities) == 0) {
-			return '';
+			return 'N/A';
 		} elseif (count($capacities) == 1) {
 			return $capacities[0];
 		} else {

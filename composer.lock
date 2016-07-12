@@ -55,12 +55,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "3c90d491bafa3d0a1bd57a7d001da839a08d2f88"
+                "reference": "a3595c5272a6f247228abb20076ed27321e4aae9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/3c90d491bafa3d0a1bd57a7d001da839a08d2f88",
-                "reference": "3c90d491bafa3d0a1bd57a7d001da839a08d2f88",
+                "url": "https://api.github.com/repos/composer/installers/zipball/a3595c5272a6f247228abb20076ed27321e4aae9",
+                "reference": "a3595c5272a6f247228abb20076ed27321e4aae9",
                 "shasum": ""
             },
             "require": {
@@ -149,7 +149,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2016-06-24 07:03:15"
+            "time": "2016-07-05 06:18:20"
         },
         {
             "name": "johngrogg/ics-parser",
@@ -340,12 +340,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-project.git",
-                "reference": "da760ed23bca9e69a5fa3ffaab8bdf85dc58eb89"
+                "reference": "c4030822c3f8d3d0a3b2d44b87ef48c3d193d21a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/da760ed23bca9e69a5fa3ffaab8bdf85dc58eb89",
-                "reference": "da760ed23bca9e69a5fa3ffaab8bdf85dc58eb89",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/c4030822c3f8d3d0a3b2d44b87ef48c3d193d21a",
+                "reference": "c4030822c3f8d3d0a3b2d44b87ef48c3d193d21a",
                 "shasum": ""
             },
             "require": {
@@ -385,7 +385,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/division-project/tree/3.3.x",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-project/issues"
             },
-            "time": "2016-07-01 15:52:42"
+            "time": "2016-07-12 21:14:47"
         },
         {
             "name": "md/rss-display",
@@ -623,12 +623,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-blog.git",
-                "reference": "226d8282fd345f6a333c42015e0155ee813bc210"
+                "reference": "9e117b64ea2e1376df737c10ecf6a814488db685"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-blog/zipball/226d8282fd345f6a333c42015e0155ee813bc210",
-                "reference": "226d8282fd345f6a333c42015e0155ee813bc210",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-blog/zipball/9e117b64ea2e1376df737c10ecf6a814488db685",
+                "reference": "9e117b64ea2e1376df737c10ecf6a814488db685",
                 "shasum": ""
             },
             "require": {
@@ -668,7 +668,7 @@
                 "news",
                 "silverstripe"
             ],
-            "time": "2016-06-29 22:16:28"
+            "time": "2016-07-05 06:43:25"
         },
         {
             "name": "silverstripe/cms",
@@ -1337,12 +1337,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-widgets.git",
-                "reference": "4aa66af42dd1940d52aded54e998ec93b41cc049"
+                "reference": "9e2b4f15864b65eedb6f5be5ae16c52da84859a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-widgets/zipball/4aa66af42dd1940d52aded54e998ec93b41cc049",
-                "reference": "4aa66af42dd1940d52aded54e998ec93b41cc049",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-widgets/zipball/9e2b4f15864b65eedb6f5be5ae16c52da84859a9",
+                "reference": "9e2b4f15864b65eedb6f5be5ae16c52da84859a9",
                 "shasum": ""
             },
             "require": {
@@ -1374,7 +1374,7 @@
                 "silverstripe",
                 "widgets"
             ],
-            "time": "2016-06-21 01:20:39"
+            "time": "2016-07-12 02:44:18"
         },
         {
             "name": "simplepie/simplepie",

@@ -369,3 +369,19 @@ NAVIGATION OVERRIDES
 		padding-right: 1.8em;
 	}
 }
+
+@charset "UTF-8";
+.accordion{
+	margin-left: 0;
+	.accordion-navigation{
+		a {
+			text-transform: capitalize;
+		}
+	}
+	.content{
+		.column{
+			float: none;
+			padding: 0;
+		}
+	}
+}

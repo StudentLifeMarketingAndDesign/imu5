@@ -154,7 +154,7 @@
 						<h4 class="title">Rates</h4>
 						<% if StudentRate %>
 							<p>
-								<strong>Student organizations</strong><br>
+								<strong>UI Student Organization Events</strong><br>
 							 	<span class="dolla_dolla_bill">
 							 		$StudentRate
 							 	</span>
@@ -163,7 +163,7 @@
 
 						<% if FacultyRate %>
 							<p>
-								<strong>Faculty departments</strong><br>
+								<strong>UI Departmental Events</strong><br>
 								<span class="dolla_dolla_bill">
 									$FacultyRate
 								</span>
@@ -172,7 +172,7 @@
 
 						<% if GeneralRate %>
 							<p>
-								<strong>General public</strong><br>
+								<strong>General Public Events</strong><br>
 								<span class="dolla_dolla_bill">
 									$GeneralRate
 								</span>
@@ -184,7 +184,7 @@
 				</div>
 				<div class="well">
 
-					<% if InSection("spaces") %>
+					<% if InSection("outdoor-spaces") %>
 						<p>Make a reservation for this space by calling 319-335-3114 or emailing <a href="mailto:imu-eventservices@uiowa.edu">imu-eventservices@uiowa.edu</a>.</p>
 					<% else %>
 						<a href="event-services/reservations/" class="btn">Make a reservation</a>

@@ -184,7 +184,7 @@
 				</div>
 				<div class="well">
 
-					<% if InSection("outdoor-spaces") %>
+					<% if $Parent.ID == 417 %>
 						<p>Make a reservation for this space by calling 319-335-3114 or emailing <a href="mailto:imu-eventservices@uiowa.edu">imu-eventservices@uiowa.edu</a>.</p>
 					<% else %>
 						<a href="event-services/reservations/" class="btn">Make a reservation</a>

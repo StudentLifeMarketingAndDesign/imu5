@@ -133,7 +133,7 @@ class MeetingRoomPage extends Page {
 		$capacities = array_values($capacities);
 
 		if (count($capacities) == 0) {
-			return 'N/A';
+			return false;
 		} elseif (count($capacities) == 1) {
 			return $capacities[0];
 		} else {

@@ -1,4 +1,4 @@
-<h2>All Topics:</h2>
+<h2>All topics:</h2>
 <ul class="accordion small-block-grid-2 medium-block-grid-3 large-block-grid-5" data-accordion role="tablist" <% if $SelectedTag %>data-highlight="$CurrentTag.ID"<% end_if %>>
   <% loop $AllTags %>
   <% if $BlogPosts %>

@@ -1,14 +1,27 @@
+.TopicHolder {
+	.main-content h1 {
+		text-align: center;
+	}
+}
+
+.Topic {
+	.main-content {
+		h1 {
+			text-transform: none;
+		}
+	}
+
+	.topic-subnav {
+		border-top: 1px solid #ddd;
+	}
+}
+
 .TopicHolder, .Topic {
 	.main-content {
 		div.column {
 			margin: 0;
 			padding: 0;
 		}
-	}
-
-	.main-content h1 {
-		text-transform: none;
-		text-align: center;
 	}
 
 	.search-container {
@@ -38,8 +51,10 @@
 		margin-left: 0;
 
 		.accordion-navigation {
+			//tag headings:
 			> a {
 				font-family: $heading-font;
+				font-size: rem-calc(17);
 				text-transform: uppercase;
 				background: none;
 				padding: 0;

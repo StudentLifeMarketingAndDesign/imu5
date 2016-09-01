@@ -11,8 +11,6 @@
       <section class="main-content <% if $BackgroundImage %>margin-top<% end_if %>">
         $Breadcrumbs
         <h1>$Title</h1>
-        $Content
-
 
         <% if $CurrentTag %>
           <div class="row">
@@ -53,6 +51,7 @@
         <% else %>
 
         <% end_if %>
+        <hr />
         <% include TopicHolderSearchForm %>
         <% include TopicHolderAllTopics %>
 

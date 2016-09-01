@@ -7,3 +7,9 @@ After: 'framework/*','cms/*'
 # Caution: Indentation through two spaces, not tabs
 SSViewer:
   theme: 'simple'
+TopicHolder_Controller:
+  extensions:
+    - TopicHolderControllerSearchExtension
+Topic_Controller:
+  extensions:
+    - TopicControllerSearchExtension

@@ -1,3 +1,14 @@
+$accordion-navigation-padding: rem-calc(16);
+$accordion-navigation-bg-color: $silver;
+$accordion-navigation-hover-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -5%);
+$accordion-navigation-active-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -3%);
+$accordion-navigation-font-color: $jet;
+$accordion-navigation-font-size: rem-calc(22);
+$accordion-navigation-font-family: $heading-font;
+
+$accordion-content-padding: ($column-gutter/2);
+$accordion-content-active-bg-color: $white;
+
 /* Secondary HomePage highlights */
 .home-highlights {
 	padding-bottom: 0;
@@ -285,7 +296,7 @@ RESPONSIVE TABLES
 
 }
 
-.who-does-what h3, h4 {
+.who-does-what h3, .who-does-what h4 {
 	margin: 0 0 10px 0;
 	color: #222222;
 }
@@ -371,17 +382,5 @@ NAVIGATION OVERRIDES
 }
 
 @charset "UTF-8";
-.accordion{
-	margin-left: 0;
-	.accordion-navigation{
-		a {
-			text-transform: capitalize;
-		}
-	}
-	.content{
-		.column{
-			float: none;
-			padding: 0;
-		}
-	}
-}
+
+

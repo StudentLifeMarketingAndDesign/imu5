@@ -27,8 +27,8 @@ class MeetingRoomPage extends Page {
 		'HasElectricPiano'               => 'Boolean',
 		'ExternalLink'                   => 'Text',
 		'ComplimentaryEquipmentProvided' => 'Boolean',
-
-		'ShowRoomLayout' => 'Boolean',
+		'ShowStandardSetUpFee' => 'Boolean',
+		'ShowRoomLayout' => 'Boolean'
 	);
 
 	private static $has_one = array(
@@ -80,7 +80,7 @@ class MeetingRoomPage extends Page {
 		$fields->addFieldToTab('Root.Capacities', new TextField('ClassroomCapacity', 'Classroom Capacity'));
 		$fields->addFieldToTab('Root.Capacities', new TextField('UshapeCapacity', 'U-Shape Capacity'));
 		$fields->addFieldToTab('Root.Capacities', new TextField('BoardroomCapacity', 'Board Room Capacity'));
-
+		$fields->addFieldToTab('Root.Capacities', new CheckboxField('ShowStandardSetUpFee', 'Show Setup Fee?'));
 		// Amenities
 		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasComputer', 'Has Computer?'));
 		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasEthernetConnection', 'Has Ethernet Connection?'));
@@ -127,6 +127,7 @@ class MeetingRoomPage extends Page {
 				(int) $this->BoardroomCapacity
 			);
 		}
+
 
 		$capacities = array_filter($capacities);
 		asort($capacities);

@@ -23,18 +23,10 @@
           <hr />
 
           <% with $Parent %>
-            <h2>Featured topics:</h2>
-              <ul class="large-block-grid-3">
-              <% loop $BlogPosts.Sort('RAND()').Limit(3) %>
-                <li>
-                  <h3><i class="fa fa-file-text-o fa-lg fa-fw"></i><a href="$Link">$Title</a></h3>
-                  <p>$Content.LimitCharacters(100)</p>
-                </li>
-              <% end_loop %>
-              </ul>
-          <hr />
+            <% include TopicHolderFeaturedTopics %>
           <% end_with %>
           <% include TopicHolderAllTopics %>
+
 
     </div>
   </div>

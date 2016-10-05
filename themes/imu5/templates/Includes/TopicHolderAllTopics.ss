@@ -1,14 +1,16 @@
 <h2>All topics:</h2>
-<ul class="accordion small-block-grid-2 medium-block-grid-3 large-block-grid-5" data-accordion role="tablist" <% if $SelectedTag %>data-highlight="$CurrentTag.ID"<% end_if %>>
+<ul class="topic-grid small-block-grid-2 medium-block-grid-3 large-block-grid-5">
   <% loop $AllTags %>
   <% if $BlogPosts %>
-  <li class="accordion-navigation">
-    <a href="#panel{$ID}d" role="tab" id="panel{$ID}d-heading" aria-controls="panel{$ID}d">$Title <i class="fa fa-caret-down fa-sm"></i></a>
-    <div id="panel{$ID}d" class="content <% if $Up.ExpandAllTopicsByDefault %>active<% end_if %>" role="tabpanel" aria-labelledby="panel{$ID}d-heading">
+  <li class="topic-grid-nav">
+    <a href="$Link">$Title</a>
+    <div class="content active">
       <ul class="fa-ul"> 
-        <% loop $BlogPosts %>
-          <li><i class="fa-li fa fa-file-text-o"></i><a href="$Link">$Title</a></li>
+        <% loop $BlogPosts.Limit(5) %>
+          <li><i class="fa-li fa fa-file-text-o" aria-hidden="true"></i><a href="$Link">$Title</a></li>
+          
         <% end_loop %>
+        <% if $BlogPosts.Count > 5 %><li><i class="fa-li fa fa-ellipsis-h" aria-hidden="true"></i><a href="$Link">More &rarr;</a></li><% end_if %>
       </ul>
 <%--               <% if $BlogPosts.Count > 1 %><p>Jump to: <% loop $BlogPosts %><a href="#topic-{$ID}">$Title</a><% if not $Last%>, <% end_if %><% end_loop %></p><hr /><% end_if %>
       <% loop $BlogPosts %>

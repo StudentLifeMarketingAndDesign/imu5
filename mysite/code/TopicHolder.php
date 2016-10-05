@@ -3,7 +3,7 @@
 class TopicHolder extends Blog {
 
 	private static $db = array(
-		'ExpandAllTopicsByDefault' => 'Boolean'
+
 	);
 	public function getCMSFields(){
 		$fields = parent::getCMSFields();

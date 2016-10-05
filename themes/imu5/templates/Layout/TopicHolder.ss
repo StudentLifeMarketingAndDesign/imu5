@@ -21,7 +21,7 @@
                 <ul class="large-block-grid-2">
                 <% loop $BlogPosts %>
                   <li>
-                    <h3><i class="fa fa-file-text-o fa-lg fa-fw"></i><a href="$Link">$Title</a></h3>
+                    <h3><i class="fa fa-file-text-o fa-lg fa-fw" aria-hidden="true"></i><a href="$Link">$Title</a></h3>
                     <p>$Content.LimitCharacters(100)</p>
                   </li>
                 <% end_loop %>
@@ -41,15 +41,7 @@
 
         <% include TopicHolderSearchForm %>
         <hr />
-          <h2>Featured topics:</h2>
-            <ul class="large-block-grid-3">
-            <% loop $BlogPosts.Sort('RAND()').Limit(3) %>
-              <li>
-                <h3><i class="fa fa-file-text-o fa-lg fa-fw"></i><a href="$Link">$Title</a></h3>
-                <p>$Content.LimitCharacters(100)</p>
-              </li>
-            <% end_loop %>
-            </ul>
+        <% include TopicHolderFeaturedTopics %>
         <hr />
         <% include TopicHolderAllTopics %>
     

@@ -9,6 +9,7 @@ class MeetingRoomPage extends Page {
 		'FacultyRate' => 'Varchar',
 		'GeneralRate' => 'Varchar',
 		// Capacities
+		'CapacityToShowOnHolder' => 'Varchar',
 		'TablesAndChairsCapacity' => 'Varchar',
 		'RoundedTablesCapacity'   => 'Varchar',
 		'TheaterCapacity'         => 'Varchar',
@@ -73,7 +74,9 @@ class MeetingRoomPage extends Page {
 		$fields->addFieldToTab('Root.Rates', new TextField('FacultyRate', 'Faculty Rate'));
 		$fields->addFieldToTab('Root.Rates', new TextField('GeneralRate', 'General Rate'));
 
+
 		// Capacities
+		$fields->addFieldToTab('Root.Capacities', new TextField('CapacityToShowOnHolder', 'Show the following capacity on the holder page (e.g., Up to 700)'));
 		$fields->addFieldToTab('Root.Capacities', new TextField('TablesAndChairsCapacity', 'Tables & Chairs Capacity.  Put * after a capacity value to indicate a room\'s standard setup capacity.'));
 		$fields->addFieldToTab('Root.Capacities', new TextField('RoundedTablesCapacity', 'Rounded Tables Capacity'));
 		$fields->addFieldToTab('Root.Capacities', new TextField('TheaterCapacity', 'Theater Capacity'));
@@ -115,6 +118,9 @@ class MeetingRoomPage extends Page {
 
 	function getDisplayCapacity() {
 
+		if($this->CapacityToShowOnHolder){
+			return $this->CapacityToShowOnHolder;
+		}
 		if ($this->getStandardCapacity()) {
 			return $this->getStandardCapacity();
 		} else {

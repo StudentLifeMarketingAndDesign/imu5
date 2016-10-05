@@ -5,6 +5,8 @@ class TopicHolder extends Blog {
 	private static $db = array(
 
 	);
+
+	private static $allowed_children = array('Topic');
 	public function getCMSFields(){
 		$fields = parent::getCMSFields();
 		//$fields->addFieldToTab("Root.Settings", new CheckboxField('ExpandAllTopicsByDefault', 'Expand all topics by default'));

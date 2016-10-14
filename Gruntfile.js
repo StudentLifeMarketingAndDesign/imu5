@@ -73,7 +73,8 @@ module.exports = function(grunt) {
                                   '.featured-topic-grid',
                                   '.topic-grid',
                                   '.large-block-grid-3',
-                                  '.large-block-grid-3 li'
+                                  '.large-block-grid-3 li',
+                                  '.flexslider'
                                   ]
                 }
             }

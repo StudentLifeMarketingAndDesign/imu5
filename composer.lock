@@ -1582,12 +1582,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-blog-sortable-categories.git",
-                "reference": "471cd55f48228706f18da4bcd6d3e83e809b33c1"
+                "reference": "518c2d68ceb0c93327f688a5cbdd16e90a15c070"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/silverstripe-blog-sortable-categories/zipball/471cd55f48228706f18da4bcd6d3e83e809b33c1",
-                "reference": "471cd55f48228706f18da4bcd6d3e83e809b33c1",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/silverstripe-blog-sortable-categories/zipball/518c2d68ceb0c93327f688a5cbdd16e90a15c070",
+                "reference": "518c2d68ceb0c93327f688a5cbdd16e90a15c070",
                 "shasum": ""
             },
             "require": {
@@ -1615,9 +1615,9 @@
                 "sortable"
             ],
             "support": {
-                "source": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-blog-sortable-categories/tree/1.0.1"
+                "source": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-blog-sortable-categories/tree/master"
             },
-            "time": "2015-12-16 02:08:30"
+            "time": "2016-10-14 20:07:26"
         },
         {
             "name": "undefinedoffset/sortablegridfield",

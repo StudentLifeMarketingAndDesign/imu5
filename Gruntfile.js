@@ -39,7 +39,56 @@ module.exports = function(grunt) {
       }
     },
 
-
+      criticalcss: {
+            custom: {
+                options: {
+                    url: "http://localhost:8888/imu5/",
+                    width: 1200,
+                    height: 900,
+                    outputfile: "<%=globalConfig.themeDir %>/templates/Includes/CriticalCss.ss",
+                    filename: "<%=globalConfig.themeDir %>/css/master.css", // Using path.resolve( path.join( ... ) ) is a good idea here
+                    buffer: 800*1024,
+                    ignoreConsole: false,
+                    forceInclude: [
+                                  // '.division-topbar',
+                                  // '.division-search',
+                                  // '.division-search-input',
+                                  // '.division-search-input form',
+                                  '.img-container', 
+                                  '.main-content', 
+                                  '.sec-content', 
+                                  '.sec-nav', 
+                                  '.sec-nav ul', 
+                                  '.sec-nav a', 
+                                  '.section-title', 
+                                  '.margin-top', 
+                                  '.gradient', 
+                                  '.img-fifty-top',
+                                  '.breadcrumbs',
+                                  '.breadcrumbs li',
+                                  '.breadcrumbs li:after',
+                                  '.row',
+                                  '.page-full-width',
+                                  '.search-container',
+                                  '.featured-topic-grid',
+                                  '.topic-grid',
+                                  '.large-block-grid-3',
+                                  '.large-block-grid-3 li'
+                                  ]
+                }
+            }
+        },
+      cssmin: {
+        options: {
+          shorthandCompacting: false,
+          roundingPrecision: -1
+        },
+        target: {
+          files: {
+            '<%=globalConfig.themeDir %>/templates/Includes/CriticalCss.ss': ['<%=globalConfig.themeDir %>/templates/Includes/CriticalCss.ss']
+          }
+        }
+      },
     //minify those concated files
     //toggle mangle to leave variable names intact
 
@@ -68,7 +117,7 @@ module.exports = function(grunt) {
           spawn: true,
         }
       }
-    },
+    }
 
   });
 
@@ -79,8 +128,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-simple-watch');
 
+  grunt.loadNpmTasks('grunt-criticalcss');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   // Default task(s).
   // Note: order of tasks is very important
-  grunt.registerTask('default', ['sass', 'concat', 'uglify', 'watch']);
+  grunt.registerTask('default', ['sass', 'concat', 'uglify', 'criticalcss','cssmin', 'watch']);
 
 };

@@ -74,7 +74,8 @@
 			//tag headings:
 			> a {
 				font-family: $heading-font;
-				font-size: rem-calc(17);
+				font-size: rem-calc(20);
+				font-weight: bold;
 				text-transform: uppercase;
 				background: none;
 				padding: 0;

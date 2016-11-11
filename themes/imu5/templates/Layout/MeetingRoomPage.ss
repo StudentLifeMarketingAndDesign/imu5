@@ -196,7 +196,7 @@
 					<p>*Some items are provided in fee rooms in limited amounts for no charge: for a full list see our <a href="event-services/fees/"> A/V, Equipment, and Services page.  </p></a>
 				<% end_if %>
 
-				<% if $StandardCapacity && $ShowupSetChangeFee && $SetupChangeFee %>
+				<% if $StandardCapacity && $ShowSetupChangeFee && $SetupChangeFee %>
 					<p class="standard_setup_notice">
 						* denotes a room's standard setup. Minimum setup change fee: 
 						<strong>$SetupChangeFee</strong>.

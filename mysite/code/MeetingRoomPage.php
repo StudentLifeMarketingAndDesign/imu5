@@ -28,7 +28,8 @@ class MeetingRoomPage extends Page {
 		'HasElectricPiano'               => 'Boolean',
 		'ExternalLink'                   => 'Text',
 		'ComplimentaryEquipmentProvided' => 'Boolean',
-		'ShowStandardSetUpFee' => 'Boolean',
+		'ShowSetupChangeFee' => 'Boolean',
+		'SetupChangeFee'	=> 'Text',
 		'ShowRoomLayout' => 'Boolean'
 	);
 
@@ -83,7 +84,10 @@ class MeetingRoomPage extends Page {
 		$fields->addFieldToTab('Root.Capacities', new TextField('ClassroomCapacity', 'Classroom Capacity'));
 		$fields->addFieldToTab('Root.Capacities', new TextField('UshapeCapacity', 'U-Shape Capacity'));
 		$fields->addFieldToTab('Root.Capacities', new TextField('BoardroomCapacity', 'Board Room Capacity'));
-		$fields->addFieldToTab('Root.Capacities', new CheckboxField('ShowStandardSetUpFee', 'Show Setup Fee?'));
+
+		$fields->addFieldToTab('Root.Capacities', new CheckboxField('ShowSetupChangeFee', 'Show minimum set change fee?'));
+		$fields->addFieldToTab('Root.Capacities', new TextField('SetupChangeFee', 'Minimum set change fee (include dollar sign)'));
+		
 		// Amenities
 		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasComputer', 'Has Computer?'));
 		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasEthernetConnection', 'Has Ethernet Connection?'));

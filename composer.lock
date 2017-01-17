@@ -347,12 +347,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-project.git",
-                "reference": "4d1bd45ca4e753a386af1c9bc77a005ade4ac458"
+                "reference": "fc8b2ba7032a922b1efe256649dd74425eaa5a68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/4d1bd45ca4e753a386af1c9bc77a005ade4ac458",
-                "reference": "4d1bd45ca4e753a386af1c9bc77a005ade4ac458",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/fc8b2ba7032a922b1efe256649dd74425eaa5a68",
+                "reference": "fc8b2ba7032a922b1efe256649dd74425eaa5a68",
                 "shasum": ""
             },
             "require": {
@@ -378,7 +378,7 @@
                 "silverstripe/secureassets": "dev-master",
                 "silverstripe/staticpublisher": "*",
                 "silverstripe/timepickerfield": "*",
-                "silverstripe/userforms": "3.*",
+                "silverstripe/userforms": "4.*@stable",
                 "silverstripe/widgets": "*",
                 "simplepie/simplepie": "*",
                 "thisisbd/silverstripe-maintenance-mode": "*",
@@ -393,7 +393,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/division-project/tree/3.4.x",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-project/issues"
             },
-            "time": "2017-01-12 15:43:52"
+            "time": "2017-01-17 15:56:33"
         },
         {
             "name": "md/rss-display",
@@ -1277,16 +1277,16 @@
         },
         {
             "name": "silverstripe/userforms",
-            "version": "3.x-dev",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-userforms.git",
-                "reference": "bda22e9df6688e3de8c15b38816a646ea39b7cc3"
+                "reference": "064701af23394d39c54c77b4cb087ecc84f5265c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-userforms/zipball/bda22e9df6688e3de8c15b38816a646ea39b7cc3",
-                "reference": "bda22e9df6688e3de8c15b38816a646ea39b7cc3",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-userforms/zipball/064701af23394d39c54c77b4cb087ecc84f5265c",
+                "reference": "064701af23394d39c54c77b4cb087ecc84f5265c",
                 "shasum": ""
             },
             "require": {
@@ -1297,12 +1297,13 @@
             },
             "suggest": {
                 "colymba/gridfield-bulk-editing-tools": "Allows for bulk management of form submissions",
+                "silverstripe/gridfieldqueuedexport": "Export large submission as CSV through queued jobs in the background",
                 "silverstripe/secureassets": "Enables files uploaded via userforms to be secured from public access"
             },
             "type": "silverstripe-module",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.1.x-dev"
+                    "dev-master": "4.3.x-dev"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1336,7 +1337,7 @@
                 "silverstripe",
                 "userforms"
             ],
-            "time": "2016-10-11 03:20:08"
+            "time": "2017-01-16 11:09:07"
         },
         {
             "name": "silverstripe/widgets",

@@ -85,8 +85,8 @@ class MeetingRoomPage extends Page {
 		$fields->addFieldToTab('Root.Capacities', new TextField('UshapeCapacity', 'U-Shape Capacity'));
 		$fields->addFieldToTab('Root.Capacities', new TextField('BoardroomCapacity', 'Board Room Capacity'));
 
-		$fields->addFieldToTab('Root.Capacities', new CheckboxField('ShowSetupChangeFee', 'Show minimum set change fee?'));
-		$fields->addFieldToTab('Root.Capacities', new TextField('SetupChangeFee', 'Minimum set change fee (include dollar sign)'));
+		$fields->addFieldToTab('Root.Capacities', new CheckboxField('ShowSetupChangeFee', 'Show minimum setup change fee?'));
+		$fields->addFieldToTab('Root.Capacities', new TextField('SetupChangeFee', 'Minimum setup change fee (include dollar sign)'));
 		
 		// Amenities
 		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasComputer', 'Has Computer?'));

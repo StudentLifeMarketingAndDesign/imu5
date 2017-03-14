@@ -5,11 +5,11 @@ class BuildingDepartment extends DataObject {
 		'Title' => 'Varchar',
 		'Location' => 'Varchar',
 		'Link' => 'Text',
-		'SortOrder' => 'Text'
+		'SortOrder' => 'Int'
 	);
 
 	private static $has_one = array(
-		'Buliding' => 'BuildingHoursPage',
+		'Buliding' => 'BuildingHoursPage'
 	);
 
 	private static $has_many = array(
@@ -17,9 +17,12 @@ class BuildingDepartment extends DataObject {
 		'ExceptionHours' => 'BuildingExceptionHours',
 	);
 
+	private static $summary_fields = array(
+		'Title',
+	);
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
-
+		// $fields = new FieldList();
 		$fields->addFieldToTab( 'Root.Main', new TextField("Title", "Title"));
 		$fields->addFieldToTab( 'Root.Main', new TextField("Location", "Location"));
 		$fields->addFieldToTab( 'Root.Main', new TextField("Link", "Link"));

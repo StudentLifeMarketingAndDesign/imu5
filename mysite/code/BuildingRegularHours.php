@@ -14,7 +14,11 @@ class BuildingRegularHours extends DataObject {
 	private static $has_one = array(
 		'Department' => 'BuildingDepartment',
 	);
-
+	
+	private static $summary_fields = array(
+		'StartDate',
+		'EndDate'
+	);
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 

@@ -13,6 +13,11 @@ class BuildingExceptionHours extends DataObject {
 		'Department' => 'BuildingDepartment',
 	);
 
+	private static $summary_fields = array(
+		'StartDate',
+		'EndDate'
+	);
+
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 

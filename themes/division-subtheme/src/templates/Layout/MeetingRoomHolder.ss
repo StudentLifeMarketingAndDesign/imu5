@@ -26,38 +26,26 @@ $BlockArea(BeforeContent)
 		</div>
 		$BlockArea(AfterContentConstrained)
 		$Form
-		<ul class="justify MeetingRoomList">
+		<div class="room-grid row small-up-2 medium-up-3">
 				<% loop $Children %>
 
-					<li class="item">
-						<a href="$Link">
-							<img src="$SlideshowImage1.croppedImage(300,200).URL" alt="$Title">
-							<h3 class="title">$Title</h3>
-
-							<p class="room-capacity">
+					 <div class="column column-block">
+						<a href="$Link" class="room-grid__link">
+							<img src="$SlideshowImage1.FocusFill(300,200).URL" alt="$Title">
+							<h3 class="room-grid__title">$Title</h3>
+							<p class="room-grid__info">
 							<% if $DisplayCapacity %>
-								<span class="capacity"><strong>Capacity: </strong>$DisplayCapacity</span>
+								<span class="room-grid__label"><strong>Capacity: </strong>$DisplayCapacity</span>
 							<% end_if %>
 							<% if $Number %>
-								<span class="room"><strong>Room #</strong>$Number</span>
+								<span class="room-grid__label"><strong>Room #</strong>$Number</span>
 							<% end_if %>
 							</p>
-							
-
-							<!--
-							<% if $TablesAndChairsCapacity %>$TablesAndChairsCapacity<% end_if %>
-							<% if $RoundedTablesCapacity %>$RoundedTablesCapacity<% end_if %>
-							<% if $TheaterCapacity %>$TheaterCapacity<% end_if %>
-							<% if $ClassroomCapacity %>$ClassroomCapacity<% end_if %>
-							<% if $UshapeCapacity %>$UshapeCapacity<% end_if %>
-							<% if $BoardroomCapacity %>$BoardroomCapacity<% end_if %>
-							-->
-							
 						 </a>
-					</li>&nbsp;
+					</div>
 
 				<% end_loop %>
-					<li class="item filler"></li>
+
 			</ul>
 	</article>
 	<aside class="sidebar dp-sticky">

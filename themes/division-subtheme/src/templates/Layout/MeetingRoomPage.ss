@@ -22,34 +22,66 @@ $BlockArea(BeforeContent)
 		$BlockArea(BeforeContentConstrained)
 		<div class="main-content__text">
 		 		<% if $SlideshowImage1 || $SlideshowImage2 || $SlideshowImage3 || $SlideshowImage4 || $SlideshowImage5 || $SlideshowImage6 || $SlideshowImage7 || $SlideshowImage8 %>
-					<div class="flexslider">
-						<ul class="slides">
-							<% if SlideshowImage1 %><li><img src="$SlideshowImage1.CroppedImage(760, 506).URL" alt="$Title"></li><% end_if %>
-							<% if SlideshowImage2 %><li><img src="$SlideshowImage2.CroppedImage(760, 506).URL" alt="$Title"></li><% end_if %>
-							<% if SlideshowImage3 %><li><img src="$SlideshowImage3.CroppedImage(760, 506).URL" alt="$Title"></li><% end_if %>
-							<% if SlideshowImage4 %><li><img src="$SlideshowImage4.CroppedImage(760, 506).URL" alt="$Title"></li><% end_if %>
-							<% if SlideshowImage5 %><li><img src="$SlideshowImage5.CroppedImage(760, 506).URL" alt="$Title"></li><% end_if %>
-							<% if SlideshowImage6 %><li><img src="$SlideshowImage6.CroppedImage(760, 506).URL" alt="$Title"></li><% end_if %>
-							<% if SlideshowImage7 %><li><img src="$SlideshowImage7.CroppedImage(760, 506).URL" alt="$Title"></li><% end_if %>
-							<% if SlideshowImage8 %><li><img src="$SlideshowImage8.CroppedImage(760, 506).URL" alt="$Title"></li><% end_if %>
-						</ul>
+
+
+					<div class="slideshow">
+			
+						<div class="slideshow__slide">
+							<% if SlideshowImage1 %>
+								<img class="slideshow__img" data-flickity-lazyload="$SlideshowImage1.FocusFill(840, 525).URL" width="840" height="525" alt="" role="presentation" />
+							<% end_if %>
+						</div>
+						<% if SlideshowImage2 %>
+							<div class="slideshow__slide">
+								<img class="slideshow__img" data-flickity-lazyload="$SlideshowImage2.FocusFill(840, 525).URL" width="840" height="525" alt="" role="presentation" />
+							</div>
+						<% end_if %>
+						<% if SlideshowImage3 %>
+							<div class="slideshow__slide">
+								<img class="slideshow__img" data-flickity-lazyload="$SlideshowImage3.FocusFill(840, 525).URL" width="840" height="525" alt="" role="presentation" />
+							</div>
+						<% end_if %>		
+						<% if SlideshowImage4 %>
+							<div class="slideshow__slide">
+								<img class="slideshow__img" data-flickity-lazyload="$SlideshowImage4.FocusFill(840, 525).URL" width="840" height="525" alt="" role="presentation" />
+							</div>
+						<% end_if %>				
+						<% if SlideshowImage5 %>
+							<div class="slideshow__slide">
+								<img class="slideshow__img" data-flickity-lazyload="$SlideshowImage5.FocusFill(840, 525).URL" width="840" height="525" alt="" role="presentation" />
+							</div>
+						<% end_if %>
+						<% if SlideshowImage6 %>
+							<div class="slideshow__slide">
+								<img class="slideshow__img" data-flickity-lazyload="$SlideshowImage6.FocusFill(840, 525).URL" width="840" height="525" alt="" role="presentation" />
+							</div>
+						<% end_if %>
+						<% if SlideshowImage7 %>
+							<div class="slideshow__slide">
+								<img class="slideshow__img" data-flickity-lazyload="$SlideshowImage7.FocusFill(840, 525).URL" width="840" height="525" alt="" role="presentation" />
+							</div>
+						<% end_if %>
+						<% if SlideshowImage8 %>
+							<div class="slideshow__slide">
+								<img class="slideshow__img" data-flickity-lazyload="$SlideshowImage8.FocusFill(840, 525).URL" width="840" height="525" alt="" role="presentation" />
+							</div>
+						<% end_if %>																	
 					</div>
 				<% else %>
 					<img src="$SlideshowImage1.CroppedImage(760, 506).URL" alt="$Title">
 				<% end_if %>
-				$Breadcrumbs
-				<h1 class="name">$Title</h1>
+			
+				<h1>$Title</h1>
 
-				<% if $Number %><p class="number">Room #$Number</p><% end_if %>
+				<% if $Number %><p>Room #$Number</p><% end_if %>
 				$Content
 				$Form
 
 				
-				<div class="meeting-page-details clearfix">
+				<div class="room-single__details">
 					<% if $TablesAndChairsCapacity || $RoundedTablesCapacity || $TheaterCapacity || $ClassroomCapacity || $UshapeCapacity || $BoardroomCapacity %>
-					<div class="item first capacity">
-						<h4 class="title">Capacity by setup</h4>
-						<div class="">
+						<h4>Capacity by setup</h4>
+						
 							<% if $TablesAndChairsCapacity %>
 							<p>
 								<!-- <span><img src="$ThemeDir/images/table_icon.png"></span> -->
@@ -86,16 +118,16 @@ $BlockArea(BeforeContent)
 								<strong>Board Room:</strong> $BoardroomCapacity
 							</p>
 							<% end_if %>
-						</div>
-					</div>
+						
+			
 					<% end_if %>
 				 
 
 				  	<% if $HasComputer || $HasEthernetConnection || $HasProjectorScreen || $HasDVD || $HasSpeakers || $HasMarkerboard || $HasMicrophone || $HasWifi || $HasElectricPiano|| $ComplimentaryEquipmentProvided %>
-					<div class="item equipment ">
+				
 					
-						<h4 class="title">Equipment</h4>
-						<div>
+						<h4>Equipment</h4>
+					
 							<% if $HasComputer %>
 								<p>
 								 	<!-- <span><img src="$ThemeDir/images/computer_icon.png" height="24"></span> -->
@@ -156,13 +188,11 @@ $BlockArea(BeforeContent)
 									Complimentary items*
 								</p>
 							<% end_if %>
-						</div>
-					</div>
+					
 					<% end_if %>
 
 					<% if $StudentRate || $FacultyRate || $GeneralRate %>
-					<div class="item last rates">
-						<h4 class="title">Rates</h4>
+						<h4>Rates</h4>
 						<% if $StudentRate %>
 							<p>
 								<strong>UI Student Organization Events</strong><br>
@@ -189,7 +219,6 @@ $BlockArea(BeforeContent)
 								</span>
 							</p>
 						<% end_if %>
-					</div>
 					<% end_if %>
 
 				</div>
@@ -198,7 +227,7 @@ $BlockArea(BeforeContent)
 					<% if $Parent.ID == 417 %>
 						<p>Make a reservation for this space by calling 319-335-3114 or emailing <a href="mailto:imu-eventservices@uiowa.edu">imu-eventservices@uiowa.edu</a>.</p>
 					<% else %>
-						<a href="event-services/reservations/" class="btn btn-large">Make a reservation</a>
+						<a href="event-services/reservations/" class="button button--large">Make a reservation</a>
 					<% end_if %>
 				</div>
 
@@ -219,10 +248,10 @@ $BlockArea(BeforeContent)
 
 					
 					<% if $TablesAndChairsCapacity %>
-					<li class="item">
+					<li>
 						<img src="{$ThemeDir}/images/room-setups/tables.png" alt="tables">
-						<h3 class="title">Banquet Rectangles</h3>
-						<p class="room-capacity">
+						<h3>Banquet Rectangles</h3>
+						<p>
 							<strong> Capacity: </strong> $TablesAndChairsCapacity
 						</p>
 						
@@ -230,12 +259,12 @@ $BlockArea(BeforeContent)
 					<% end_if %>
 
 					<% if $RoundedTablesCapacity %>
-					<li class="item">
+					<li>
 
 							<img src="{$ThemeDir}/images/room-setups/roundTables.png" alt="roundTables">
 
-						<h3 class="title">Banquet Rounds</h3>
-						<p class="room-capacity">
+						<h3>Banquet Rounds</h3>
+						<p>
 							<strong> Capacity: </strong> $RoundedTablesCapacity
 						</p>
 					
@@ -243,12 +272,12 @@ $BlockArea(BeforeContent)
 					<% end_if %>
 
 					<% if $TheaterCapacity %>
-					<li class="item">
+					<li>
 
 							<img src="{$ThemeDir}/images/room-setups/theater.png" alt="theater">
 
-						<h3 class="title">Theater</h3>
-						<p class="room-capacity">
+						<h3>Theater</h3>
+						<p>
 							<strong> Capacity: </strong> $TheaterCapacity
 						</p>
 					
@@ -256,12 +285,12 @@ $BlockArea(BeforeContent)
 					<% end_if %>
 
 					<% if $ClassroomCapacity %>
-					<li class="item">
+					<li>
 
 							<img src="{$ThemeDir}/images/room-setups/classroom.png" alt="classroom">
 
-						<h3 class="title">Classroom</h3>
-						<p class="room-capacity">
+						<h3>Classroom</h3>
+						<p>
 							<strong> Capacity: </strong> $ClassroomCapacity
 						</p>
 					
@@ -269,11 +298,11 @@ $BlockArea(BeforeContent)
 					<% end_if %>								
 
 					<% if $UshapeCapacity %>
-					<li class="item">
+					<li>
 
 						<img src="{$ThemeDir}/images/room-setups/Ushape.png" alt="Ushape">
-						<h3 class="title">U-Shape</h3>
-						<p class="room-capacity">
+						<h3>U-Shape</h3>
+						<p>
 							<strong> Capacity: </strong> $UshapeCapacity
 						</p>
 					
@@ -281,17 +310,15 @@ $BlockArea(BeforeContent)
 					<% end_if %>
 
 					<% if $BoardroomCapacity %>
-					<li class="item">
+					<li>
 						<img src="{$ThemeDir}/images/room-setups/boardRoom.png" alt="boardRoom">
-						<h3 class="title">Board Room</h3>
-						<p class="room-capacity">
+						<h3>Board Room</h3>
+						<p>
 							<strong> Capacity: </strong> $BoardroomCapacity
 						</p>
 					
 					</li>&nbsp;
 					<% end_if %>
-
-					<li class="item filler"></li>
 				</ul>
 				<% end_if %>
 

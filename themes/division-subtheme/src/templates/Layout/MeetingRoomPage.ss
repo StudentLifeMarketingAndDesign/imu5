@@ -244,7 +244,7 @@ $BlockArea(BeforeContent)
 				<% end_if %>
 				<% if $ShowRoomLayout %>
 				<h2>Available setups for {$Title}:</h2>
-				<ul class="justify MeetingRoomList room-setups">
+				<ul class="room-single__setups">
 
 					
 					<% if $TablesAndChairsCapacity %>

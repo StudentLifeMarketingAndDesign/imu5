@@ -464,12 +464,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-project.git",
-                "reference": "dd62886141aa612d957ffe4bd7652bd958677da1"
+                "reference": "48f971f35dba2ad62f49bb056f76eac48e4cdb54"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/dd62886141aa612d957ffe4bd7652bd958677da1",
-                "reference": "dd62886141aa612d957ffe4bd7652bd958677da1",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/48f971f35dba2ad62f49bb056f76eac48e4cdb54",
+                "reference": "48f971f35dba2ad62f49bb056f76eac48e4cdb54",
                 "shasum": ""
             },
             "require": {
@@ -486,7 +486,7 @@
                 "sheadawson/quickaddnew": "*",
                 "sheadawson/silverstripe-blocks": "1.1.1",
                 "silverstripe-themes/simple": "*",
-                "silverstripe/activedirectory": "3.*",
+                "silverstripe/activedirectory": "3.0.4.2",
                 "silverstripe/blog": "2.*",
                 "silverstripe/cms": "3.6.1",
                 "silverstripe/framework": "3.6.1",
@@ -516,7 +516,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/division-project/tree/2.0.x",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-project/issues"
             },
-            "time": "2017-07-11 17:14:50"
+            "time": "2017-07-11 17:44:02"
         },
         {
             "name": "md/rss-display",
@@ -1029,16 +1029,16 @@
         },
         {
             "name": "silverstripe/activedirectory",
-            "version": "3.x-dev",
+            "version": "3.0.4.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/silverstripe/silverstripe-activedirectory.git",
-                "reference": "17028e0031f947a81f9dfe66602f2fd7dea5c8b9"
+                "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-activedirectory.git",
+                "reference": "0f664fcda1962e3011d6b7cc4b6d1adc5443fd81"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-activedirectory/zipball/17028e0031f947a81f9dfe66602f2fd7dea5c8b9",
-                "reference": "17028e0031f947a81f9dfe66602f2fd7dea5c8b9",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/silverstripe-activedirectory/zipball/0f664fcda1962e3011d6b7cc4b6d1adc5443fd81",
+                "reference": "0f664fcda1962e3011d6b7cc4b6d1adc5443fd81",
                 "shasum": ""
             },
             "require": {
@@ -1059,7 +1059,6 @@
                     "3.x-dev": "3.0.x-dev"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -1075,15 +1074,18 @@
             ],
             "description": "Adds Active Directory support to SilverStripe including user synchronisation and SSO/LDAP authentication",
             "keywords": [
-                "SSO",
                 "active",
                 "ad",
                 "directory",
                 "ldap",
                 "saml",
-                "silverstripe"
+                "silverstripe",
+                "sso"
             ],
-            "time": "2017-07-10 21:43:27"
+            "support": {
+                "source": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-activedirectory/tree/3"
+            },
+            "time": "2017-07-11T17:31:00+00:00"
         },
         {
             "name": "silverstripe/blog",

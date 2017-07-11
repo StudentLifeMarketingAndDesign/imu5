@@ -74,7 +74,9 @@ $BlockArea(BeforeContent)
 				<h1>$Title</h1>
 
 				<% if $Number %><p>Room #$Number</p><% end_if %>
-				$Content
+				<div class="room-single__info">
+					$Content
+				</div>
 				$Form
 
 				

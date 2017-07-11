@@ -2365,26 +2365,26 @@
         },
         {
             "name": "zendframework/zend-eventmanager",
-            "version": "dev-develop",
+            "version": "3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-eventmanager.git",
-                "reference": "071016ade1deee5b8346ec9d8d48935437746c37"
+                "reference": "5c80bdee0e952be112dcec0968bad770082c3a6e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-eventmanager/zipball/071016ade1deee5b8346ec9d8d48935437746c37",
-                "reference": "071016ade1deee5b8346ec9d8d48935437746c37",
+                "url": "https://api.github.com/repos/zendframework/zend-eventmanager/zipball/5c80bdee0e952be112dcec0968bad770082c3a6e",
+                "reference": "5c80bdee0e952be112dcec0968bad770082c3a6e",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.6 || ^7.0"
+                "php": "^5.5 || ^7.0"
             },
             "require-dev": {
                 "athletic/athletic": "^0.1",
                 "container-interop/container-interop": "^1.1.0",
-                "phpunit/phpunit": "^6.0.7 || ^5.7.14",
-                "zendframework/zend-coding-standard": "~1.0.0",
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "^2.0",
                 "zendframework/zend-stdlib": "^2.7.3 || ^3.0"
             },
             "suggest": {
@@ -2394,8 +2394,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.2-dev",
-                    "dev-develop": "3.3-dev"
+                    "dev-master": "3.0-dev",
+                    "dev-develop": "3.1-dev"
                 }
             },
             "autoload": {
@@ -2415,7 +2415,7 @@
                 "events",
                 "zf2"
             ],
-            "time": "2017-07-11 19:19:12"
+            "time": "2016-02-18 20:53:00"
         },
         {
             "name": "zendframework/zend-ldap",
@@ -2538,31 +2538,31 @@
         },
         {
             "name": "zendframework/zend-stdlib",
-            "version": "dev-develop",
+            "version": "3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-stdlib.git",
-                "reference": "16818ed8ee2a92a503c43883dcb6263fe6283ee8"
+                "reference": "8bafa58574204bdff03c275d1d618aaa601588ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-stdlib/zipball/16818ed8ee2a92a503c43883dcb6263fe6283ee8",
-                "reference": "16818ed8ee2a92a503c43883dcb6263fe6283ee8",
+                "url": "https://api.github.com/repos/zendframework/zend-stdlib/zipball/8bafa58574204bdff03c275d1d618aaa601588ae",
+                "reference": "8bafa58574204bdff03c275d1d618aaa601588ae",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.6 || ^7.0"
+                "php": "^5.5 || ^7.0"
             },
             "require-dev": {
                 "athletic/athletic": "~0.1",
-                "phpunit/phpunit": "~4.0",
-                "squizlabs/php_codesniffer": "^2.6.2"
+                "fabpot/php-cs-fixer": "1.7.*",
+                "phpunit/phpunit": "~4.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.1-dev",
-                    "dev-develop": "3.2-dev"
+                    "dev-master": "3.0-dev",
+                    "dev-develop": "3.1-dev"
                 }
             },
             "autoload": {
@@ -2579,7 +2579,7 @@
                 "stdlib",
                 "zf2"
             ],
-            "time": "2016-09-13 14:40:02"
+            "time": "2016-04-12 21:19:36"
         }
     ],
     "packages-dev": [],

@@ -464,12 +464,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-project.git",
-                "reference": "48f971f35dba2ad62f49bb056f76eac48e4cdb54"
+                "reference": "6339fb17818b4657cbbcbf90fc0b1b92c4bd5769"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/48f971f35dba2ad62f49bb056f76eac48e4cdb54",
-                "reference": "48f971f35dba2ad62f49bb056f76eac48e4cdb54",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/6339fb17818b4657cbbcbf90fc0b1b92c4bd5769",
+                "reference": "6339fb17818b4657cbbcbf90fc0b1b92c4bd5769",
                 "shasum": ""
             },
             "require": {
@@ -486,7 +486,7 @@
                 "sheadawson/quickaddnew": "*",
                 "sheadawson/silverstripe-blocks": "1.1.1",
                 "silverstripe-themes/simple": "*",
-                "silverstripe/activedirectory": "3.0.4.2",
+                "silverstripe/activedirectory": "3.0.4.4",
                 "silverstripe/blog": "2.*",
                 "silverstripe/cms": "3.6.1",
                 "silverstripe/framework": "3.6.1",
@@ -516,7 +516,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/division-project/tree/2.0.x",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-project/issues"
             },
-            "time": "2017-07-11 17:44:02"
+            "time": "2017-07-11 18:03:49"
         },
         {
             "name": "md/rss-display",
@@ -1029,16 +1029,16 @@
         },
         {
             "name": "silverstripe/activedirectory",
-            "version": "3.0.4.2",
+            "version": "3.0.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-activedirectory.git",
-                "reference": "0f664fcda1962e3011d6b7cc4b6d1adc5443fd81"
+                "reference": "5cc1ea6d45a9bdcd7e18eb8ac72f4981e61f4c5c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/silverstripe-activedirectory/zipball/0f664fcda1962e3011d6b7cc4b6d1adc5443fd81",
-                "reference": "0f664fcda1962e3011d6b7cc4b6d1adc5443fd81",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/silverstripe-activedirectory/zipball/5cc1ea6d45a9bdcd7e18eb8ac72f4981e61f4c5c",
+                "reference": "5cc1ea6d45a9bdcd7e18eb8ac72f4981e61f4c5c",
                 "shasum": ""
             },
             "require": {
@@ -1046,9 +1046,9 @@
                 "php": ">=5.4",
                 "silverstripe/framework": "~3.1",
                 "silverstripe/queuedjobs": "~2.6@stable",
-                "zendframework/zend-authentication": "^2.5.1",
-                "zendframework/zend-ldap": "^2.5.1",
-                "zendframework/zend-session": "^2.5.1"
+                "zendframework/zend-authentication": "2.5.3",
+                "zendframework/zend-ldap": "2.8.0",
+                "zendframework/zend-session": "2.7.4"
             },
             "require-dev": {
                 "phpunit/phpunit": "~4.8"
@@ -1083,9 +1083,9 @@
                 "sso"
             ],
             "support": {
-                "source": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-activedirectory/tree/3"
+                "source": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-activedirectory/tree/3.0.4.4"
             },
-            "time": "2017-07-11T17:31:00+00:00"
+            "time": "2017-07-11T18:03:07+00:00"
         },
         {
             "name": "silverstripe/blog",
@@ -2304,16 +2304,16 @@
         },
         {
             "name": "zendframework/zend-authentication",
-            "version": "dev-develop",
+            "version": "2.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-authentication.git",
-                "reference": "796013de02b70e804489ea7858411f1b20baf5b9"
+                "reference": "1422dec160eb769c719cad2229847fcbf20a1405"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-authentication/zipball/796013de02b70e804489ea7858411f1b20baf5b9",
-                "reference": "796013de02b70e804489ea7858411f1b20baf5b9",
+                "url": "https://api.github.com/repos/zendframework/zend-authentication/zipball/1422dec160eb769c719cad2229847fcbf20a1405",
+                "reference": "1422dec160eb769c719cad2229847fcbf20a1405",
                 "shasum": ""
             },
             "require": {
@@ -2362,7 +2362,7 @@
                 "Authentication",
                 "zf2"
             ],
-            "time": "2016-04-27 18:55:45"
+            "time": "2016-02-28T15:02:34+00:00"
         },
         {
             "name": "zendframework/zend-eventmanager",
@@ -2420,16 +2420,16 @@
         },
         {
             "name": "zendframework/zend-ldap",
-            "version": "dev-master",
+            "version": "2.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-ldap.git",
-                "reference": "17f8c531f95840f8a508f6b8e8dfe81775ec3d97"
+                "reference": "a9284a7440e17ce0ba697670bb4db1baf2340acd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-ldap/zipball/17f8c531f95840f8a508f6b8e8dfe81775ec3d97",
-                "reference": "17f8c531f95840f8a508f6b8e8dfe81775ec3d97",
+                "url": "https://api.github.com/repos/zendframework/zend-ldap/zipball/a9284a7440e17ce0ba697670bb4db1baf2340acd",
+                "reference": "a9284a7440e17ce0ba697670bb4db1baf2340acd",
                 "shasum": ""
             },
             "require": {
@@ -2469,7 +2469,7 @@
                 "ldap",
                 "zf2"
             ],
-            "time": "2017-03-11 21:10:12"
+            "time": "2017-03-06T20:39:12+00:00"
         },
         {
             "name": "zendframework/zend-session",

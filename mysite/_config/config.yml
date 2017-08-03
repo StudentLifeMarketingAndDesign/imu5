@@ -11,3 +11,6 @@ TopicHolder_Controller:
 Topic_Controller:
   extensions:
     - TopicControllerSearchExtension
+CMSMain:
+  extensions:
+    - CMSMainExtension

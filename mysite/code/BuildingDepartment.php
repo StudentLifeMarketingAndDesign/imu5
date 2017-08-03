@@ -17,6 +17,7 @@ class BuildingDepartment extends DataObject {
 
 	private static $summary_fields = array(
 		'Title',
+		'Location',
 		'HoursDateRange',
 		'RegularHours',
 		'ExceptionHours'

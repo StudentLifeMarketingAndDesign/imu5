@@ -89,12 +89,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "c568b9567deda672098b7adb7910c63f8bb278e3"
+                "reference": "9ce17fb70e9a38dd8acff0636a29f5cf4d575c1b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/c568b9567deda672098b7adb7910c63f8bb278e3",
-                "reference": "c568b9567deda672098b7adb7910c63f8bb278e3",
+                "url": "https://api.github.com/repos/composer/installers/zipball/9ce17fb70e9a38dd8acff0636a29f5cf4d575c1b",
+                "reference": "9ce17fb70e9a38dd8acff0636a29f5cf4d575c1b",
                 "shasum": ""
             },
             "require": {
@@ -164,6 +164,7 @@
                 "croogo",
                 "dokuwiki",
                 "drupal",
+                "eZ Platform",
                 "elgg",
                 "expressionengine",
                 "fuelphp",
@@ -197,7 +198,57 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2017-07-06 12:31:10"
+            "time": "2017-08-09 07:53:48"
+        },
+        {
+            "name": "embed/embed",
+            "version": "v2.2.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oscarotero/Embed.git",
+                "reference": "75736ec8928e1d27929105ef9902a08d52ec5b34"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/75736ec8928e1d27929105ef9902a08d52ec5b34",
+                "reference": "75736ec8928e1d27929105ef9902a08d52ec5b34",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Embed\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oscar Otero",
+                    "email": "oom@oscarotero.com",
+                    "homepage": "http://oscarotero.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP library to retrieve page info using oembed, opengraph, etc",
+            "homepage": "https://github.com/oscarotero/Embed",
+            "keywords": [
+                "embed",
+                "embedly",
+                "oembed",
+                "opengraph",
+                "twitter cards"
+            ],
+            "time": "2015-06-27T17:19:54+00:00"
         },
         {
             "name": "facebook/graph-sdk",
@@ -432,12 +483,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events.git",
-                "reference": "e6dac05b0f20c336963adfccd140d031c6cb3a92"
+                "reference": "c46bcef4cbf596a4ade4e231be64c129c88951ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/ac-json-events/zipball/e6dac05b0f20c336963adfccd140d031c6cb3a92",
-                "reference": "e6dac05b0f20c336963adfccd140d031c6cb3a92",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/ac-json-events/zipball/c46bcef4cbf596a4ade4e231be64c129c88951ef",
+                "reference": "c46bcef4cbf596a4ade4e231be64c129c88951ef",
                 "shasum": ""
             },
             "require": {
@@ -456,7 +507,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/tree/master",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/issues"
             },
-            "time": "2017-04-12 19:06:46"
+            "time": "2017-08-10 14:34:03"
         },
         {
             "name": "md/division-project",
@@ -464,12 +515,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-project.git",
-                "reference": "6de140279999edad5aa935bb24742946a83e9ea8"
+                "reference": "73c99fd720b12d1429e85e67a12b5468b999427d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/6de140279999edad5aa935bb24742946a83e9ea8",
-                "reference": "6de140279999edad5aa935bb24742946a83e9ea8",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/73c99fd720b12d1429e85e67a12b5468b999427d",
+                "reference": "73c99fd720b12d1429e85e67a12b5468b999427d",
                 "shasum": ""
             },
             "require": {
@@ -485,6 +536,7 @@
                 "plato-creative/silverstripe-typekit": "*",
                 "sheadawson/quickaddnew": "*",
                 "sheadawson/silverstripe-blocks": "1.1.1",
+                "sheadawson/silverstripe-linkable": "1.3.*",
                 "silverstripe-themes/simple": "*",
                 "silverstripe/activedirectory": "3.0.4.4",
                 "silverstripe/blog": "2.*",
@@ -516,7 +568,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/division-project/tree/2.0.x",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-project/issues"
             },
-            "time": "2017-07-31 18:46:05"
+            "time": "2017-08-08 14:28:57"
         },
         {
             "name": "md/rss-display",
@@ -931,6 +983,59 @@
                 "widgets"
             ],
             "time": "2016-11-08T22:48:10+00:00"
+        },
+        {
+            "name": "sheadawson/silverstripe-linkable",
+            "version": "1.3.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sheadawson/silverstripe-linkable.git",
+                "reference": "c79afd96fa2d9d8064707f14800dd1912082baee"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sheadawson/silverstripe-linkable/zipball/c79afd96fa2d9d8064707f14800dd1912082baee",
+                "reference": "c79afd96fa2d9d8064707f14800dd1912082baee",
+                "shasum": ""
+            },
+            "require": {
+                "embed/embed": "~2.2.2",
+                "php": ">=5.3.2",
+                "silverstripe/framework": "^3.2",
+                "unclecheese/display-logic": "^1.4"
+            },
+            "suggest": {
+                "silverstripe/cms": "To allow for a linking of the SiteTree data object."
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "linkable",
+                "branch-alias": {
+                    "dev-master": "1.4.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Marcus Nyeholt",
+                    "email": "marcus@silverstripe.com.au"
+                },
+                {
+                    "name": "Shea Dawson",
+                    "email": "shea@silverstripe.com.au"
+                }
+            ],
+            "description": "A couple of handy form fields and objects for managing external and internal links on DataObjects",
+            "homepage": "http://github.com/sheadawson/silverstripe-linkable",
+            "keywords": [
+                "cms",
+                "link",
+                "silverstripe"
+            ],
+            "time": "2017-05-30 04:40:45"
         },
         {
             "name": "silverstripe-australia/gridfieldextensions",
@@ -1898,12 +2003,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/simplepie/simplepie.git",
-                "reference": "8b47ee93efd61f86c2597f9e53b74107cb054ffb"
+                "reference": "a3e04e32224a0a41ddcd474a10f39e121df40f21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simplepie/simplepie/zipball/8b47ee93efd61f86c2597f9e53b74107cb054ffb",
-                "reference": "8b47ee93efd61f86c2597f9e53b74107cb054ffb",
+                "url": "https://api.github.com/repos/simplepie/simplepie/zipball/a3e04e32224a0a41ddcd474a10f39e121df40f21",
+                "reference": "a3e04e32224a0a41ddcd474a10f39e121df40f21",
                 "shasum": ""
             },
             "require": {
@@ -1950,7 +2055,7 @@
                 "feeds",
                 "rss"
             ],
-            "time": "2017-07-28 06:15:06"
+            "time": "2017-08-08 00:22:22"
         },
         {
             "name": "symbiote/silverstripe-addressable",

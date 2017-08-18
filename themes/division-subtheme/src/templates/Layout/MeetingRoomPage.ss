@@ -227,7 +227,7 @@ $BlockArea(BeforeContent)
 				<div class="well">
 
 					<% if $ContactInfo %>
-						<h2>Contact information</h2>
+						<h3>Contact information</h3>
 						<p>$ContactInfo</p>
 					<% else_if $Parent.ID == 417 %>
 						<p>Make a reservation for this space by calling 319-335-3114 or emailing <a href="mailto:imu-eventservices@uiowa.edu">imu-eventservices@uiowa.edu</a>.</p>

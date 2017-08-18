@@ -67,7 +67,7 @@ $BlockArea(BeforeContent)
 							</div>
 						<% end_if %>																	
 					</div>
-				<% else %>
+				<% else_if $SlideshowImage1 %>
 					<img src="$SlideshowImage1.CroppedImage(760, 506).URL" alt="$Title">
 				<% end_if %>
 			

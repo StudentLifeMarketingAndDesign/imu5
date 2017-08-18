@@ -82,7 +82,7 @@ $BlockArea(BeforeContent)
 				
 				<div class="room-single__details">
 					<% if $TablesAndChairsCapacity || $RoundedTablesCapacity || $TheaterCapacity || $ClassroomCapacity || $UshapeCapacity || $BoardroomCapacity %>
-						<h4>Capacity by setup</h4>
+						<h2>Capacity by setup</h2>
 						
 							<% if $TablesAndChairsCapacity %>
 							<p>
@@ -128,7 +128,7 @@ $BlockArea(BeforeContent)
 				  	<% if $HasComputer || $HasEthernetConnection || $HasProjectorScreen || $HasDVD || $HasSpeakers || $HasMarkerboard || $HasMicrophone || $HasWifi || $HasElectricPiano|| $ComplimentaryEquipmentProvided %>
 				
 					
-						<h4>Equipment</h4>
+						<h2>Equipment</h2>
 					
 							<% if $HasComputer %>
 								<p>
@@ -194,7 +194,7 @@ $BlockArea(BeforeContent)
 					<% end_if %>
 
 					<% if $StudentRate || $FacultyRate || $GeneralRate %>
-						<h4>Rates</h4>
+						<h2>Rates</h2>
 						<% if $StudentRate %>
 							<p>
 								<strong>UI Student organization events</strong><br>

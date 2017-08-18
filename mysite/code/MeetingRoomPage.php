@@ -30,7 +30,8 @@ class MeetingRoomPage extends Page {
 		'ComplimentaryEquipmentProvided' => 'Boolean',
 		'ShowSetupChangeFee' => 'Boolean',
 		'SetupChangeFee'	=> 'Text',
-		'ShowRoomLayout' => 'Boolean'
+		'ShowRoomLayout' => 'Boolean',
+		'ContactInfo' => 'HTMLText',
 	);
 
 	private static $has_one = array(
@@ -56,7 +57,8 @@ class MeetingRoomPage extends Page {
 		$fields->removeByName("Metadata");
 
 		$fields->addFieldToTab('Root.Main', new TextField('ExternalLink', 'Redirect this page to the following URL:'), 'Content');
-
+		$fields->addFieldToTab('Root.Main', HTMLEditorField::create('ContactInfo', 'Show this contact or reservation information in the footer instead of the default "contact IMU Event Services text"')->setRows(3));
+		
 		// $fields->addFieldToTab('Root.Images', new UploadField('ThumbnailImage', 'Thumbnail Image (120 x 85)', null, null, null, $this->ClassName));
 		$fields->addFieldToTab('Root.Images', new UploadField('SlideshowImage1', 'Slideshow Image 1', null, null, null, $this->ClassName));
 		$fields->addFieldToTab('Root.Images', new UploadField('SlideshowImage2', 'Slideshow Image 2', null, null, null, $this->ClassName));
@@ -69,6 +71,7 @@ class MeetingRoomPage extends Page {
 
 		// Generic
 		$fields->addFieldToTab('Root.Main', new CheckboxField('ShowRoomLayout', 'Show layouts?'), 'Content');
+
 		$fields->addFieldToTab('Root.Main', new TextField('Number', 'Room Number'), 'Content');
 		// Rates
 		$fields->addFieldToTab('Root.Rates', new TextField('StudentRate', 'Student Rate'));

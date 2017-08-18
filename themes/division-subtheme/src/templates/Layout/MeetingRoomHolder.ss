@@ -31,10 +31,10 @@ $BlockArea(BeforeContent)
 
 					 <div class="column column-block">
 						<a href="$Link" class="room-grid__link">
-							<% if $SlideshowImage1 %>
-								<img src="$SlideshowImage1.FocusFill(300,200).URL" alt="$Title">
-							<% else_if $BackgroundImage %>
+							<% if $BackgroundImage %>
 								<img src="$BackgroundImage.FocusFill(300,200).URL" alt="$Title">
+							<% else_if $SlideShowImage1 %>
+								<img src="$SlideShowImage1.FocusFill(300,200).URL" alt="$Title">
 							<% end_if %>
 							<h3 class="room-grid__title">$Title</h3>
 							<p class="room-grid__info">

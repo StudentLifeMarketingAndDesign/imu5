@@ -11,6 +11,7 @@ class MeetingRoomHolder extends Page {
 
 	private static $allowed_children = array(
 		'MeetingRoomPage',
+		'CompareRoomsPage'
 	);
 
 

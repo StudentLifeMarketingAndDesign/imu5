@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d64978ac7390a0080e7e4e82f6d604e9",
+    "content-hash": "6c4dee6c0734596fd40bd91bbaea2cbf",
     "packages": [
         {
             "name": "asyncphp/doorman",
@@ -510,17 +510,44 @@
             "time": "2017-08-31 21:36:10"
         },
         {
+            "name": "md/division-analytics",
+            "version": "1.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/StudentLifeMarketingAndDesign/division-analytics.git",
+                "reference": "b370c886e21e52cefc7b797e9a93626a4fe7bafc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-analytics/zipball/b370c886e21e52cefc7b797e9a93626a4fe7bafc",
+                "reference": "b370c886e21e52cefc7b797e9a93626a4fe7bafc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "silverstripe/cms": "3.6.1",
+                "silverstripe/framework": "3.6.1"
+            },
+            "type": "silverstripe-module",
+            "description": "The University of Iowa Division of Student Life Analytics",
+            "support": {
+                "source": "https://github.com/StudentLifeMarketingAndDesign/division-analytics/tree/master",
+                "issues": "https://github.com/StudentLifeMarketingAndDesign/division-analytics/issues"
+            },
+            "time": "2017-09-18 21:59:29"
+        },
+        {
             "name": "md/division-project",
             "version": "2.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-project.git",
-                "reference": "fb7b708392eb234949425b34f79610546321744f"
+                "reference": "4892863b02b779fbb2ba02585a290fae3ab9134a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/fb7b708392eb234949425b34f79610546321744f",
-                "reference": "fb7b708392eb234949425b34f79610546321744f",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/4892863b02b779fbb2ba02585a290fae3ab9134a",
+                "reference": "4892863b02b779fbb2ba02585a290fae3ab9134a",
                 "shasum": ""
             },
             "require": {
@@ -528,6 +555,7 @@
                 "jonom/focuspoint": "2.4.*",
                 "jonom/silverstripe-betternavigator": "3.*",
                 "md/ac-json-events": "dev-master",
+                "md/division-analytics": "1.*",
                 "md/rss-display": "*",
                 "micschk/silverstripe-gridfieldsitetreebuttons": "*",
                 "normann/gridfieldpaginatorwithshowall": "*",
@@ -568,7 +596,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/division-project/tree/2.0.x",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-project/issues"
             },
-            "time": "2017-09-18 16:31:21"
+            "time": "2017-09-18 22:02:43"
         },
         {
             "name": "md/rss-display",

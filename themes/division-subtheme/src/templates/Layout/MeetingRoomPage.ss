@@ -71,8 +71,6 @@ $BlockArea(BeforeContent)
 					<img src="$SlideshowImage1.CroppedImage(760, 506).URL" alt="$Title">
 				<% end_if %>
 			
-				<h1>$Title</h1>
-
 				<% if $Number %><p>Room #$Number</p><% end_if %>
 				<div class="room-single__info">
 					$Content

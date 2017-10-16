@@ -12,10 +12,12 @@ class MeetingRoomHolder extends Page {
 	private static $allowed_children = array(
 		'MeetingRoomPage',
 		'CompareRoomsPage',
-		'UserDefinedForm',
-		'Page'
+		'UserDefinedForm'
 	);
 
+	public function Rooms(){
+		return MeetingRoomPage::get()->filter(array('ParentID' => $this->ID));
+	}
 
 }
 class MeetingRoomHolder_Controller extends Page_Controller {

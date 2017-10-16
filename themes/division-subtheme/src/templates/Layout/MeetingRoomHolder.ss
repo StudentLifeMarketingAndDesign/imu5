@@ -27,7 +27,7 @@ $BlockArea(BeforeContent)
 		$BlockArea(AfterContentConstrained)
 		$Form
 		<div class="room-grid row small-up-2 medium-up-3">
-				<% loop $Children %>
+				<% loop $Rooms %>
 
 					 <div class="column column-block">
 						<a href="$Link" class="room-grid__link">

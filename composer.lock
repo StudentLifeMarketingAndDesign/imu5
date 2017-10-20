@@ -89,12 +89,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "9ce17fb70e9a38dd8acff0636a29f5cf4d575c1b"
+                "reference": "33decf7c820e379bcc0c9cc9231ad0b6f00baacc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/9ce17fb70e9a38dd8acff0636a29f5cf4d575c1b",
-                "reference": "9ce17fb70e9a38dd8acff0636a29f5cf4d575c1b",
+                "url": "https://api.github.com/repos/composer/installers/zipball/33decf7c820e379bcc0c9cc9231ad0b6f00baacc",
+                "reference": "33decf7c820e379bcc0c9cc9231ad0b6f00baacc",
                 "shasum": ""
             },
             "require": {
@@ -177,15 +177,18 @@
                 "lavalite",
                 "lithium",
                 "magento",
+                "majima",
                 "mako",
                 "mediawiki",
                 "modulework",
+                "modx",
                 "moodle",
                 "osclass",
                 "phpbb",
                 "piwik",
                 "ppi",
                 "puppet",
+                "pxcms",
                 "reindex",
                 "roundcube",
                 "shopware",
@@ -198,7 +201,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2017-08-09 07:53:48"
+            "time": "2017-10-19 08:12:54"
         },
         {
             "name": "embed/embed",
@@ -542,12 +545,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-project.git",
-                "reference": "c11e59e6b4cb77e901d31ce679aa93024ac9a147"
+                "reference": "ad217c21a5aec82e7ed5288d447a92a7329a23a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/c11e59e6b4cb77e901d31ce679aa93024ac9a147",
-                "reference": "c11e59e6b4cb77e901d31ce679aa93024ac9a147",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/ad217c21a5aec82e7ed5288d447a92a7329a23a6",
+                "reference": "ad217c21a5aec82e7ed5288d447a92a7329a23a6",
                 "shasum": ""
             },
             "require": {
@@ -597,7 +600,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/division-project/tree/2.0.x",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-project/issues"
             },
-            "time": "2017-10-16 14:51:58"
+            "time": "2017-10-20 19:21:57"
         },
         {
             "name": "md/rss-display",
@@ -1467,12 +1470,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-lumberjack.git",
-                "reference": "b0ab3d14b3e80187c0528e1746c07c0b6c651058"
+                "reference": "80445d05ae35e53ea6f11426136d52a59f163c1e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-lumberjack/zipball/b0ab3d14b3e80187c0528e1746c07c0b6c651058",
-                "reference": "b0ab3d14b3e80187c0528e1746c07c0b6c651058",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-lumberjack/zipball/80445d05ae35e53ea6f11426136d52a59f163c1e",
+                "reference": "80445d05ae35e53ea6f11426136d52a59f163c1e",
                 "shasum": ""
             },
             "require": {
@@ -1499,7 +1502,7 @@
                 }
             ],
             "description": "A module to make managing pages in a GridField easy without losing any of the functionality that you're used to in the CMS.",
-            "time": "2017-10-02 20:36:04"
+            "time": "2017-10-18 01:28:33"
         },
         {
             "name": "silverstripe/mathspamprotection",
@@ -2131,12 +2134,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symbiote/silverstripe-addressable.git",
-                "reference": "60af1b36a81b661ad8e9fd3b7bab9ff70dd29b73"
+                "reference": "ddf6fe6155b39cca068fa7e5a995b6e775cb7d8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symbiote/silverstripe-addressable/zipball/60af1b36a81b661ad8e9fd3b7bab9ff70dd29b73",
-                "reference": "60af1b36a81b661ad8e9fd3b7bab9ff70dd29b73",
+                "url": "https://api.github.com/repos/symbiote/silverstripe-addressable/zipball/ddf6fe6155b39cca068fa7e5a995b6e775cb7d8f",
+                "reference": "ddf6fe6155b39cca068fa7e5a995b6e775cb7d8f",
                 "shasum": ""
             },
             "require": {
@@ -2173,7 +2176,7 @@
                 "geocoding",
                 "silverstripe"
             ],
-            "time": "2017-06-29 06:26:01"
+            "time": "2017-10-18 00:08:29"
         },
         {
             "name": "symbiote/silverstripe-gridfieldextensions",

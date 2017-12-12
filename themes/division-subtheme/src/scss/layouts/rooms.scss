@@ -1,9 +1,13 @@
 .room-grid {
+
+	&__title{
+		margin-top: rem-calc(5);
+	}
 	&__link {
 		display: block;
 	}
 }
 
 .room-single__info {
-	margin-top: 25px;
+	margin-top: rem-calc(25);
 }

@@ -67,12 +67,10 @@ $BlockArea(BeforeContent)
 							</div>
 						<% end_if %>																	
 					</div>
-				<% else %>
+				<% else_if $SlideshowImage1 %>
 					<img src="$SlideshowImage1.CroppedImage(760, 506).URL" alt="$Title">
 				<% end_if %>
 			
-				<h1>$Title</h1>
-
 				<% if $Number %><p>Room #$Number</p><% end_if %>
 				<div class="room-single__info">
 					$Content
@@ -82,7 +80,7 @@ $BlockArea(BeforeContent)
 				
 				<div class="room-single__details">
 					<% if $TablesAndChairsCapacity || $RoundedTablesCapacity || $TheaterCapacity || $ClassroomCapacity || $UshapeCapacity || $BoardroomCapacity %>
-						<h4>Capacity by setup</h4>
+						<h2>Capacity by setup</h2>
 						
 							<% if $TablesAndChairsCapacity %>
 							<p>
@@ -128,7 +126,7 @@ $BlockArea(BeforeContent)
 				  	<% if $HasComputer || $HasEthernetConnection || $HasProjectorScreen || $HasDVD || $HasSpeakers || $HasMarkerboard || $HasMicrophone || $HasWifi || $HasElectricPiano|| $ComplimentaryEquipmentProvided %>
 				
 					
-						<h4>Equipment</h4>
+						<h2>Equipment</h2>
 					
 							<% if $HasComputer %>
 								<p>
@@ -194,10 +192,10 @@ $BlockArea(BeforeContent)
 					<% end_if %>
 
 					<% if $StudentRate || $FacultyRate || $GeneralRate %>
-						<h4>Rates</h4>
+						<h2>Rates</h2>
 						<% if $StudentRate %>
 							<p>
-								<strong>UI Student Organization Events</strong><br>
+								<strong>UI Student organization events</strong><br>
 							 	<span class="dolla_dolla_bill">
 							 		$StudentRate
 							 	</span>
@@ -206,7 +204,7 @@ $BlockArea(BeforeContent)
 
 						<% if $FacultyRate %>
 							<p>
-								<strong>UI Departmental Events</strong><br>
+								<strong>UI departmental events</strong><br>
 								<span class="dolla_dolla_bill">
 									$FacultyRate
 								</span>
@@ -215,7 +213,7 @@ $BlockArea(BeforeContent)
 
 						<% if $GeneralRate %>
 							<p>
-								<strong>General Public Events</strong><br>
+								<strong>General public events</strong><br>
 								<span class="dolla_dolla_bill">
 									$GeneralRate
 								</span>
@@ -226,7 +224,10 @@ $BlockArea(BeforeContent)
 				</div>
 				<div class="well">
 
-					<% if $Parent.ID == 417 %>
+					<% if $ContactInfo %>
+						<h3>Contact information</h3>
+						<p>$ContactInfo</p>
+					<% else_if $Parent.ID == 417 %>
 						<p>Make a reservation for this space by calling 319-335-3114 or emailing <a href="mailto:imu-eventservices@uiowa.edu">imu-eventservices@uiowa.edu</a>.</p>
 					<% else %>
 						<a href="event-services/reservations/" class="button button--large">Make a reservation</a>

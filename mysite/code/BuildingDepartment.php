@@ -6,24 +6,38 @@ class BuildingDepartment extends Page {
 
 		'MonOpenTime' => 'Time',
 		'MonCloseTime' => 'Time',
+		'MonOpenAllDay' => 'Boolean',
+		'MonClosedAllDay' => 'Boolean',
 
 		'TuesOpenTime' => 'Time',
 		'TuesCloseTime' => 'Time',
+		'TuesOpenAllDay' => 'Boolean',
+		'TuesClosedAllDay' => 'Boolean',
 
 		'WedOpenTime' => 'Time',
 		'WedCloseTime' => 'Time',
+		'WedOpenAllDay' => 'Boolean',
+		'WedClosedAllDay' => 'Boolean',
 
 		'ThursOpenTime' => 'Time',
 		'ThursCloseTime' => 'Time',
+		'ThursOpenAllDay' => 'Boolean',
+		'ThursClosedAllDay' => 'Boolean',
 
 		'FriOpenTime' => 'Time',
 		'FriCloseTime' => 'Time',
+		'FriOpenAllDay' => 'Boolean',
+		'FriClosedAllDay' => 'Boolean',
 
 		'SatOpenTime' => 'Time',
 		'SatCloseTime' => 'Time',
+		'SatOpenAllDay' => 'Boolean',
+		'SatClosedAllDay' => 'Boolean',
 
 		'SunOpenTime' => 'Time',
 		'SunCloseTime' => 'Time',
+		'SunOpenAllDay' => 'Boolean',
+		'SunClosedAllDay' => 'Boolean',
 
 		'Exceptions' => 'Text'
 	);
@@ -50,7 +64,9 @@ class BuildingDepartment extends Page {
 		    'Root.Main',
 		    FieldGroup::create(
 		        TimeField::create("MonOpenTime","Open"),
-		        TimeField::create("MonCloseTime","Closed")
+		        TimeField::create("MonCloseTime","Closed"),
+		        CheckboxField::create('MonOpenAllDay', 'Open 24 hours?'),
+		        CheckboxField::create('MonClosedAllDay', 'Closed all day?')
 		    )->setTitle('Monday')
 		);
 
@@ -58,7 +74,9 @@ class BuildingDepartment extends Page {
 		    'Root.Main',
 		    FieldGroup::create(
 		        TimeField::create("TuesOpenTime","Open"),
-		        TimeField::create("TuesCloseTime","Closed")
+		        TimeField::create("TuesCloseTime","Closed"),
+		        CheckboxField::create('TuesOpenAllDay', 'Open 24 hours?'),
+		        CheckboxField::create('TuesClosedAllDay', 'Closed all day?')
 		    )->setTitle('Tuesday')
 		);
 
@@ -66,7 +84,9 @@ class BuildingDepartment extends Page {
 		    'Root.Main',
 		    FieldGroup::create(
 		        TimeField::create("WedOpenTime","Open"),
-		        TimeField::create("WedCloseTime","Closed")
+		        TimeField::create("WedCloseTime","Closed"),
+		        CheckboxField::create('WedOpenAllDay', 'Open 24 hours?'),
+		        CheckboxField::create('WedClosedAllDay', 'Closed all day?')
 		    )->setTitle('Wednesday')
 		);
 
@@ -74,28 +94,36 @@ class BuildingDepartment extends Page {
 		    'Root.Main',
 		    FieldGroup::create(
 		        TimeField::create("ThursOpenTime","Open"),
-		        TimeField::create("ThursCloseTime","Closed")
+		        TimeField::create("ThursCloseTime","Closed"),
+		        CheckboxField::create('ThursOpenAllDay', 'Open 24 hours?'),
+		        CheckboxField::create('ThursClosedAllDay', 'Closed all day?')
 		    )->setTitle('Thursday')
 		);
 		$fields->addFieldToTab(
 		    'Root.Main',
 		    FieldGroup::create(
 		        TimeField::create("FriOpenTime","Open"),
-		        TimeField::create("FriCloseTime","Closed")
+		        TimeField::create("FriCloseTime","Closed"),
+		        CheckboxField::create('FriOpenAllDay', 'Open 24 hours?'),
+		        CheckboxField::create('FriClosedAllDay', 'Closed all day?')
 		    )->setTitle('Friday')
 		);
 		$fields->addFieldToTab(
 		    'Root.Main',
 		    FieldGroup::create(
 		        TimeField::create("SatOpenTime","Open"),
-		        TimeField::create("SatCloseTime","Closed")
+		        TimeField::create("SatCloseTime","Closed"),
+		        CheckboxField::create('SatOpenAllDay', 'Open 24 hours?'),
+		        CheckboxField::create('SatClosedAllDay', 'Closed all day?')
 		    )->setTitle('Saturday')
 		);
 		$fields->addFieldToTab(
 		    'Root.Main',
 		    FieldGroup::create(
 		        TimeField::create("SunOpenTime","Open"),
-		        TimeField::create("SunCloseTime","Closed")
+		        TimeField::create("SunCloseTime","Closed"),
+		        CheckboxField::create('SunOpenAllDay', 'Open 24 hours?'),
+		        CheckboxField::create('SunClosedAllDay', 'Closed all day?')
 		    )->setTitle('Sunday')
 		);
 

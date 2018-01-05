@@ -148,8 +148,8 @@ class BuildingDepartment extends Page {
 		    FieldGroup::create(
 		        TimeField::create("ThuOpenTime","Open"),
 		        TimeField::create("ThuCloseTime","Closed"),
-		        CheckboxField::create('ThursOpenAllDay', 'Open 24 hours?'),
-		        CheckboxField::create('ThursClosedAllDay', 'Closed all day?')
+		        CheckboxField::create('ThuOpenAllDay', 'Open 24 hours?'),
+		        CheckboxField::create('ThuClosedAllDay', 'Closed all day?')
 		    )->setTitle('Thursday')
 		);
 		$fields->addFieldToTab(

@@ -60,6 +60,8 @@ class BuildingDepartment extends Page {
 		$fields->removeByName('LayoutType');
 		$fields->removeByName('BackgroundImage');
 
+		$fields->addFieldToTab('Root.Main', TextField::create('Location'));
+
 		$fields->addFieldToTab(
 		    'Root.Main',
 		    FieldGroup::create(

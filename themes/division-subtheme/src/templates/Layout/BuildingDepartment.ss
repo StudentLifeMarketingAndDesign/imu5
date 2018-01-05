@@ -22,38 +22,17 @@ $Header
 		<article role="main" class="main-content main-content--with-padding <% if $SiteConfig.ShowExitButton %>main-content--with-exit-button-padding<% end_if %> <% if $Children || $Menu(2) || $SidebarBlocks ||  $SidebarView.Widgets %>main-content--with-sidebar<% else %>main-content--full-width<% end_if %>">
 			$BlockArea(BeforeContentConstrained)
 			<div class="main-content__text">
-				<%-- $Content --%>
+				$Content
+
+				<% with $Parent %>
+					<% if $EffectiveStartDate && $EffectiveEndDate %>
+						<p><em>Effective from $EffectiveStartDate.NiceUS - $EffectiveEndDate.NiceUS</em></p>
+					<% end_if %>
+				<% end_with %>
+	
+				<% include BuildingHoursTable %>
 				
-					
-					<div class="main-content__text">
-						<%-- $Content --%>
-
-						<% with $ActiveHoursPages.First %>
-							<h2>$Title</h2>
-							<% if $EffectiveStartDate && $EffectiveEndDate %>
-								<p><em>Effective from $EffectiveStartDate.NiceUS - $EffectiveEndDate.NiceUS</em></p>
-							<% end_if %>
-
-							<div>
-								<p>Jump to:</p>
-								<ul>
-									<% loop $Children %>
-										<li><a href="#{$URLSegment}">$Title</a></li>
-									<% end_loop %>
-								</ul>
-							</div>
-							<% loop $Children %>
-								<h3 id="$URLSegment">$Title</h3>
-								<% include BuildingHoursTable %>
-								<% if not $Last %>
-									<hr />
-								<% end_if %>
-							<% end_loop %>
-						<% end_with %>
-					</div>					
-
-			
-					
+		
 			</div>
 			$BlockArea(AfterContentConstrained)
 			$Form

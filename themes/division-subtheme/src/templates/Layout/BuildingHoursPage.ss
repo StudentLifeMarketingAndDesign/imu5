@@ -28,35 +28,7 @@ $Header
 				<% end_if %>
 				<% loop $Children %>
 					<h2>$Title</h2>
-					<table>
-						<tr>
-							<th>Day</th>
-							<th>Hours</th>
-						</tr>
-						<tr>
-							<td>Monday</td>
-							<td>$MonOpenTime.Nice - $MonCloseTime.Nice</td>
-						</tr>
-						<tr>
-							<td>Tuesday</td>
-							<td>$TuesOpenTime.Nice - $TuesCloseTime.Nice</td>
-						</tr>
-						<tr>
-							<td>Wednesday</td>
-							<td>$WedOpenTime.Nice - $WedCloseTime.Nice</td>
-						</tr>
-						<tr>
-							<td>Thursday</td>
-							<td>$ThursOpenTime.Nice - $ThursCloseTime.Nice</td>
-						</tr>
-						<tr>
-							<td>Friday</td>
-							<td>$FriOpenTime.Nice - $FriCloseTime.Nice</td>
-						</tr>
-					</table>
-					<% if $Exceptions %>
-						$Exceptions
-					<% end_if %>
+						<% include BuildingHoursTable %>
 				<% end_loop %>
 			</div>
 			$BlockArea(AfterContentConstrained)

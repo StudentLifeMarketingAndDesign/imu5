@@ -2,27 +2,27 @@
 class BuildingDepartment extends Page {
 
 	private static $db = array(
-		'Location' => 'Varchar',
-
+		'Location' => 'Varchar(155)',
+		'Phone' => 'Varchar(55)',
 		'MonOpenTime' => 'Time',
 		'MonCloseTime' => 'Time',
 		'MonOpenAllDay' => 'Boolean',
 		'MonClosedAllDay' => 'Boolean',
 
-		'TuesOpenTime' => 'Time',
-		'TuesCloseTime' => 'Time',
-		'TuesOpenAllDay' => 'Boolean',
-		'TuesClosedAllDay' => 'Boolean',
+		'TueOpenTime' => 'Time',
+		'TueCloseTime' => 'Time',
+		'TueOpenAllDay' => 'Boolean',
+		'TueClosedAllDay' => 'Boolean',
 
 		'WedOpenTime' => 'Time',
 		'WedCloseTime' => 'Time',
 		'WedOpenAllDay' => 'Boolean',
 		'WedClosedAllDay' => 'Boolean',
 
-		'ThursOpenTime' => 'Time',
-		'ThursCloseTime' => 'Time',
-		'ThursOpenAllDay' => 'Boolean',
-		'ThursClosedAllDay' => 'Boolean',
+		'ThuOpenTime' => 'Time',
+		'ThuCloseTime' => 'Time',
+		'ThuOpenAllDay' => 'Boolean',
+		'ThuClosedAllDay' => 'Boolean',
 
 		'FriOpenTime' => 'Time',
 		'FriCloseTime' => 'Time',
@@ -53,6 +53,56 @@ class BuildingDepartment extends Page {
 		'RegularHours',
 		'ExceptionHours'
 	);
+
+
+	public function TodayOpenTime(){
+		$currentDay = date('D');
+		return $this->obj($currentDay.'OpenTime');
+	}
+	public function TodayCloseTime(){
+		$currentDay = date('D');
+		return $this->obj($currentDay.'CloseTime');
+	}
+
+	public function TodayOpenAllDay(){
+		$currentDay = date('D');
+		return $this->obj($currentDay.'OpenAllDay');
+	}
+
+	public function TodayClosedAllDay(){
+		$currentDay = date('D');
+		return $this->obj($currentDay.'ClosedAllDay');		
+	}
+
+	public function Days(){
+		$days = new ArrayList();
+
+		for($i=1;$i<=7;$i++){
+			$j = $i - 1;
+		    $date = new DateTime(); //<-- Grabs today's datetime
+		    $date->add(new DateInterval('P'.$j.'D')); //<--- Passes the current value of $i to add days..
+		    $day = DataObject::create();
+
+		    $day->Day = $date->format('l');
+		    $day->DayShort = $date->format('D');
+		    $dayShort =$date->format('D');
+
+		    $day->OpenTime = new Time();
+		    $day->CloseTime = new Time();
+		    $day->OpenAllDay = new Boolean();
+		    $day->ClosedAllDay = new Boolean();
+
+		    $day->OpenTime->setValue($this->obj($dayShort.'OpenTime')->getValue());
+		    $day->CloseTime->setValue($this->obj($dayShort.'CloseTime')->getValue());
+		    $day->OpenAllDay->setValue($this->obj($dayShort.'OpenAllDay')->getValue());
+		    $day->ClosedAllDay->setValue($this->obj($dayShort.'ClosedAllDay')->getValue());
+		    // print_r($day);
+		    $days->push($day);
+		}
+	
+		return $days;
+	}
+
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 		$fields->removeByName('Content');
@@ -61,6 +111,7 @@ class BuildingDepartment extends Page {
 		$fields->removeByName('BackgroundImage');
 
 		$fields->addFieldToTab('Root.Main', TextField::create('Location'));
+		$fields->addFieldToTab('Root.Main', TextField::create('Phone'));
 
 		$fields->addFieldToTab(
 		    'Root.Main',
@@ -75,10 +126,10 @@ class BuildingDepartment extends Page {
 		$fields->addFieldToTab(
 		    'Root.Main',
 		    FieldGroup::create(
-		        TimeField::create("TuesOpenTime","Open"),
-		        TimeField::create("TuesCloseTime","Closed"),
-		        CheckboxField::create('TuesOpenAllDay', 'Open 24 hours?'),
-		        CheckboxField::create('TuesClosedAllDay', 'Closed all day?')
+		        TimeField::create("TueOpenTime","Open"),
+		        TimeField::create("TueCloseTime","Closed"),
+		        CheckboxField::create('TueOpenAllDay', 'Open 24 hours?'),
+		        CheckboxField::create('TueClosedAllDay', 'Closed all day?')
 		    )->setTitle('Tuesday')
 		);
 
@@ -95,8 +146,8 @@ class BuildingDepartment extends Page {
 		$fields->addFieldToTab(
 		    'Root.Main',
 		    FieldGroup::create(
-		        TimeField::create("ThursOpenTime","Open"),
-		        TimeField::create("ThursCloseTime","Closed"),
+		        TimeField::create("ThuOpenTime","Open"),
+		        TimeField::create("ThuCloseTime","Closed"),
 		        CheckboxField::create('ThursOpenAllDay', 'Open 24 hours?'),
 		        CheckboxField::create('ThursClosedAllDay', 'Closed all day?')
 		    )->setTitle('Thursday')

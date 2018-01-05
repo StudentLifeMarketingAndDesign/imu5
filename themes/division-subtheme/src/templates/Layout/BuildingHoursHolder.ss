@@ -44,9 +44,7 @@ $Header
 							</div>
 							<% loop $Children %>
 								<h3 id="$URLSegment">$Title</h3>
-								<% if $Location %>
-								<p><strong>Location:</strong> $Location</p>
-								<% end_if %>
+
 								<% include BuildingHoursTable %>
 								<% if not $Last %>
 									<hr />

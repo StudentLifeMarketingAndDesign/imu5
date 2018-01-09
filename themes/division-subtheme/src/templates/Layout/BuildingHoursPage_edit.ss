@@ -28,7 +28,7 @@ $Header
 				<% end_if %>
 				<% loop $Children %>
 					<h2>$Title</h2>
-						<% include BuildingHoursTable %>
+					<p><a href="$CMSEditLink" class="button" target="_blank">Edit {$Title} hours</a></p>
 				<% end_loop %>
 			</div>
 			$BlockArea(AfterContentConstrained)

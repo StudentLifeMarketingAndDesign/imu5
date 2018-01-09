@@ -22,13 +22,14 @@ $Header
 		<article role="main" class="main-content main-content--with-padding <% if $SiteConfig.ShowExitButton %>main-content--with-exit-button-padding<% end_if %> <% if $Children || $Menu(2) || $SidebarBlocks ||  $SidebarView.Widgets %>main-content--with-sidebar<% else %>main-content--full-width<% end_if %>">
 			$BlockArea(BeforeContentConstrained)
 			<div class="main-content__text">
-				$Content
 				<% with $ActiveHoursPages.First %>
+					<h2>$Title</h2>
 					<% if $EffectiveStartDate && $EffectiveEndDate %>
 						<p><em>Effective from $EffectiveStartDate.NiceUS - $EffectiveEndDate.NiceUS</em></p>
+						<p><a href="$CMSEditLink" class="button" target="_blank">Edit effective dates</a></p>
 					<% end_if %>
 					<% loop $Children %>
-						<h2>$Title</h2>
+						<h3>$Title</h3>
 						<p><a href="$CMSEditLink" class="button" target="_blank">Edit {$Title} hours</a></p>
 					<% end_loop %>
 				<% end_with %>

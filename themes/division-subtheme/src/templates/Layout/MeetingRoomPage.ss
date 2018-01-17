@@ -73,7 +73,7 @@ $BlockArea(BeforeContent)
 				
 				<div class="room-single__info">
 					<% if $FormerlyKnownAs %>
-					<p>Formerly known as: $FormerlyKnownAs</p>
+					<p><strong>Formerly known as:</strong> $FormerlyKnownAs</p>
 					<% end_if %>
 					$Content
 				</div>

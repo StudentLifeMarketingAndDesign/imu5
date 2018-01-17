@@ -23,7 +23,7 @@ $Header
 			$BlockArea(BeforeContentConstrained)
 			<div class="main-content__text">
 				$Content
-				<% with $ActiveHoursPages.First %>
+			
 					<% if $EffectiveStartDate && $EffectiveEndDate %>
 						<p><em>Effective from $EffectiveStartDate.NiceUS - $EffectiveEndDate.NiceUS</em></p>
 					<% end_if %>
@@ -31,7 +31,7 @@ $Header
 						<h2>$Title</h2>
 						<p><a href="$CMSEditLink" class="button" target="_blank">Edit {$Title} hours</a></p>
 					<% end_loop %>
-				<% end_with %>
+		
 			</div>
 			$BlockArea(AfterContentConstrained)
 			$Form

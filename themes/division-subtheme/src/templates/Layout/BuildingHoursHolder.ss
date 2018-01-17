@@ -21,13 +21,11 @@ $Header
 
 		<article role="main" class="main-content main-content--with-padding <% if $SiteConfig.ShowExitButton %>main-content--with-exit-button-padding<% end_if %> <% if $Children || $Menu(2) || $SidebarBlocks ||  $SidebarView.Widgets %>main-content--with-sidebar<% else %>main-content--full-width<% end_if %>">
 			$BlockArea(BeforeContentConstrained)
-			<div class="main-content__text">
 				<%-- $Content --%>
-				
-					
-					<div class="main-content__text">
-						<%-- $Content --%>
+				<div class="main-content__text">
+					$Content
 
+					<% if $ActiveHoursPages %>
 						<% with $ActiveHoursPages.First %>
 							<h2>$Title</h2>
 							<% if $EffectiveStartDate && $EffectiveEndDate %>
@@ -51,11 +49,8 @@ $Header
 								<% end_if %>
 							<% end_loop %>
 						<% end_with %>
-					</div>					
-
-			
-					
-			</div>
+					<% end_if %>
+				</div>					
 			$BlockArea(AfterContentConstrained)
 			$Form
 		</article>

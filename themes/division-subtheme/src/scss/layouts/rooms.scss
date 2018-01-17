@@ -2,12 +2,23 @@
 
 	&__title{
 		margin-top: rem-calc(5);
+		margin-bottom: rem-calc(5);
 	}
 	&__link {
 		display: block;
 	}
+	&__info{
+		font-size: rem-calc(13);
+	}
 }
 
-.room-single__info {
-	margin-top: rem-calc(25);
+.room-single{
+	&__info{
+		margin-top: rem-calc(25);
+	}
+
+	&__room-no{
+		font-size: rem-calc(32);
+		font-weight: bold;
+	}
 }

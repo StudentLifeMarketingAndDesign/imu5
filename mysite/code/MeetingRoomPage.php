@@ -16,6 +16,7 @@ class MeetingRoomPage extends Page {
 		'ClassroomCapacity'       => 'Varchar',
 		'UshapeCapacity'          => 'Varchar',
 		'BoardroomCapacity'       => 'Varchar',
+		'FormerlyKnownAs'		  => 'Varchar(155)',
 		// Amenities
 		'HasComputer'                    => 'Boolean',
 		'HasEthernetConnection'          => 'Boolean',
@@ -73,6 +74,7 @@ class MeetingRoomPage extends Page {
 		$fields->addFieldToTab('Root.Main', new CheckboxField('ShowRoomLayout', 'Show layouts?'), 'Content');
 
 		$fields->addFieldToTab('Root.Main', new TextField('Number', 'Room Number'), 'Content');
+		$fields->addFieldToTab('Root.Main', new TextField('FormerlyKnownAs', 'Formerly known as'), 'Content');
 		// Rates
 		$fields->addFieldToTab('Root.Rates', new TextField('StudentRate', 'Student Rate'));
 		$fields->addFieldToTab('Root.Rates', new TextField('FacultyRate', 'Faculty Rate'));

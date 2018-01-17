@@ -38,12 +38,13 @@ $BlockArea(BeforeContent)
 							<% end_if %>
 							<h3 class="room-grid__title">$Title</h3>
 							<p class="room-grid__info">
-							<% if $DisplayCapacity %>
-								<span class="room-grid__label"><strong>Capacity: </strong>$DisplayCapacity</span>
-							<% end_if %>
 							<% if $Number %>
-								<span class="room-grid__label"><strong>Room #</strong>$Number</span>
+								<span class="room-grid__label"><strong>Room #$Number</strong></span><br />
 							<% end_if %>
+							<% if $FormerlyKnownAs %>
+								<span class="room-grid__label"><strong>Formerly known as: </strong>$FormerlyKnownAs</span>
+							<% end_if %>
+
 							</p>
 						 </a>
 					</div>

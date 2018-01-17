@@ -10,7 +10,7 @@ $Header
 <% if not $BackgroundImage %>
 	<div class="column row">
 		<div class="main-content__header">
-			<h1>$Title</h1>
+			<h1>$Title <% if $Number %> - Room #$Number<% end_if %></h1>
 		</div>
 	</div>
 <% end_if %>
@@ -70,9 +70,11 @@ $BlockArea(BeforeContent)
 				<% else_if $SlideshowImage1 %>
 					<img src="$SlideshowImage1.CroppedImage(760, 506).URL" alt="$Title">
 				<% end_if %>
-			
-				<% if $Number %><p>Room #$Number</p><% end_if %>
+				
 				<div class="room-single__info">
+					<% if $FormerlyKnownAs %>
+					<p>Formerly known as: $FormerlyKnownAs</p>
+					<% end_if %>
 					$Content
 				</div>
 				$Form
@@ -225,7 +227,7 @@ $BlockArea(BeforeContent)
 				<div class="well">
 
 					<% if $ContactInfo %>
-						<h3>Contact information</h3>
+						<h2>Contact information</h2>
 						<p>$ContactInfo</p>
 					<% else_if $Parent.ID == 417 %>
 						<p>Make a reservation for this space by calling 319-335-3114 or emailing <a href="mailto:imu-eventservices@uiowa.edu">imu-eventservices@uiowa.edu</a>.</p>

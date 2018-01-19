@@ -79,148 +79,155 @@ $BlockArea(BeforeContent)
 				</div>
 				$Form
 
-				
-				<div class="room-single__details">
+			
+
+				<div class="row small-up-2 medium-up-3 room-single__details">
 					<% if $TablesAndChairsCapacity || $RoundedTablesCapacity || $TheaterCapacity || $ClassroomCapacity || $UshapeCapacity || $BoardroomCapacity %>
+						<div class="column">
 						<h2>Capacity by setup</h2>
-						
+							<ul>
 							<% if $TablesAndChairsCapacity %>
-							<p>
+							<li>
 								<!-- <span><img src="$ThemeDir/images/table_icon.png"></span> -->
 								<strong>Banquet Rectangles:</strong> $TablesAndChairsCapacity
-							</p>
+							</li>
 							<% end_if %>
 							<% if $RoundedTablesCapacity %>
-							<p>
+							<li>
 								<!-- <span><img src="$ThemeDir/images/round_table_icon.png"></span> -->
 								<strong>Banquet Rounds:</strong> $RoundedTablesCapacity
-							</p>
+							</li>
 							<% end_if %>
 							<% if $TheaterCapacity %>
-							<p>
+							<li>
 								<!-- <span><img src="$ThemeDir/images/theater_icon.png"></span>  -->
 								<strong>Theater:</strong> $TheaterCapacity
-							</p>
+							</li>
 							<% end_if %>
 							<% if $ClassroomCapacity %>
-							<p>
+							<li>
 								<!-- <span><img src="$ThemeDir/images/classroom_icon.png"></span> -->
 								<strong>Classroom:</strong> $ClassroomCapacity
-							</p>
+							</li>
 							<% end_if %>
 							<% if $UshapeCapacity %>
-							<p>
+							<li>
 								<!-- <span><img src="$ThemeDir/images/ushape_icon.png"></span> -->
 								<strong>U-Shape:</strong> $UshapeCapacity
-							</p>
+							</li>
 							<% end_if %>
 							<% if $BoardroomCapacity %>
-							<p>
+							<li>
 								<!-- <span><img src="$ThemeDir/images/boardroom_icon.png" width="24"></span> -->
 								<strong>Board Room:</strong> $BoardroomCapacity
-							</p>
+							</li>
 							<% end_if %>
-						
-			
+						</ul>
+					</div>
 					<% end_if %>
 				 
 
 				  	<% if $HasComputer || $HasEthernetConnection || $HasProjectorScreen || $HasDVD || $HasSpeakers || $HasMarkerboard || $HasMicrophone || $HasWifi || $HasElectricPiano|| $ComplimentaryEquipmentProvided %>
-				
+						<div class="column">
 					
 						<h2>Equipment</h2>
-					
+						<ul>
 							<% if $HasComputer %>
-								<p>
+								<li>
 								 	<!-- <span><img src="$ThemeDir/images/computer_icon.png" height="24"></span> -->
 								 	Computer
-								</p>
+								</li>
 							<% end_if %>
 							<% if $HasEthernetConnection %>
-								<p>
+								<li>
 									<!-- <span><img src="$ThemeDir/images/ethernet_connection_icon.png" width="24"></span> -->
 									Ethernet connection
-								</p>
+								</li>
 							<% end_if %>
 							<% if $HasProjectorScreen %>
-								<p>
+								<li>
 									<!-- <span><img src="$ThemeDir/images/projector_icon.png" width="24"></span> -->
 									Projector screen
-								</p>
+								</li>
 							<% end_if %>
 							<% if $HasDVD %>
-								<p>
+								<li>
 									<!-- <span><img src="$ThemeDir/images/dvd_vcr.png" height="24"></span> -->
 									DVD player
-								</p>
+								</li>
 							<% end_if %>
 							<% if $HasSpeakers %>
-								<p>
+								<li>
 									<!-- <span><img src="$ThemeDir/images/speakers_icon.png" height="24"></span> -->
 									Speakers
-								</p>
+								</li>
 							<% end_if %>
 							<% if $HasMarkerboard %>
-								<p>
+								<li>
 									<!-- <span><img src="$ThemeDir/images/markerboard_icon.png" height="24"></span> -->
 									Markerboard
-								</p>
+								</li>
 							<% end_if %>
 							<% if $HasMicrophone %>
-								<p>
+								<li>
 									<!-- <span><img src="$ThemeDir/images/microphone_icon.png" height="24"></span> -->
 									Microphone
-								</p>
+								</li>
 							<% end_if %>
 							<% if $HasWifi %>
-								<p>
+								<li>
 									<!-- <span><img src="$ThemeDir/images/wifi_icon.png" height="24"></span> -->
 									Wifi
-								</p>
+								</li>
 							<% end_if %>
 							<% if $HasElectricPiano %>
-								<p>
+								<li>
 									<!-- <span><img src="$ThemeDir/images/wifi_icon.png" height="24"></span> -->
 									Electric piano
-								</p>
+								</li>
 							<% end_if %>
 							<% if $ComplimentaryEquipmentProvided %>
-								<p>
+								<li>
 									<!-- <span><img src="$ThemeDir/images/wifi_icon.png" height="24"></span> -->
 									Complimentary items*
-								</p>
+								</li>
 							<% end_if %>
-					
+						</ul>
+					</div>
 					<% end_if %>
 
 					<% if $StudentRate || $FacultyRate || $GeneralRate %>
+						<div class="column">
 						<h2>Rates</h2>
+						<ul>
 						<% if $StudentRate %>
-							<p>
-								<strong>UI Student organization events</strong><br>
+							<li>
+								<strong>UI Student organization events:</strong>
 							 	<span class="dolla_dolla_bill">
 							 		$StudentRate
 							 	</span>
-							</p>
+							</li>
 						<% end_if %>
 
 						<% if $FacultyRate %>
-							<p>
-								<strong>UI departmental events</strong><br>
-								<span class="dolla_dolla_bill">
+							<li>
+								<strong>UI departmental events:</strong>				<span class="dolla_dolla_bill">
 									$FacultyRate
 								</span>
-							</p>
+
+							</li>
 						<% end_if %>
 
 						<% if $GeneralRate %>
-							<p>
-								<strong>General public events</strong><br>
-								<span class="dolla_dolla_bill">
+							<li>
+								<strong>General public events:</strong>								<span class="dolla_dolla_bill">
 									$GeneralRate
 								</span>
-							</p>
+
+							</li>
 						<% end_if %>
+						</ul>
+						</div>
 					<% end_if %>
 
 				</div>
@@ -249,85 +256,85 @@ $BlockArea(BeforeContent)
 				<% end_if %>
 				<% if $ShowRoomLayout %>
 				<h2>Available setups for {$Title}:</h2>
-				<ul class="room-single__setups">
+				<div class="row small-up-2 medium-up-3 large-up-4 room-single__setups">
 
 					
 					<% if $TablesAndChairsCapacity %>
-					<li>
-						<img src="{$ThemeDir}/images/room-setups/tables.png" alt="tables">
+					<div class="column">
+						<img src="{$ThemeDir}/dist/images/room-setups/tables.png" alt="tables">
 						<h3>Banquet Rectangles</h3>
 						<p>
 							<strong> Capacity: </strong> $TablesAndChairsCapacity
 						</p>
 						
-					</li>&nbsp;
+					</div>
 					<% end_if %>
 
 					<% if $RoundedTablesCapacity %>
-					<li>
+					<div class="column">
 
-							<img src="{$ThemeDir}/images/room-setups/roundTables.png" alt="roundTables">
+							<img src="{$ThemeDir}/dist/images/room-setups/roundTables.png" alt="roundTables">
 
 						<h3>Banquet Rounds</h3>
 						<p>
 							<strong> Capacity: </strong> $RoundedTablesCapacity
 						</p>
 					
-					</li>&nbsp;
+					</div>
 					<% end_if %>
 
 					<% if $TheaterCapacity %>
-					<li>
+					<div class="column">
 
-							<img src="{$ThemeDir}/images/room-setups/theater.png" alt="theater">
+							<img src="{$ThemeDir}/dist/images/room-setups/theater.png" alt="theater">
 
 						<h3>Theater</h3>
 						<p>
 							<strong> Capacity: </strong> $TheaterCapacity
 						</p>
 					
-					</li>&nbsp;
+					</div>
 					<% end_if %>
 
 					<% if $ClassroomCapacity %>
-					<li>
+					<div class="column">
 
-							<img src="{$ThemeDir}/images/room-setups/classroom.png" alt="classroom">
+							<img src="{$ThemeDir}/dist/images/room-setups/classroom.png" alt="classroom">
 
 						<h3>Classroom</h3>
 						<p>
 							<strong> Capacity: </strong> $ClassroomCapacity
 						</p>
 					
-					</li>&nbsp;
+					</div>
 					<% end_if %>								
 
 					<% if $UshapeCapacity %>
-					<li>
+					<div class="column">
 
-						<img src="{$ThemeDir}/images/room-setups/Ushape.png" alt="Ushape">
+						<img src="{$ThemeDir}/dist/images/room-setups/Ushape.png" alt="Ushape">
 						<h3>U-Shape</h3>
 						<p>
 							<strong> Capacity: </strong> $UshapeCapacity
 						</p>
 					
-					</li>&nbsp;
+					</div>
 					<% end_if %>
 
 					<% if $BoardroomCapacity %>
-					<li>
-						<img src="{$ThemeDir}/images/room-setups/boardRoom.png" alt="boardRoom">
+					<div class="column">
+						<img src="{$ThemeDir}/dist/images/room-setups/boardRoom.png" alt="boardRoom">
 						<h3>Board Room</h3>
 						<p>
 							<strong> Capacity: </strong> $BoardroomCapacity
 						</p>
 					
-					</li>&nbsp;
+					</div>
 					<% end_if %>
-				</ul>
+				</div>
 				<% end_if %>
 
-		</div>
+	
 		$BlockArea(AfterContentConstrained)
 		$Form
 		<% if $ShowChildPages %>

@@ -231,7 +231,7 @@ $BlockArea(BeforeContent)
 					<% end_if %>
 
 				</div>
-				<div class="well">
+				<div class="room-single__contact">
 
 					<% if $ContactInfo %>
 						<h2>Contact information</h2>
@@ -241,19 +241,20 @@ $BlockArea(BeforeContent)
 					<% else %>
 						<a href="event-services/reservations/" class="button button--large">Make a reservation</a>
 					<% end_if %>
+				
+
+
+					<% if $ComplimentaryEquipmentProvided %>
+						<p>*Some items are provided in fee rooms in limited amounts for no charge: for a full list see our <a href="event-services/fees/"> A/V, Equipment, and Services page.  </p></a>
+					<% end_if %>
+
+					<% if $StandardCapacity && $ShowSetupChangeFee && $SetupChangeFee %>
+						<p class="standard_setup_notice">
+							* denotes a room's standard setup. Minimum setup change fee: 
+							<strong>$SetupChangeFee</strong>.
+						</p>
+					<% end_if %>
 				</div>
-
-
-				<% if $ComplimentaryEquipmentProvided %>
-					<p>*Some items are provided in fee rooms in limited amounts for no charge: for a full list see our <a href="event-services/fees/"> A/V, Equipment, and Services page.  </p></a>
-				<% end_if %>
-
-				<% if $StandardCapacity && $ShowSetupChangeFee && $SetupChangeFee %>
-					<p class="standard_setup_notice">
-						* denotes a room's standard setup. Minimum setup change fee: 
-						<strong>$SetupChangeFee</strong>.
-					</p>
-				<% end_if %>
 				<% if $ShowRoomLayout %>
 				<h2>Available setups for {$Title}:</h2>
 				<div class="row small-up-2 medium-up-3 large-up-4 room-single__setups">
@@ -331,7 +332,7 @@ $BlockArea(BeforeContent)
 					
 					</div>
 					<% end_if %>
-				</div>
+				 </div>
 				<% end_if %>
 
 	

@@ -81,7 +81,7 @@ $BlockArea(BeforeContent)
 
 			
 
-				<div class="row small-up-2 medium-up-3 room-single__details">
+				<div class="row small-up-1 medium-up-3 room-single__details">
 					<% if $TablesAndChairsCapacity || $RoundedTablesCapacity || $TheaterCapacity || $ClassroomCapacity || $UshapeCapacity || $BoardroomCapacity %>
 						<div class="column">
 						<h2>Capacity by setup</h2>

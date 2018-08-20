@@ -75,10 +75,10 @@ class WhoDoesWhatPage_Controller extends BlogPost_Controller {
 	private static $allowed_actions = array (
 	);
 
-	public function index(){
-		$holder = WhoDoesWhatHolder::get()->first();
-		$this->redirect($holder->Link().'#'.$this->URLSegment);
-	}
+	// public function index(){
+	// 	$holder = WhoDoesWhatHolder::get()->first();
+	// 	$this->redirect($holder->Link().'#'.$this->URLSegment);
+	// }
 
 	public function init() {
 		parent::init();

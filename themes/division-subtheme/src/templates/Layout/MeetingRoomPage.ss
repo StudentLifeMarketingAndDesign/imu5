@@ -127,7 +127,7 @@ $BlockArea(BeforeContent)
 					<% end_if %>
 				 
 
-				  	<% if $HasComputer || $HasEthernetConnection || $HasProjectorScreen || $HasDVD || $HasSpeakers || $HasMarkerboard || $HasMicrophone || $HasWifi || $HasElectricPiano|| $ComplimentaryEquipmentProvided %>
+				  	<% if $HasComputer || $HasEthernetConnection || $HasProjectorScreen || $HasDVD || $HasBluRay || $HasSpeakers || $HasMarkerboard || $HasMicrophone || $HasWifi || $HasElectricPiano|| $ComplimentaryEquipmentProvided %>
 						<div class="column">
 					
 						<h2>Equipment</h2>
@@ -150,10 +150,22 @@ $BlockArea(BeforeContent)
 									Projector screen
 								</li>
 							<% end_if %>
+							<% if $HasProjector %>
+								<li>
+									<!-- <span><img src="$ThemeDir/images/projector_icon.png" width="24"></span> -->
+									Projector screen
+								</li>
+							<% end_if %>
 							<% if $HasDVD %>
 								<li>
 									<!-- <span><img src="$ThemeDir/images/dvd_vcr.png" height="24"></span> -->
 									DVD player
+								</li>
+							<% end_if %>
+							<% if $HasBluRay %>
+								<li>
+									<!-- <span><img src="$ThemeDir/images/dvd_vcr.png" height="24"></span> -->
+									Blu-ray player
 								</li>
 							<% end_if %>
 							<% if $HasSpeakers %>

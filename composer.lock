@@ -47,12 +47,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/colymba/GridFieldBulkEditingTools.git",
-                "reference": "7c5881c7a4f54ca3b4e51499323d340abf84193e"
+                "reference": "5d1c30d1c0767ba6a24591e75f6c1905cf90bd9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/colymba/GridFieldBulkEditingTools/zipball/7c5881c7a4f54ca3b4e51499323d340abf84193e",
-                "reference": "7c5881c7a4f54ca3b4e51499323d340abf84193e",
+                "url": "https://api.github.com/repos/colymba/GridFieldBulkEditingTools/zipball/5d1c30d1c0767ba6a24591e75f6c1905cf90bd9b",
+                "reference": "5d1c30d1c0767ba6a24591e75f6c1905cf90bd9b",
                 "shasum": ""
             },
             "require": {
@@ -81,7 +81,7 @@
                 "gridfield bulk upload",
                 "silverstripe"
             ],
-            "time": "2018-04-20T03:25:11+00:00"
+            "time": "2018-09-07T10:31:13+00:00"
         },
         {
             "name": "composer/installers",
@@ -89,12 +89,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "5d15e4e9aab1da3a622678bdaaa4f7d57d150923"
+                "reference": "cfcca6b1b60bc4974324efb5783c13dca6932b5b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/5d15e4e9aab1da3a622678bdaaa4f7d57d150923",
-                "reference": "5d15e4e9aab1da3a622678bdaaa4f7d57d150923",
+                "url": "https://api.github.com/repos/composer/installers/zipball/cfcca6b1b60bc4974324efb5783c13dca6932b5b",
+                "reference": "cfcca6b1b60bc4974324efb5783c13dca6932b5b",
                 "shasum": ""
             },
             "require": {
@@ -201,7 +201,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2018-04-05T19:08:21+00:00"
+            "time": "2018-08-27T06:10:37+00:00"
         },
         {
             "name": "embed/embed",
@@ -317,12 +317,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "5c7a5c524e556113e7f8685e6880cbc4090c798d"
+                "reference": "05f9f3b9f928c7fe051382b26102b4c4e41fb61c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/5c7a5c524e556113e7f8685e6880cbc4090c798d",
-                "reference": "5c7a5c524e556113e7f8685e6880cbc4090c798d",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/05f9f3b9f928c7fe051382b26102b4c4e41fb61c",
+                "reference": "05f9f3b9f928c7fe051382b26102b4c4e41fb61c",
                 "shasum": ""
             },
             "require": {
@@ -374,7 +374,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2018-08-08T04:37:00+00:00"
+            "time": "2018-09-07T17:54:47+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -872,12 +872,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events.git",
-                "reference": "bda15cbe91598d1aef2c0b49f177347143862674"
+                "reference": "05d56d677343c27ebb997ce63e107e16b6acc746"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/ac-json-events/zipball/bda15cbe91598d1aef2c0b49f177347143862674",
-                "reference": "bda15cbe91598d1aef2c0b49f177347143862674",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/ac-json-events/zipball/05d56d677343c27ebb997ce63e107e16b6acc746",
+                "reference": "05d56d677343c27ebb997ce63e107e16b6acc746",
                 "shasum": ""
             },
             "require": {
@@ -896,7 +896,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/tree/master",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/issues"
             },
-            "time": "2018-07-31T21:38:40+00:00"
+            "time": "2018-09-10T21:07:49+00:00"
         },
         {
             "name": "md/blog",
@@ -986,12 +986,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-project.git",
-                "reference": "ed8914207b373a722da1f8ada607ce373c43d519"
+                "reference": "85095057f7d16dfe53a5a6c0c31db0bbaf8c721e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/ed8914207b373a722da1f8ada607ce373c43d519",
-                "reference": "ed8914207b373a722da1f8ada607ce373c43d519",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/85095057f7d16dfe53a5a6c0c31db0bbaf8c721e",
+                "reference": "85095057f7d16dfe53a5a6c0c31db0bbaf8c721e",
                 "shasum": ""
             },
             "require": {
@@ -1030,7 +1030,7 @@
                 "silverstripe/userforms": "4.*",
                 "silverstripe/widgets": "*",
                 "simplepie/simplepie": "*",
-                "symbiote/silverstripe-addressable": "2.*",
+                "symbiote/silverstripe-addressable": "3.*",
                 "thisisbd/silverstripe-maintenance-mode": "1.*",
                 "unclecheese/betterbuttons": "1.3.*",
                 "unclecheese/display-logic": "1.5.*",
@@ -1045,7 +1045,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/division-project/tree/2.0.x",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-project/issues"
             },
-            "time": "2018-08-20T14:55:15+00:00"
+            "time": "2018-09-11T19:26:46+00:00"
         },
         {
             "name": "md/rss-display",
@@ -2483,7 +2483,7 @@
                 "shasum": ""
             },
             "require": {
-                "silverstripe/framework": "~3.1"
+                "silverstripe/framework": "^3.3"
             },
             "suggest": {
                 "silverstripe/cms": "Allows you to easily edit file permissions in the CMS"
@@ -2939,30 +2939,33 @@
         },
         {
             "name": "symbiote/silverstripe-addressable",
-            "version": "2.0.x-dev",
+            "version": "3.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symbiote/silverstripe-addressable.git",
-                "reference": "ddf6fe6155b39cca068fa7e5a995b6e775cb7d8f"
+                "reference": "cef994b6552d5fa62b27f599e8a04f4651fa2338"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symbiote/silverstripe-addressable/zipball/ddf6fe6155b39cca068fa7e5a995b6e775cb7d8f",
-                "reference": "ddf6fe6155b39cca068fa7e5a995b6e775cb7d8f",
+                "url": "https://api.github.com/repos/symbiote/silverstripe-addressable/zipball/cef994b6552d5fa62b27f599e8a04f4651fa2338",
+                "reference": "cef994b6552d5fa62b27f599e8a04f4651fa2338",
                 "shasum": ""
             },
             "require": {
-                "silverstripe/framework": "3.*"
+                "silverstripe/framework": "^3.1"
             },
             "replace": {
                 "ajshort/silverstripe-addressable": "self.version",
                 "silverstripe-australia/addressable": "self.version"
             },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "^3.0"
+            },
             "type": "silverstripe-module",
             "extra": {
                 "installer-name": "addressable",
                 "branch-alias": {
-                    "dev-master": "2.0.x-dev"
+                    "dev-master": "3.0.x-dev"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2971,21 +2974,22 @@
             ],
             "authors": [
                 {
-                    "name": "Andrew Short",
-                    "email": "andrewjshort@gmail.com"
-                },
-                {
                     "name": "Marcus Nyeholt",
                     "email": "nyeholt@symbiote.com.au"
+                },
+                {
+                    "name": "Symbiote",
+                    "homepage": "https://www.symbiote.com.au/"
                 }
             ],
             "description": "SilverStripe addressable and geocoding module",
             "keywords": [
                 "addressable",
                 "geocoding",
-                "silverstripe"
+                "silverstripe",
+                "symbiote"
             ],
-            "time": "2017-10-18T00:08:29+00:00"
+            "time": "2018-07-25T05:45:07+00:00"
         },
         {
             "name": "symbiote/silverstripe-gridfieldextensions",
@@ -3665,12 +3669,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-stdlib.git",
-                "reference": "181042fd782146364e66fed138f04fc822cfaef6"
+                "reference": "89a6fb821c11ba790ea2e123559ba1432596be39"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-stdlib/zipball/181042fd782146364e66fed138f04fc822cfaef6",
-                "reference": "181042fd782146364e66fed138f04fc822cfaef6",
+                "url": "https://api.github.com/repos/zendframework/zend-stdlib/zipball/89a6fb821c11ba790ea2e123559ba1432596be39",
+                "reference": "89a6fb821c11ba790ea2e123559ba1432596be39",
                 "shasum": ""
             },
             "require": {
@@ -3703,7 +3707,7 @@
                 "stdlib",
                 "zf"
             ],
-            "time": "2018-04-30T14:23:00+00:00"
+            "time": "2018-08-29T10:55:46+00:00"
         }
     ],
     "packages-dev": [],

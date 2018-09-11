@@ -20,13 +20,16 @@ class MeetingRoomPage extends Page {
 		// Amenities
 		'HasComputer'                    => 'Boolean',
 		'HasEthernetConnection'          => 'Boolean',
+		'HasProjector' => 'Boolean',
 		'HasProjectorScreen'             => 'Boolean',
 		'HasDVD'                         => 'Boolean',
+		'HasBluRay'					     => 'Boolean',
 		'HasSpeakers'                    => 'Boolean',
 		'HasMarkerboard'                 => 'Boolean',
 		'HasMicrophone'                  => 'Boolean',
 		'HasWifi'                        => 'Boolean',
 		'HasElectricPiano'               => 'Boolean',
+
 		'ExternalLink'                   => 'Text',
 		'ComplimentaryEquipmentProvided' => 'Boolean',
 		'ShowSetupChangeFee' => 'Boolean',
@@ -97,7 +100,9 @@ class MeetingRoomPage extends Page {
 		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasComputer', 'Has Computer?'));
 		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasEthernetConnection', 'Has Ethernet Connection?'));
 		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasProjectorScreen', 'Has Projector Screen?'));
+		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasProjector', 'Has Projector?'));
 		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasDVD', 'Has DVD Player?'));
+		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasBluRay', 'Has Blu-ray Player?'));
 		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasSpeakers', 'Has Speakers?'));
 		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasMarkerboard', 'Has Markerboard?'));
 		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasMicrophone', 'Has Microphone?'));

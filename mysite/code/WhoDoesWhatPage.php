@@ -1,4 +1,9 @@
 <?php
+
+use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+use SilverStripe\Blog\Model\BlogPost;
+
 class WhoDoesWhatPage extends BlogPost {
 
 	private static $db = array(
@@ -54,35 +59,4 @@ class WhoDoesWhatPage extends BlogPost {
 		$f->addFieldToTab("Root.Main", $gridField); // add the grid field to a tab in the CMS	*/
 		return $fields;
 	}
-}
-class WhoDoesWhatPage_Controller extends BlogPost_Controller {
-
-	/**
-	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the
-	 * permissions or conditions required to allow the user to access it.
-	 *
-	 * <code>
-	 * array (
-	 *     'action', // anyone can access this action
-	 *     'action' => true, // same as above
-	 *     'action' => 'ADMIN', // you must have ADMIN permissions to access this action
-	 *     'action' => '->checkAction' // you can only access this action if $this->checkAction() returns true
-	 * );
-	 * </code>
-	 *
-	 * @var array
-	 */
-	private static $allowed_actions = array (
-	);
-
-	// public function index(){
-	// 	$holder = WhoDoesWhatHolder::get()->first();
-	// 	$this->redirect($holder->Link().'#'.$this->URLSegment);
-	// }
-
-	public function init() {
-		parent::init();
-
-	}
-
 }

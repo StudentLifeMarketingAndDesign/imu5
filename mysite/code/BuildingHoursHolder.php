@@ -1,4 +1,6 @@
 <?php
+
+use PageController;
 class BuildingHoursHolder extends Page {
 
 	private static $db = array(
@@ -32,27 +34,6 @@ class BuildingHoursHolder extends Page {
 			)
 		);
 		return $children;
-	}
-
-}
-class BuildingHoursHolder_Controller extends Page_Controller {
-
-	
-	private static $allowed_actions = array (
-		'edit'
-	);
-
-	private static $url_handlers = array(
-		'edit//' => 'edit'
-	);
-	public function edit(){
-		return $this->renderWith(array('BuildingHoursHolder_edit', 'Page'));
-	}
-
-	public function init() {
-		parent::init();
-
-
 	}
 
 }

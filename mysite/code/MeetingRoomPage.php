@@ -1,4 +1,11 @@
 <?php
+
+use SilverStripe\Assets\Image;
+use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Forms\CheckboxField;
+
 class MeetingRoomPage extends Page {
 
 	private static $db = array(
@@ -40,14 +47,14 @@ class MeetingRoomPage extends Page {
 
 	private static $has_one = array(
 		// 'ThumbnailImage'  => 'Image',
-		'SlideshowImage1' => 'Image',
-		'SlideshowImage2' => 'Image',
-		'SlideshowImage3' => 'Image',
-		'SlideshowImage4' => 'Image',
-		'SlideshowImage5' => 'Image',
-		'SlideshowImage6' => 'Image',
-		'SlideshowImage7' => 'Image',
-		'SlideshowImage8' => 'Image',
+		'SlideshowImage1' => Image::class,
+		'SlideshowImage2' => Image::class,
+		'SlideshowImage3' => Image::class,
+		'SlideshowImage4' => Image::class,
+		'SlideshowImage5' => Image::class,
+		'SlideshowImage6' => Image::class,
+		'SlideshowImage7' => Image::class,
+		'SlideshowImage8' => Image::class,
 
 	);
 
@@ -162,35 +169,6 @@ class MeetingRoomPage extends Page {
 		}
 
 	}
-}
-class MeetingRoomPage_Controller extends Page_Controller {
-
-	/**
-	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the
-	 * permissions or conditions required to allow the user to access it.
-	 *
-	 * <code>
-	 * array (
-	 *     'action', // anyone can access this action
-	 *     'action' => true, // same as above
-	 *     'action' => 'ADMIN', // you must have ADMIN permissions to access this action
-	 *     'action' => '->checkAction' // you can only access this action if $this->checkAction() returns true
-	 * );
-	 * </code>
-	 *
-	 * @var array
-	 */
-	private static $allowed_actions = array(
-	);
-
-	public function init() {
-		parent::init();
-		if ($link = $this->ExternalLink) {
-			$this->redirect($link, 301);
-			return;
-		}
-	}
-
 	public function HasAnyAmenities() {
 		return $this->HasComputer ||
 		$this->HasEthernetConnection ||
@@ -198,5 +176,4 @@ class MeetingRoomPage_Controller extends Page_Controller {
 		$this->HasDVD ||
 		$this->HasWifi;
 	}
-
 }

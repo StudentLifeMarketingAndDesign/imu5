@@ -17,7 +17,7 @@ UNCSS_OPTIONS:
 # Gulp will reference these paths when it copies files
 PATHS:
   projectName: "imu"
-  theme: "../themes/division-subtheme"
+  theme: "../../../themes/division-subtheme"
   # Path to theme folder
   dist: "dist"  
   # Paths to static assets that aren't images, CSS, or JavaScript
@@ -25,8 +25,8 @@ PATHS:
     - "src/**/*"
     - "!src/{images,scripts,scss,templates}/**/*"
     - "!src/{images,scripts,scss,templates}"
-    - "!../themes/division-subtheme/src/{images,scripts,scss,templates}/**/*"
-    - "!../themes/division-subtheme/src/{images,scripts,scss,templates}"
+    - "!../../../themes/division-subtheme/src/{images,scripts,scss,templates}/**/*"
+    - "!../../../themes/division-subtheme/src/{images,scripts,scss,templates}"
   # Paths to Sass libraries, which can then be loaded with @import
   sass:
     - "src/scss/"

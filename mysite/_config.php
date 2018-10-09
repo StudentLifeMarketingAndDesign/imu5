@@ -1,24 +1,16 @@
 <?php
 
-global $project;
-$project = 'mysite';
+use SilverStripe\Security\PasswordValidator;
+use SilverStripe\Security\Member;
+use SilverStripe\Control\Director;
 
-global $database;
-$database = 'imu';
- 
-// Use _ss_environment.php file for configuration
-require_once("conf/ConfigureFromEnv.php");
+// remove PasswordValidator for SilverStripe 5.0
+$validator = new PasswordValidator();
 
-MySQLDatabase::set_connection_charset('utf8');
-
-// Set the site locale
-i18n::set_locale('en_US');
-FulltextSearchable::enable();
+$validator->minLength(8);
+$validator->checkHistoricalPasswords(6);
+Member::set_password_validator($validator);
 
 if(Director::isLive()) {
-	Director::forceSSL(array('/^Security/','/^admin/'));
+	Director::forceSSL();
 }
-Authenticator::unregister('MemberAuthenticator');
-Authenticator::set_default_authenticator('SAMLAuthenticator');
-
-SSViewer::set_theme('division-subtheme');

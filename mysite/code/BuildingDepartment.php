@@ -1,4 +1,14 @@
 <?php
+
+use SilverStripe\ORM\ArrayList;
+use SilverStripe\ORM\DataObject;
+use SilverStripe\ORM\FieldType\DBBoolean;
+use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\TimeField;
+use SilverStripe\Forms\CheckboxField;
+use SilverStripe\Forms\FieldGroup;
+use SilverStripe\Forms\TextareaField;
+
 class BuildingDepartment extends Page {
 
 	private static $db = array(
@@ -89,8 +99,8 @@ class BuildingDepartment extends Page {
 
 		    $day->OpenTime = new Time();
 		    $day->CloseTime = new Time();
-		    $day->OpenAllDay = new Boolean();
-		    $day->ClosedAllDay = new Boolean();
+		    $day->OpenAllDay = new DBBoolean();
+		    $day->ClosedAllDay = new DBBoolean();
 
 		    $day->OpenTime->setValue($this->obj($dayShort.'OpenTime')->getValue());
 		    $day->CloseTime->setValue($this->obj($dayShort.'CloseTime')->getValue());
@@ -192,17 +202,4 @@ class BuildingDepartment extends Page {
 
 		return $fields;
 	}
-}
-class BuildingDepartment_Controller extends Page_Controller {
-
-	
-	private static $allowed_actions = array (
-	);
-
-	public function init() {
-		parent::init();
-
-
-	}
-
 }

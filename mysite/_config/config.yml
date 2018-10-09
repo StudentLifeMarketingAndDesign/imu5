@@ -1,16 +1,5 @@
 ---
-Name: mysite
-After: 'framework/*','cms/*'
+Name: myproject
 ---
-# YAML configuration for SilverStripe
-# See http://doc.silverstripe.org/framework/en/topics/configuration
-# Caution: Indentation through two spaces, not tabs
-TopicHolder_Controller:
-  extensions:
-    - TopicHolderControllerSearchExtension
-Topic_Controller:
-  extensions:
-    - TopicControllerSearchExtension
-CMSMain:
-  extensions:
-    - CMSMainExtension
+SilverStripe\Core\Manifest\ModuleManifest:
+  project: mysite

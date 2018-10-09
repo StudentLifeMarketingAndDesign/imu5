@@ -1,4 +1,7 @@
 <?php
+
+use SilverStripe\Forms\DateField;
+use PageController;
 class BuildingHoursPage extends Page {
 
 	private static $db = array(
@@ -27,26 +30,6 @@ class BuildingHoursPage extends Page {
 		$fields->addFieldToTab('Root.Main', DateField::create('EffectiveEndDate')->setConfig('showcalendar', true), 'Content');
 
 		return $fields;
-
-	}
-
-}
-class BuildingHoursPage_Controller extends Page_Controller {
-
-	
-	private static $allowed_actions = array (
-		'edit'
-	);
-
-	private static $url_handlers = array(
-		'edit//' => 'edit'
-	);
-	public function edit(){
-		return $this->renderWith(array('BuildingHoursPage_edit', 'Page'));
-	}
-	public function init() {
-		parent::init();
-
 
 	}
 

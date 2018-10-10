@@ -1,6 +1,5 @@
 <?php
 
-use PageController;
 class BuildingHoursHolder extends Page {
 
 	private static $db = array(

@@ -1,7 +1,7 @@
 <?php
 
 use SilverStripe\Forms\DateField;
-use PageController;
+
 class BuildingHoursPage extends Page {
 
 	private static $db = array(

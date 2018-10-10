@@ -23,9 +23,9 @@ class WhoDoesWhatPage extends BlogPost {
 	private static $has_many = array(
 	);
 	
-	static $singular_name = 'Who Does What Page';
+	private static $singular_name = 'Who Does What Page';
 	
-	static $plural_name = 'Who Does What Pages';
+	private static $plural_name = 'Who Does What Pages';
 	/* This is a GLOBAL change that should happen on all CISL sites */
 	
 	public function getCMSFields(){

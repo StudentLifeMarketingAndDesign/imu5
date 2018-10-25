@@ -29,7 +29,7 @@ $Header
 						<% with $ActiveHoursPages.First %>
 							<h2>$Title</h2>
 							<% if $EffectiveStartDate && $EffectiveEndDate %>
-								<p><em>Effective from $EffectiveStartDate.NiceUS - $EffectiveEndDate.NiceUS</em></p>
+								<p><em>Effective from $EffectiveStartDate.Nice - $EffectiveEndDate.Nice</em></p>
 							<% end_if %>
 
 							<div>

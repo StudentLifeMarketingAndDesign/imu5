@@ -29,7 +29,7 @@ $Header
 
 				<% with $Parent %>
 					<% if $EffectiveStartDate && $EffectiveEndDate %>
-						<p><em>Effective from $EffectiveStartDate.NiceUS - $EffectiveEndDate.NiceUS</em></p>
+						<p><em>Effective from $EffectiveStartDate.Nice - $EffectiveEndDate.Nice</em></p>
 					<% end_if %>
 				<% end_with %>
 	

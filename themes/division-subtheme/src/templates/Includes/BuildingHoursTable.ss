@@ -13,9 +13,9 @@
 
 	<tr class="day-$DayShort">
 		<td>$Day</td>
-		<% if $ClosedAllDay %>
+		<% if $ClosedAllDay == "1" %>
 			<td><strong>Closed</strong></td>
-		<% else_if $OpenAllDay %>
+		<% else_if $OpenAllDay == "1" %>
 			<td><strong>Open 24 Hours</strong></td>
 		<% else %>
 			<td>$OpenTime.Short - $CloseTime.Short</td>

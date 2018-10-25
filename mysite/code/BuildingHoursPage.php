@@ -26,8 +26,8 @@ class BuildingHoursPage extends Page {
 		$fields->removeByName('LayoutType');
 		$fields->removeByName('BackgroundImage');
 
-		$fields->addFieldToTab('Root.Main', DateField::create('EffectiveStartDate')->setConfig('showcalendar', true), 'Content');
-		$fields->addFieldToTab('Root.Main', DateField::create('EffectiveEndDate')->setConfig('showcalendar', true), 'Content');
+		$fields->addFieldToTab('Root.Main', DateField::create('EffectiveStartDate')->setHTML5(true), 'Content');
+		$fields->addFieldToTab('Root.Main', DateField::create('EffectiveEndDate')->setHTML5(true), 'Content');
 
 		return $fields;
 

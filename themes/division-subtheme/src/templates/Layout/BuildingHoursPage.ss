@@ -24,7 +24,7 @@ $Header
 			<div class="main-content__text">
 				$Content
 				<% if $EffectiveStartDate && $EffectiveEndDate %>
-					<p><em>Effective from $EffectiveStartDate.NiceUS - $EffectiveEndDate.NiceUS</em></p>
+					<p><em>Effective from $EffectiveStartDate.Nice - $EffectiveEndDate</em></p>
 				<% end_if %>
 				<% loop $Children %>
 					<h2>$Title</h2>

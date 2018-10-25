@@ -8,7 +8,8 @@ use SilverStripe\Forms\TimeField;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\FieldGroup;
 use SilverStripe\Forms\TextareaField;
-
+use SilverStripe\ORM\FieldType\DBTime;
+use SilverStripe\Dev\Debug;
 class BuildingDepartment extends Page {
 
 	private static $db = array(
@@ -91,24 +92,31 @@ class BuildingDepartment extends Page {
 			$j = $i - 1;
 		    $date = new DateTime(); //<-- Grabs today's datetime
 		    $date->add(new DateInterval('P'.$j.'D')); //<--- Passes the current value of $i to add days..
-		    $day = DataObject::create();
+		    $day = BuildingHoursDay::create();
 
 		    $day->Day = $date->format('l');
 		    $day->DayShort = $date->format('D');
 		    $dayShort =$date->format('D');
 
-		    $day->OpenTime = new Time();
-		    $day->CloseTime = new Time();
-		    $day->OpenAllDay = new DBBoolean();
-		    $day->ClosedAllDay = new DBBoolean();
+		    $day->OpenTime = DBTime::create();
+		    $day->CloseTime = DBTime::create();
+		    $day->OpenAllDay = DBBoolean::create();
+		    $day->ClosedAllDay = DBBoolean::create();
 
-		    $day->OpenTime->setValue($this->obj($dayShort.'OpenTime')->getValue());
-		    $day->CloseTime->setValue($this->obj($dayShort.'CloseTime')->getValue());
-		    $day->OpenAllDay->setValue($this->obj($dayShort.'OpenAllDay')->getValue());
-		    $day->ClosedAllDay->setValue($this->obj($dayShort.'ClosedAllDay')->getValue());
-		    // print_r($day);
+		    // print_r($this->obj($dayShort.'OpenTime')->getValue());
+
+		    $day->OpenTime = $this->obj($dayShort.'OpenTime')->getValue();
+		    $day->CloseTime = $this->obj($dayShort.'CloseTime')->getValue();
+		    $day->OpenAllDay = $this->obj($dayShort.'OpenAllDay')->getValue();
+		    $day->ClosedAllDay = $this->obj($dayShort.'ClosedAllDay')->getValue();
+
+		    
 		    $days->push($day);
+
+
 		}
+
+
 	
 		return $days;
 	}

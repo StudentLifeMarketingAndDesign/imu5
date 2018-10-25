@@ -1,11 +1,4 @@
 
-<style>
-	table tbody tr.day-$Now.Format(D):nth-child(odd),
-	table tbody tr.day-$Now.Format(D):nth-child(even){
-		background: rgba(255, 205, 0, 0.46);
-		font-weight: bold;
-	}
-</style>
 <p>
 	<% if $Location %>
 		<strong>Location:</strong> $Location
@@ -15,8 +8,9 @@
 		<strong>Phone:</strong> $Phone
 	<% end_if %>
 </p>
-<table>
+<table class="building-hours-table">
 	<% loop $Days %>
+
 	<tr class="day-$DayShort">
 		<td>$Day</td>
 		<% if $ClosedAllDay %>
@@ -24,7 +18,7 @@
 		<% else_if $OpenAllDay %>
 			<td><strong>Open 24 Hours</strong></td>
 		<% else %>
-			<td>$OpenTime.Nice - $CloseTime.Nice</td>
+			<td>$OpenTime.Short - $CloseTime.Short</td>
 		<% end_if %>
 
 	</tr>

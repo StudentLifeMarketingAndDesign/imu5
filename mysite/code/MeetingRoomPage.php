@@ -58,6 +58,17 @@ class MeetingRoomPage extends Page {
 
 	);
 
+	private static $owns = array(
+		'SlideshowImage1',
+		'SlideshowImage2',
+		'SlideshowImage3',
+		'SlideshowImage4',
+		'SlideshowImage5',
+		'SlideshowImage6',
+		'SlideshowImage7',
+		'SlideshowImage8'
+	);
+
 	private static $defaults = array(
 		"HasWifi" => true
 	);

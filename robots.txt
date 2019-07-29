@@ -1,3 +1,0 @@
-# Don't allow web crawlers to index Admin
-User-agent: *
-Disallow: /admin/

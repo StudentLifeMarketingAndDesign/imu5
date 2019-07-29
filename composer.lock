@@ -492,16 +492,16 @@
         },
         {
             "name": "embed/embed",
-            "version": "v3.4.0",
+            "version": "v3.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oscarotero/Embed.git",
-                "reference": "5594b253dee90888c14cdca43696183c98f078e9"
+                "reference": "960bbd5a62c5697302bd5394d58efba2e998b787"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/5594b253dee90888c14cdca43696183c98f078e9",
-                "reference": "5594b253dee90888c14cdca43696183c98f078e9",
+                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/960bbd5a62c5697302bd5394d58efba2e998b787",
+                "reference": "960bbd5a62c5697302bd5394d58efba2e998b787",
                 "shasum": ""
             },
             "require": {
@@ -527,9 +527,9 @@
             "authors": [
                 {
                     "name": "Oscar Otero",
+                    "role": "Developer",
                     "email": "oom@oscarotero.com",
-                    "homepage": "http://oscarotero.com",
-                    "role": "Developer"
+                    "homepage": "http://oscarotero.com"
                 }
             ],
             "description": "PHP library to retrieve page info using oembed, opengraph, etc",
@@ -541,7 +541,7 @@
                 "opengraph",
                 "twitter cards"
             ],
-            "time": "2019-06-23T11:12:03+00:00"
+            "time": "2019-07-20T17:05:41+00:00"
         },
         {
             "name": "gorriecoe/silverstripe-webfonts",
@@ -1263,12 +1263,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-project.git",
-                "reference": "02628aba6eae900c8fd3c54f85eb9cbd487cbabf"
+                "reference": "de048e71d6dddc4ca9f352593a40ae888b849f47"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/02628aba6eae900c8fd3c54f85eb9cbd487cbabf",
-                "reference": "02628aba6eae900c8fd3c54f85eb9cbd487cbabf",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/de048e71d6dddc4ca9f352593a40ae888b849f47",
+                "reference": "de048e71d6dddc4ca9f352593a40ae888b849f47",
                 "shasum": ""
             },
             "require": {
@@ -1317,7 +1317,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/division-project/tree/ss4.x",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-project/issues"
             },
-            "time": "2019-06-26T21:02:22+00:00"
+            "time": "2019-07-29T14:22:37+00:00"
         },
         {
             "name": "md/saml",
@@ -3657,7 +3657,7 @@
         },
         {
             "name": "symfony/cache",
-            "version": "v3.4.29",
+            "version": "v3.4.30",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/cache.git",
@@ -3727,16 +3727,16 @@
         },
         {
             "name": "symfony/config",
-            "version": "v3.4.29",
+            "version": "v3.4.30",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
-                "reference": "29a33f66194fbe2ed4555981810f15fd8440e4a8"
+                "reference": "623fd6be3e5d4112d667003488c8c3ec12b66f62"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/config/zipball/29a33f66194fbe2ed4555981810f15fd8440e4a8",
-                "reference": "29a33f66194fbe2ed4555981810f15fd8440e4a8",
+                "url": "https://api.github.com/repos/symfony/config/zipball/623fd6be3e5d4112d667003488c8c3ec12b66f62",
+                "reference": "623fd6be3e5d4112d667003488c8c3ec12b66f62",
                 "shasum": ""
             },
             "require": {
@@ -3787,11 +3787,11 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
-            "time": "2019-05-30T15:47:52+00:00"
+            "time": "2019-07-17T15:23:18+00:00"
         },
         {
             "name": "symfony/filesystem",
-            "version": "v3.4.29",
+            "version": "v3.4.30",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
@@ -3841,16 +3841,16 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v3.4.29",
+            "version": "v3.4.30",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "5f80266a729e30bbcc37f8bf0e62c3d5a38c8208"
+                "reference": "1e762fdf73ace6ceb42ba5a6ca280be86082364a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/5f80266a729e30bbcc37f8bf0e62c3d5a38c8208",
-                "reference": "5f80266a729e30bbcc37f8bf0e62c3d5a38c8208",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/1e762fdf73ace6ceb42ba5a6ca280be86082364a",
+                "reference": "1e762fdf73ace6ceb42ba5a6ca280be86082364a",
                 "shasum": ""
             },
             "require": {
@@ -3886,7 +3886,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2019-05-30T15:47:52+00:00"
+            "time": "2019-06-28T08:02:59+00:00"
         },
         {
             "name": "symfony/polyfill-apcu",
@@ -4127,16 +4127,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.4.29",
+            "version": "v3.4.30",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "212a27b731e5bfb735679d1ffaac82bd6a1dc996"
+                "reference": "051d045c684148060ebfc9affb7e3f5e0899d40b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/212a27b731e5bfb735679d1ffaac82bd6a1dc996",
-                "reference": "212a27b731e5bfb735679d1ffaac82bd6a1dc996",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/051d045c684148060ebfc9affb7e3f5e0899d40b",
+                "reference": "051d045c684148060ebfc9affb7e3f5e0899d40b",
                 "shasum": ""
             },
             "require": {
@@ -4182,7 +4182,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2019-03-25T07:48:46+00:00"
+            "time": "2019-07-24T13:01:31+00:00"
         },
         {
             "name": "unclecheese/display-logic",
@@ -4246,16 +4246,16 @@
         },
         {
             "name": "undefinedoffset/silverstripe-nocaptcha",
-            "version": "2.0.3",
+            "version": "2.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UndefinedOffset/silverstripe-nocaptcha.git",
-                "reference": "b9fe21d0b08d18a91ac4fde87f6fe2ab8bb69ac5"
+                "reference": "a7767503563618e6aeb3afdf16699093808cbbfc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UndefinedOffset/silverstripe-nocaptcha/zipball/b9fe21d0b08d18a91ac4fde87f6fe2ab8bb69ac5",
-                "reference": "b9fe21d0b08d18a91ac4fde87f6fe2ab8bb69ac5",
+                "url": "https://api.github.com/repos/UndefinedOffset/silverstripe-nocaptcha/zipball/a7767503563618e6aeb3afdf16699093808cbbfc",
+                "reference": "a7767503563618e6aeb3afdf16699093808cbbfc",
                 "shasum": ""
             },
             "require": {
@@ -4284,8 +4284,8 @@
             "authors": [
                 {
                     "name": "Ed Chipman",
-                    "homepage": "http://www.edchipman.ca",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "homepage": "http://www.edchipman.ca"
                 }
             ],
             "description": "A spam protector and form field using the new Google's reCAPTCHA 2 aka No Captcha",
@@ -4296,7 +4296,7 @@
                 "silverstripe",
                 "spamprotection"
             ],
-            "time": "2019-05-13T15:42:07+00:00"
+            "time": "2019-07-29T13:29:58+00:00"
         },
         {
             "name": "undefinedoffset/sortablegridfield",

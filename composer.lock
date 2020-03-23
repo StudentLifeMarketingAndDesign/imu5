@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a8a8e6f15cec0c434968cd379a5c0718",
+    "content-hash": "386797e5a3ee730d78a1b3a1a41a5f08",
     "packages": [
         {
             "name": "bramus/ansi-php",
@@ -1017,16 +1017,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.65",
+            "version": "1.0.66",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "8f17b3ba67097aafb8318cd5c553b1acf7c891c8"
+                "reference": "021569195e15f8209b1c4bebb78bd66aa4f08c21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/8f17b3ba67097aafb8318cd5c553b1acf7c891c8",
-                "reference": "8f17b3ba67097aafb8318cd5c553b1acf7c891c8",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/021569195e15f8209b1c4bebb78bd66aa4f08c21",
+                "reference": "021569195e15f8209b1c4bebb78bd66aa4f08c21",
                 "shasum": ""
             },
             "require": {
@@ -1097,7 +1097,13 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2020-03-08T18:53:20+00:00"
+            "funding": [
+                {
+                    "url": "https://offset.earth/frankdejonge",
+                    "type": "other"
+                }
+            ],
+            "time": "2020-03-17T18:58:12+00:00"
         },
         {
             "name": "m1/env",
@@ -1210,12 +1216,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events.git",
-                "reference": "653377a93d704c23a3973154df32774f497572a0"
+                "reference": "3416c7149ae29a058a131a55b160bb5339f49951"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/ac-json-events/zipball/653377a93d704c23a3973154df32774f497572a0",
-                "reference": "653377a93d704c23a3973154df32774f497572a0",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/ac-json-events/zipball/3416c7149ae29a058a131a55b160bb5339f49951",
+                "reference": "3416c7149ae29a058a131a55b160bb5339f49951",
                 "shasum": ""
             },
             "require": {
@@ -1234,7 +1240,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/tree/3",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/issues"
             },
-            "time": "2019-12-19T21:58:30+00:00"
+            "time": "2020-03-20T21:42:44+00:00"
         },
         {
             "name": "md/deploy-helper",
@@ -1296,12 +1302,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-project.git",
-                "reference": "9ce274f26b2fc7e37483018fd4f0a7e16e67a490"
+                "reference": "1bbccab8ad51b3d88fdf057b24646b5d81a80865"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/9ce274f26b2fc7e37483018fd4f0a7e16e67a490",
-                "reference": "9ce274f26b2fc7e37483018fd4f0a7e16e67a490",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/1bbccab8ad51b3d88fdf057b24646b5d81a80865",
+                "reference": "1bbccab8ad51b3d88fdf057b24646b5d81a80865",
                 "shasum": ""
             },
             "require": {
@@ -1347,7 +1353,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/division-project/tree/2",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-project/issues"
             },
-            "time": "2020-03-13T15:34:03+00:00"
+            "time": "2020-03-23T14:43:59+00:00"
         },
         {
             "name": "md/saml",
@@ -1355,12 +1361,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-saml.git",
-                "reference": "6e816a618acfd49ad301f646e69d42af5e7ecfb7"
+                "reference": "0b7dde29415d73b380659cab24f6eb71309540fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/silverstripe-saml/zipball/6e816a618acfd49ad301f646e69d42af5e7ecfb7",
-                "reference": "6e816a618acfd49ad301f646e69d42af5e7ecfb7",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/silverstripe-saml/zipball/0b7dde29415d73b380659cab24f6eb71309540fc",
+                "reference": "0b7dde29415d73b380659cab24f6eb71309540fc",
                 "shasum": ""
             },
             "require": {
@@ -1415,7 +1421,7 @@
             "support": {
                 "source": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-saml/tree/md"
             },
-            "time": "2019-11-26T16:15:31+00:00"
+            "time": "2020-03-18T15:24:21+00:00"
         },
         {
             "name": "md/silverstripe-maintenance-mode",
@@ -1487,12 +1493,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/uiowa-bar.git",
-                "reference": "2b087ee8c75ce04deddd749fe9a60200351c66ca"
+                "reference": "cf1ada16ac84a8c78d82651cbdf51114cfd79708"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/uiowa-bar/zipball/2b087ee8c75ce04deddd749fe9a60200351c66ca",
-                "reference": "2b087ee8c75ce04deddd749fe9a60200351c66ca",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/uiowa-bar/zipball/cf1ada16ac84a8c78d82651cbdf51114cfd79708",
+                "reference": "cf1ada16ac84a8c78d82651cbdf51114cfd79708",
                 "shasum": ""
             },
             "require": {
@@ -1506,7 +1512,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/uiowa-bar/tree/1.2.x",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/uiowa-bar/issues"
             },
-            "time": "2020-03-13T18:29:09+00:00"
+            "time": "2020-03-18T16:09:30+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -2710,52 +2716,6 @@
             ],
             "description": "A module to make managing pages in a GridField easy without losing any of the functionality that you're used to in the CMS.",
             "time": "2020-01-17T03:56:22+00:00"
-        },
-        {
-            "name": "silverstripe/mathspamprotection",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/silverstripe/silverstripe-mathspamprotection.git",
-                "reference": "570eec324c89578f299e2340681b74edb7b3c712"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-mathspamprotection/zipball/570eec324c89578f299e2340681b74edb7b3c712",
-                "reference": "570eec324c89578f299e2340681b74edb7b3c712",
-                "shasum": ""
-            },
-            "require": {
-                "silverstripe/spamprotection": "^3"
-            },
-            "type": "silverstripe-vendormodule",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "SilverStripe\\MathSpamProtection\\": "code/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Will Rossiter",
-                    "email": "will@fullscreen.io"
-                }
-            ],
-            "description": "This module provides a simple math protection mechanism for prevent spam from your forms.Includes an EditableMathSpamField to integrate with the UserForms module.",
-            "keywords": [
-                "mathspamprotection",
-                "silverstripe",
-                "spamprotection"
-            ],
-            "time": "2018-06-28T21:15:27+00:00"
         },
         {
             "name": "silverstripe/recipe-cms",
@@ -5878,13 +5838,12 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "silverstripe/mathspamprotection": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": ">=5.6.0"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }

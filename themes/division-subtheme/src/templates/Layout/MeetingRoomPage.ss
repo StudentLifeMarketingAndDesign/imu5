@@ -86,7 +86,7 @@ $BlockArea(BeforeContent)
 						<div class="column">
 						
 
-						<% if $Parent.SocialDistancingOnly  %>
+						<% if $SocialDistancingOnly  %>
 							<% if SocialDistancingCapacity%>
 							<h2>Capacity by setup</h2>
 							<ul>

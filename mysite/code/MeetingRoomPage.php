@@ -25,7 +25,8 @@ class MeetingRoomPage extends Page {
 		'BoardroomCapacity'       => 'Varchar',
 
 		'SocialDistancingCapacity'       => 'Varchar',
-
+		'SocialDistancingOnly' => 'Boolean',
+		
 		'FormerlyKnownAs'		  => 'Varchar(155)',
 		// Amenities
 		'HasComputer'                    => 'Boolean',
@@ -107,6 +108,11 @@ class MeetingRoomPage extends Page {
 
 		// Capacities
 		$fields->addFieldToTab('Root.Capacities', new TextField('CapacityToShowOnHolder', 'Show the following capacity on the holder page (e.g., Up to 700)'));
+
+		$fields->addFieldToTab('Root.Capacities', new TextField('SocialDistancingCapacity', 'Social Distancing Capacity'));
+		$fields->addFieldToTab('Root.Capacities', new CheckboxField('SocialDistancingOnly', 'Show only the above social distancing capacity/setup option on this page'));
+
+
 		$fields->addFieldToTab('Root.Capacities', new TextField('TablesAndChairsCapacity', 'Tables & Chairs Capacity.  Put * after a capacity value to indicate a room\'s standard setup capacity.'));
 		$fields->addFieldToTab('Root.Capacities', new TextField('RoundedTablesCapacity', 'Rounded Tables Capacity'));
 		$fields->addFieldToTab('Root.Capacities', new TextField('TheaterCapacity', 'Theater Capacity'));
@@ -114,11 +120,10 @@ class MeetingRoomPage extends Page {
 		$fields->addFieldToTab('Root.Capacities', new TextField('UshapeCapacity', 'U-Shape Capacity'));
 		$fields->addFieldToTab('Root.Capacities', new TextField('BoardroomCapacity', 'Board Room Capacity'));
 
-		$fields->addFieldToTab('Root.Capacities', new TextField('SocialDistancingCapacity', 'Social Distancing Capacity'));
 
-		$fields->addFieldToTab('Root.Capacities', new CheckboxField('ShowSetupChangeFee', 'Show minimum setup change fee?'));
+
 		$fields->addFieldToTab('Root.Capacities', new TextField('SetupChangeFee', 'Minimum setup change fee (include dollar sign)'));
-		
+				$fields->addFieldToTab('Root.Capacities', new CheckboxField('ShowSetupChangeFee', 'Show minimum setup change fee?'));
 		// Amenities
 		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasComputer', 'Has Computer?'));
 		$fields->addFieldToTab('Root.Amenities', new CheckboxField('HasEthernetConnection', 'Has Ethernet Connection?'));

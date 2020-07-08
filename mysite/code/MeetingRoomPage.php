@@ -23,6 +23,9 @@ class MeetingRoomPage extends Page {
 		'ClassroomCapacity'       => 'Varchar',
 		'UshapeCapacity'          => 'Varchar',
 		'BoardroomCapacity'       => 'Varchar',
+
+		'SocialDistancingCapacity'       => 'Varchar',
+
 		'FormerlyKnownAs'		  => 'Varchar(155)',
 		// Amenities
 		'HasComputer'                    => 'Boolean',
@@ -110,6 +113,8 @@ class MeetingRoomPage extends Page {
 		$fields->addFieldToTab('Root.Capacities', new TextField('ClassroomCapacity', 'Classroom Capacity'));
 		$fields->addFieldToTab('Root.Capacities', new TextField('UshapeCapacity', 'U-Shape Capacity'));
 		$fields->addFieldToTab('Root.Capacities', new TextField('BoardroomCapacity', 'Board Room Capacity'));
+
+		$fields->addFieldToTab('Root.Capacities', new TextField('SocialDistancingCapacity', 'Social Distancing Capacity'));
 
 		$fields->addFieldToTab('Root.Capacities', new CheckboxField('ShowSetupChangeFee', 'Show minimum setup change fee?'));
 		$fields->addFieldToTab('Root.Capacities', new TextField('SetupChangeFee', 'Minimum setup change fee (include dollar sign)'));

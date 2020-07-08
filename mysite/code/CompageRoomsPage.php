@@ -14,12 +14,8 @@ class CompareRoomsPage extends Page {
 
 	public function getCMSFields(){
 		$fields = parent::getCMSFields();
-
-
 		return $fields;
-
 	}
 
-	//private static $allowed_children = array("");
 
 }

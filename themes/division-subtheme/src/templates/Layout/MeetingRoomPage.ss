@@ -82,9 +82,23 @@ $BlockArea(BeforeContent)
 			
 
 				<div class="row small-up-1 medium-up-3 room-single__details">
-					<% if $TablesAndChairsCapacity || $RoundedTablesCapacity || $TheaterCapacity || $ClassroomCapacity || $UshapeCapacity || $BoardroomCapacity %>
+					<% if $TablesAndChairsCapacity || $RoundedTablesCapacity || $TheaterCapacity || $ClassroomCapacity || $UshapeCapacity || $BoardroomCapacity || $SocialDistancingCapacity %>
 						<div class="column">
-						<h2>Capacity by setup</h2>
+						
+
+						<% if $Parent.SocialDistancingOnly  %>
+							<% if SocialDistancingCapacity%>
+							<h2>Capacity by setup</h2>
+							<ul>
+								<li>
+									<strong>Social Distancing:</strong> $SocialDistancingCapacity
+								</li>
+							</ul>
+							<%-- <% else %> --%>
+								<%-- <p>Please check back for capacity information.</p> --%>
+							<% end_if %>
+						<% else %>
+							<h2>Capacity by setup</h2>
 							<ul>
 							<% if $TablesAndChairsCapacity %>
 							<li>
@@ -123,6 +137,8 @@ $BlockArea(BeforeContent)
 							</li>
 							<% end_if %>
 						</ul>
+
+						<% end_if %>
 					</div>
 					<% end_if %>
 				 

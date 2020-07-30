@@ -94,8 +94,6 @@ $BlockArea(BeforeContent)
 									<strong>Social Distancing:</strong> $SocialDistancingCapacity
 								</li>
 							</ul>
-							<%-- <% else %> --%>
-								<%-- <p>Please check back for capacity information.</p> --%>
 							<% end_if %>
 						<% else %>
 							<h2>Capacity by setup</h2>
@@ -276,11 +274,15 @@ $BlockArea(BeforeContent)
 						<p>*Some items are provided in fee rooms in limited amounts for no charge: for a full list see our <a href="event-services/fees/"> A/V, Equipment, and Services page.  </p></a>
 					<% end_if %>
 
-					<% if $StandardCapacity && $ShowSetupChangeFee && $SetupChangeFee %>
-						<p class="standard_setup_notice">
-							* denotes a room's standard setup. Minimum setup change fee: 
-							<strong>$SetupChangeFee</strong>.
-						</p>
+					<% if $Parent.SocialDistancingOnly  %>
+						<p class="standard_setup_notice">Due to social distancing guidelines, the meeting room configuration and capacity cannot be changed.</p>
+					<% else %>
+						<% if $StandardCapacity && $ShowSetupChangeFee && $SetupChangeFee %>
+							<p class="standard_setup_notice">
+								* denotes a room's standard setup. Minimum setup change fee: 
+								<strong>$SetupChangeFee</strong>.
+							</p>
+						<% end_if %>
 					<% end_if %>
 				</div>
 				<% if $ShowRoomLayout %>

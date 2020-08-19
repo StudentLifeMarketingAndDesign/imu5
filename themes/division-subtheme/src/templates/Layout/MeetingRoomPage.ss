@@ -88,12 +88,13 @@ $BlockArea(BeforeContent)
 
 						<% if $SocialDistancingOnly  %>
 							<% if SocialDistancingCapacity%>
-							<h2>Capacity by setup</h2>
-							<ul>
-								<li>
-									<strong>Social Distancing:</strong> $SocialDistancingCapacity
-								</li>
-							</ul>
+								<h2>Capacity by setup</h2>
+								<ul>
+									<li>
+										<strong>Social Distancing:</strong> $SocialDistancingCapacity
+									</li>
+								</ul>
+				
 							<% end_if %>
 						<% else %>
 							<h2>Capacity by setup</h2>
@@ -257,6 +258,14 @@ $BlockArea(BeforeContent)
 					<% end_if %>
 
 				</div>
+				<% if $SocialDistancingLayoutImage && $SocialDistancingOnly %>
+				<div class="row">
+					<div class="column">
+						<h2>Social distancing layout:</h2>
+						<img style="margin: auto; display: block;" src="$SocialDistancingLayoutImage.ScaleWidth(640).URL" alt="Room diagram for social distancing">
+					</div>
+				</div>
+				<% end_if %>
 				<div class="room-single__contact">
 
 					<% if $ContactInfo %>

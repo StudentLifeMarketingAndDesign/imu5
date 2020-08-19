@@ -60,6 +60,8 @@ class MeetingRoomPage extends Page {
 		'SlideshowImage7' => Image::class,
 		'SlideshowImage8' => Image::class,
 
+		'SocialDistancingLayoutImage' => Image::class
+
 	);
 
 	private static $owns = array(
@@ -109,9 +111,9 @@ class MeetingRoomPage extends Page {
 		// Capacities
 		$fields->addFieldToTab('Root.Capacities', new TextField('CapacityToShowOnHolder', 'Show the following capacity on the holder page (e.g., Up to 700)'));
 
-		$fields->addFieldToTab('Root.Capacities', new TextField('SocialDistancingCapacity', 'Social Distancing Capacity'));
-		$fields->addFieldToTab('Root.Capacities', new CheckboxField('SocialDistancingOnly', 'Show only the above social distancing capacity/setup option on this page'));
-
+		$fields->addFieldToTab('Root.Capacities', new TextField('SocialDistancingCapacity', 'Social distancing capacity'));
+		$fields->addFieldToTab('Root.Capacities', new CheckboxField('SocialDistancingOnly', 'Show only the social distancing capacity/setup option on this page'));
+		$fields->addFieldToTab('Root.Capacities', new UploadField('SocialDistancingLayoutImage', 'Social distancing layout diagram'));
 
 		$fields->addFieldToTab('Root.Capacities', new TextField('TablesAndChairsCapacity', 'Tables & Chairs Capacity.  Put * after a capacity value to indicate a room\'s standard setup capacity.'));
 		$fields->addFieldToTab('Root.Capacities', new TextField('RoundedTablesCapacity', 'Rounded Tables Capacity'));

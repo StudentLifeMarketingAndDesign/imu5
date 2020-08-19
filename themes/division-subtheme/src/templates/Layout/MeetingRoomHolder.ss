@@ -41,6 +41,9 @@ $BlockArea(BeforeContent)
 							<% if $Number %>
 								<span class="room-grid__label"><strong>Room #$Number</strong></span><br />
 							<% end_if %>
+							<% if $SocialDistancingCapacity && $SocialDistancingOnly %>
+								<span class="room-grid__label"><strong>Social distancing capacity: </strong>$SocialDistancingCapacity</span>
+							<% end_if %>
 							<% if $FormerlyKnownAs %>
 								<span class="room-grid__label"><strong>Formerly known as: </strong>$FormerlyKnownAs</span>
 							<% end_if %>

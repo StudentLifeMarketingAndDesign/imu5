@@ -72,7 +72,8 @@ class MeetingRoomPage extends Page {
 		'SlideshowImage5',
 		'SlideshowImage6',
 		'SlideshowImage7',
-		'SlideshowImage8'
+		'SlideshowImage8',
+		'SocialDistancingLayoutImage'
 	);
 
 	private static $defaults = array(

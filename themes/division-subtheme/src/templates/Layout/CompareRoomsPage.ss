@@ -1,19 +1,34 @@
+$Header
+<main class="main-content__container" id="main-content__container">
 
-<% if $BackgroundImage %>
-	<div class="img-container" style="background-image: url($BackgroundImage.URL);">
-		<div class="img-fifty-top"></div>
-	</div>
-<% end_if %>
-	<div class="gradient">
-		<div class="page-full-width">
-			<div class="container clearfix">
-				<div class="white-cover"></div>
-				 <section class="main-content <% if $BackgroundImage %>margin-top<% end_if %>">
-				 $Breadcrumbs
-					$Content
-					$Form
+	<!-- Background Image Feature -->
+	<% if $BackgroundImage %>
+		<% include FeaturedImage %>
+	<% end_if %>
+	
+	<% if not $BackgroundImage %>
+		<div class="column row">
+	        <div class="main-content__header">
+	            $Breadcrumbs
+				<h1>$Title</h1>
+			</div>
+		</div>
+	<% end_if %>
 
-					<% with $Page(meetings) %>
+	$BeforeContent
+
+	<div class="row">
+
+		<div class="main-content main-content--with-padding <% if $SiteConfig.ShowExitButton %>main-content--with-exit-button-padding<% end_if %> <% if $Children || $Menu(2) || $SidebarArea.Elements ||  $SidebarView.Widgets %>main-content--with-sidebar<% else %>main-content--full-width<% end_if %>">
+			$BeforeContentConstrained
+			<% if $MainImage %>
+				<img class="main-content__main-img" src="$MainImage.ScaleMaxWidth(500).URL" alt="" role="presentation"/>
+			<% end_if %>
+			<div class="main-content__text">
+				$Content
+	            $AfterContentConstrained
+	            $Form
+				<% with $Page(meetings) %>
 
 						<table class="responsive-table">
 						<thead>
@@ -48,10 +63,22 @@
 						</tbody>
 					</table>
 					<% end_with %>
-
-				 </section>
 			</div>
-		</div>
-	</div>
-<% include TopicsAndNews %>
 
+			<% if $ShowChildPages %>
+				<% include ChildPages %>
+			<% end_if %>
+
+		</div>
+		<aside class="sidebar dp-sticky">
+			<% include SideNav %>
+			<% if $SideBarView %>
+				$SideBarView
+			<% end_if %>
+			$SidebarArea
+		</aside>
+	</div>
+$AfterContent
+
+
+</main>

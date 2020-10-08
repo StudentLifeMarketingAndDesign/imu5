@@ -1,3 +1,4 @@
+
 $Header
 <main class="main-content__container" id="main-content__container">
 
@@ -5,23 +6,27 @@ $Header
 	<% if $BackgroundImage %>
 		<% include FeaturedImage %>
 	<% end_if %>
-	$Breadcrumbs
-
-<% if not $BackgroundImage %>
+	
+	<% if not $BackgroundImage %>
 	<div class="column row">
-		<div class="main-content__header">
-			<h1>$Title <% if $Number %> - Room #$Number<% end_if %></h1>
+        <div class="main-content__header">
+            $Breadcrumbs
+			<h1>$Title</h1>
 		</div>
 	</div>
 <% end_if %>
 
-$BlockArea(BeforeContent)
+$BeforeContent
 
 <div class="row">
-	<article role="main" class="main-content main-content--with-padding <% if $Children || $Menu(2) || $SidebarBlocks ||  $SidebarView.Widgets %>main-content--with-sidebar<% else %>main-content--full-width<% end_if %>">
-		$BlockArea(BeforeContentConstrained)
+
+	<div class="main-content main-content--with-padding <% if $SiteConfig.ShowExitButton %>main-content--with-exit-button-padding<% end_if %> <% if $Children || $Menu(2) || $SidebarArea.Elements ||  $SidebarView.Widgets %>main-content--with-sidebar<% else %>main-content--full-width<% end_if %>">
+		$BeforeContentConstrained
+		<% if $MainImage %>
+			<img class="main-content__main-img" src="$MainImage.ScaleMaxWidth(500).URL" alt="" role="presentation"/>
+		<% end_if %>
 		<div class="main-content__text">
-		 		<% if $SlideshowImage1 || $SlideshowImage2 || $SlideshowImage3 || $SlideshowImage4 || $SlideshowImage5 || $SlideshowImage6 || $SlideshowImage7 || $SlideshowImage8 %>
+<% if $SlideshowImage1 || $SlideshowImage2 || $SlideshowImage3 || $SlideshowImage4 || $SlideshowImage5 || $SlideshowImage6 || $SlideshowImage7 || $SlideshowImage8 %>
 
 
 					<div class="slideshow">
@@ -374,21 +379,24 @@ $BlockArea(BeforeContent)
 				 </div>
 				<% end_if %>
 
-	
-		$BlockArea(AfterContentConstrained)
-		$Form
+		</div>
+
 		<% if $ShowChildPages %>
 			<% include ChildPages %>
 		<% end_if %>
-	</article>
+
+	</div>
 	<aside class="sidebar dp-sticky">
 		<% include SideNav %>
 		<% if $SideBarView %>
 			$SideBarView
 		<% end_if %>
-		$BlockArea(Sidebar)
+		$SidebarArea
 	</aside>
 </div>
-$BlockArea(AfterContent)
+$AfterContent
+
 
 </main>
+
+

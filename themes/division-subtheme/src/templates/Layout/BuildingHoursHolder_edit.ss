@@ -5,23 +5,27 @@ $Header
 	<% if $BackgroundImage %>
 		<% include FeaturedImage %>
 	<% end_if %>
-	$Breadcrumbs
-
+	
 	<% if not $BackgroundImage %>
 		<div class="column row">
-			<div class="main-content__header">
+	        <div class="main-content__header">
+	            $Breadcrumbs
 				<h1>$Title</h1>
 			</div>
 		</div>
 	<% end_if %>
 
-	$BlockArea(BeforeContent)
+	$BeforeContent
 
 	<div class="row">
 
-		<article role="main" class="main-content main-content--with-padding <% if $SiteConfig.ShowExitButton %>main-content--with-exit-button-padding<% end_if %> <% if $Children || $Menu(2) || $SidebarBlocks ||  $SidebarView.Widgets %>main-content--with-sidebar<% else %>main-content--full-width<% end_if %>">
-			$BlockArea(BeforeContentConstrained)
+		<div class="main-content main-content--with-padding <% if $SiteConfig.ShowExitButton %>main-content--with-exit-button-padding<% end_if %> <% if $Children || $Menu(2) || $SidebarArea.Elements ||  $SidebarView.Widgets %>main-content--with-sidebar<% else %>main-content--full-width<% end_if %>">
+			$BeforeContentConstrained
+			<% if $MainImage %>
+				<img class="main-content__main-img" src="$MainImage.ScaleMaxWidth(500).URL" alt="" role="presentation"/>
+			<% end_if %>
 			<div class="main-content__text">
+				$Content
 				<% with $ActiveHoursPages.First %>
 					<h2>$Title</h2>
 					<% if $EffectiveStartDate && $EffectiveEndDate %>
@@ -33,18 +37,24 @@ $Header
 						<p><a href="$CMSEditLink" class="button" target="_blank">Edit {$Title} hours</a></p>
 					<% end_loop %>
 				<% end_with %>
+	            $AfterContentConstrained
+	            $Form
 			</div>
-			$BlockArea(AfterContentConstrained)
-			$Form
-		</article>
+
+			<% if $ShowChildPages %>
+				<% include ChildPages %>
+			<% end_if %>
+
+		</div>
 		<aside class="sidebar dp-sticky">
 			<% include SideNav %>
 			<% if $SideBarView %>
 				$SideBarView
 			<% end_if %>
-			$BlockArea(Sidebar)
+			$SidebarArea
 		</aside>
 	</div>
-	$BlockArea(AfterContent)
+$AfterContent
+
 
 </main>

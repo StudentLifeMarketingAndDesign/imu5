@@ -2,16 +2,20 @@
     "name": "silverstripe/installer",
     "type": "silverstripe-recipe",
     "description": "The SilverStripe Framework Installer",
-    "require": {
+    "require":
+    {
         "php": ">=5.6.0",
         "md/division-project": "dev-2-branding"
     },
-    "require-dev": {
+    "require-dev":
+    {
         "phpunit/phpunit": "^5.7"
     },
-    "extra": {
+    "extra":
+    {
         "resources-dir": "_resources",
-        "branch-alias": {
+        "branch-alias":
+        {
             "4.x-dev": "4.2.x-dev",
             "dev-master": "5.x-dev"
         },
@@ -40,41 +44,46 @@
             "themes/division-subtheme/css"
         ]
     },
-    "repositories": {
-        "0": {
+    "repositories":
+    {
+        "0":
+        {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/division-project"
         },
-        "1": {
+        "1":
+        {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/division-analytics"
         },
-        "2": {
+        "2":
+        {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-maintenance-mode"
         },
-        "3": {
+        "3":
+        {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/uiowa-bar"
         },
-        "4": {
+        "4":
+        {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events"
         },
-        "5": {
+        "5":
+        {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-flickr"
         },
-        "6": {
+        "6":
+        {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-saml"
-        },
-        "repo-name": {
-            "type": "vcs",
-            "url": "https://github.com/StudentLifeMarketingAndDesign/deploy-helper"
         }
     },
-    "config": {
+    "config":
+    {
         "process-timeout": 600
     },
     "prefer-stable": true,

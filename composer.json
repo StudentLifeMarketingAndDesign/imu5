@@ -5,7 +5,7 @@
     "require":
     {
         "php": ">=5.6.0",
-        "md/division-project": "dev-2-branding"
+        "md/division-project": "3.*"
     },
     "require-dev":
     {

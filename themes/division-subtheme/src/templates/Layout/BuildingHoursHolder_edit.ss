@@ -41,10 +41,6 @@ $Header
 	            $Form
 			</div>
 
-			<% if $ShowChildPages %>
-				<% include ChildPages %>
-			<% end_if %>
-
 		</div>
 		<aside class="sidebar dp-sticky">
 			<% include SideNav %>

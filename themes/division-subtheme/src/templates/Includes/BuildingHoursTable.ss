@@ -1,9 +1,5 @@
 
 <p>
-	<% if $Location %>
-		<strong>Location:</strong> $Location
-	<% end_if %>
-	<% if $Location && $Phone %><br /><% end_if %>
 	<% if $Phone %>
 		<strong>Phone:</strong> $Phone
 	<% end_if %>

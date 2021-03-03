@@ -29,7 +29,7 @@ $Header
 				<% if $ActiveHoursPages %>
 						<% with $ActiveHoursPages.First %>
 							<h2>$Title</h2>
-							$Content
+							
 							<% if $EffectiveStartDate && $EffectiveEndDate %>
 								<p><em>Effective from $EffectiveStartDate.Nice - $EffectiveEndDate.Nice</em></p>
 							<% end_if %>
@@ -44,7 +44,7 @@ $Header
 							</div>
 							<% loop $Children %>
 								<h3 id="$URLSegment">$Title</h3>
-
+								$Content
 								<% include BuildingHoursTable %>
 								<% if not $Last %>
 									<hr />

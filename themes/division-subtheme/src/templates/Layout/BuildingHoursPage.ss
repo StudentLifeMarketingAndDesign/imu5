@@ -31,6 +31,7 @@ $Header
 				<% end_if %>
 				<% loop $Children %>
 					<h2>$Title</h2>
+					$Content
 						<% include BuildingHoursTable %>
 				<% end_loop %>
 	            $AfterContentConstrained

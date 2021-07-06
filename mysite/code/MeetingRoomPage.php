@@ -144,7 +144,7 @@ class MeetingRoomPage extends Page {
 		return $fields;
 
 	}
-	function getStandardCapacity() {
+	public function getStandardCapacity() {
 		$capacities = array(
 			$this->TablesAndChairsCapacity,
 			$this->RoundTablesCapacity,
@@ -161,7 +161,49 @@ class MeetingRoomPage extends Page {
 		return false;
 	}
 
-	function getDisplayCapacity() {
+	public function getLayoutCount(){
+
+		$count = 0;
+
+		$capacities = array(
+			$this->TablesAndChairsCapacity,
+			$this->RoundTablesCapacity,
+			$this->TheaterCapacity,
+			$this->ClassroomCapacity,
+			$this->UshapeCapacity,
+			$this->BoardroomCapacity
+		);
+
+		foreach ($capacities as $capacity) {
+			if (!is_null($capacity)) {
+				$count = $count + 1;
+			}
+		}
+
+		return $count;
+	}
+
+	// public function getLayouts(){
+
+	// 	$capacities = array(
+	// 		$this->TablesAndChairsCapacity => 'Tables and chairs',
+	// 		$this->RoundTablesCapacity,
+	// 		$this->TheaterCapacity,
+	// 		$this->ClassroomCapacity,
+	// 		$this->UshapeCapacity,
+	// 		$this->BoardroomCapacity
+	// 	);
+
+	// 	foreach ($capacities as $capacity) {
+	// 		if (!is_null($capacity) {
+				
+	// 		}
+	// 	}
+
+
+	// }
+
+	public function getDisplayCapacity() {
 
 		if($this->CapacityToShowOnHolder){
 			return $this->CapacityToShowOnHolder;
